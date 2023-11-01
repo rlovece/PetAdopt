@@ -54,15 +54,15 @@ h2{
 #derechos{
   padding-bottom: 0.6em;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 10px;
 }
 
-@media screen and (min-width: 40em) and (max-width: 63.9em) {
-
-}
-
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 40em) {
   .container{
     flex-direction: row;
   }
+  #derechos{
+    font-size: 13px;
+  }
 }
+
