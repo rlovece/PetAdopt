@@ -1,0 +1,97 @@
+.show-mobile {
+  > div {
+    button{
+      border: none;
+      background-color: transparent;
+    }
+  }
+  .side-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F6F8CD;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: all ease-out 0.3s;
+    &.active {
+      transform: translateX(0);
+    }
+    .active, a:hover {
+      color: #B3E283;
+    }
+  }
+}
+.show-mobile::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(44, 44, 44, 0.3);
+  box-shadow: 0px 2px 5px rgba(97, 97, 97, 0.9);
+}
+
+.hide-mobile {
+  display: none;
+  box-shadow: 0px 2px 5px rgb(black, .2);
+  > div {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #nav-cabecera {
+    display: flex;
+    align-items: center;
+  }
+  #lista-cabecera {
+    display: flex;
+    flex-direction: row;
+  }
+}
+ul {
+  list-style: none;
+  a{
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.hide-mobile::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px; /* Ajusta la altura de la sombra según tus preferencias */
+  background: rgba(44, 44, 44, 0.3); /* Color y opacidad de la sombra */
+  box-shadow: 0px 2px 5px rgba(97, 97, 97, 0.9); /* Estilo de la sombra */
+}
+
+#hamburger{
+  width: 30px;
+  height: 30px;
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .show-mobile {
+    display: none;
+  }
+  .hide-mobile {
+    display: block;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .show-mobile {
+    display: none;
+  }
+  .hide-mobile {
+    display: block;
+  }
+}

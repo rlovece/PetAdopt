@@ -1,0 +1,31 @@
+<div class="show-mobile">
+  <div>
+    <button (click)="toggleMenu()">
+      <img id="hamburger" src="../../../assets/images/hamburger.png" alt="menu">
+    </button>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toggleMenu()">
+      Close
+    </button>
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">Contacto</a></li>
+      <li><a href="">Nosotros</a></li>
+      <li><a href="">Login</a></li>
+    </ul>
+  </div>
+</div>
+<div class="hide-mobile" id="cabecera-grande">
+  <div>
+    <nav id="nav-cabecera">
+      <ul id="lista-cabecera">
+        <li><a href="">Home</a></li>
+        <li><a href="">Contacto</a></li>
+        <li><a href="">Nosotros</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
