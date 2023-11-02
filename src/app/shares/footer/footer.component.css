@@ -28,35 +28,39 @@ h2{
   height: 85px;
   margin: 20px;
   padding: 10px;
-  *{
-    background-color: white;
-    border-radius: 15px;
-  }
-  img{
-    width: 40px;
-    height: 40px;
-    align-content: center;
-    margin: 1.5em 1em 1.5em 1.8em;
-  }
-  .info-tarjeta{
-    margin-left: 1em;
-    margin-right: 2em;
-    p{
-      text-transform: uppercase;
-    }
-    a{
-      text-decoration: none;
-      color: black;
-    }
-    a:hover {
-      color: #B3E283;
-    }
-  }
+}
+
+.tarjeta *{
+  background-color: white;
+  border-radius: 15px;
+}
+
+.tarjeta img{
+  width: 40px;
+  height: 40px;
+  align-content: center;
+  margin: 1.5em 1em 1.5em 1.8em;
+}
+
+p{
+  text-transform: uppercase;
+}
+
+.info-tarjeta{
+  margin-left: 1em;
+  margin-right: 2em;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #B3E283;
 }
 
 #derechos{
   padding-bottom: 0.6em;
-  text-transform: uppercase;
   font-size: 10px;
 }
 

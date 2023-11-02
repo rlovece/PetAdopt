@@ -1,0 +1,68 @@
+{
+  "animales": [
+    {
+      "id": 1,
+      "nombre": "Pepa",
+      "tipo": "Perro",
+      "Sexo": "F",
+      "foto": "https://pixabay.com/es/photos/buldog-perro-mascota-animal-1224267/",
+      "tamaño": "Mediano",
+      "edad": 6,
+      "caracteristicas": "Sociable, tranquila, le gustan los niños",
+      "estado": "Adoptada",
+      "idAdminCarga": 1
+    }
+  ],
+  "Usuarios": [
+    {
+      "id": 1,
+      "nombre": "Ruth",
+      "apellido": "Lovece",
+      "dni": 33111111,
+      "telefono": "2291457449",
+      "direccion": "Calle 1 2314",
+      "email": "rutys@gmail.com",
+      "contraseña": "aa123",
+      "admin": true
+    },
+    {
+      "id": 2,
+      "nombre": "Belen",
+      "apellido": "Perez",
+      "dni": 33111112,
+      "telefono": "2291627449",
+      "direccion": "Calle 2 2314",
+      "email": "belen@gmail.com",
+      "contraseña": "123456",
+      "admin": false
+    }
+  ],
+  "Solicitudes":[
+    {
+      "id": 1,
+      "fecha": "12/10/23",
+      "idAnimal": 1,
+      "idUsuario": 2,
+      "estado": "aprobada"
+    }
+  ],
+  "Adopciones":[
+    {
+      "id": 1,
+      "idSolicitudAdopcion": 1,
+      "fecha": "15/10/23",
+      "foto": "https://pixabay.com/es/photos/hombre-mujer-perro-mascota-2425121/",
+      "comentarios": "Se realiza visita, se encuentra en excelente estado, y esterelizada",
+      "idAdminCarga": 1
+    }
+  ],
+  "Comentarios":[
+    {
+      "id": 1,
+      "idUsuario": 2,
+      "puntaje": 5,
+      "fecha": "20/10/23",
+      "comentario": "Muy amables, me encanta como se preocupan por los animales.💚Gracias!💚"
+    }
+  ]
+}
