@@ -1,5 +1,8 @@
-<app-imagen [archivo]="mascota.foto"></app-imagen>
-<h2>$ {{mascota.nombre}}</h2>
-<p>Edad: {{mascota.edad}} años</p>
-<p>Sexo: {{mascota.sexo}}, Tamaño: {{mascota.tamanio}}</p>
-<p>{{mascota.caracteristicas}}</p>
+<div class="contenedor-con-imagen">
+  <app-imagen [archivo]="inputMascota.foto"></app-imagen>
+  <h2>{{inputMascota.nombre}}</h2>
+  <p>Edad: {{inputMascota.edad}} años</p>
+  <p>Sexo: {{inputMascota.sexo}}, Tamaño: {{inputMascota.tamanio}}</p>
+  <p>{{inputMascota.caracteristicas}}</p>
+</div>
+

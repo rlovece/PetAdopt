@@ -1,26 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { Observable, lastValueFrom, toArray } from 'rxjs';
 import { ApiMascotasService } from 'src/app/core/api-mascotas.service';
 import { Mascota } from 'src/app/core/models/mascota.models';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MascotasService {
+export class MascotasService implements OnInit {
 
   mascotas: Mascota[] = [];
-
-
 
   constructor(
     private apiMascotasService : ApiMascotasService
   ) { }
 
-  getAll(){
-    this.apiMascotasService.getAll()
-    .subscribe({
-      next: data => this.mascotas = data,
-      error: (e) => console.log(e)
-    })
+
+  ngOnInit(): void {
+    this.getAll();
+  }
+
+  getAll() : Observable<Mascota[]>{
+    return this.apiMascotasService.getAll();
   }
 
 }

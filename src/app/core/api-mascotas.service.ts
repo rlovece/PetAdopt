@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Mascota } from './models/mascota.models';
+import { environments } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiMascotasService {
 
-  baseURL: string = "http://localhost:3000"
+  baseURL: string = environments.baseURL;
 
   constructor(private http: HttpClient) { }
 

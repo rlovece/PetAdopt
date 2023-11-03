@@ -8,6 +8,7 @@ import { Mascota } from 'src/app/core/models/mascota.models';
 })
 export class MascotaComponent {
 
-  @Input() mascota: Mascota = new Mascota();
+  @Input() inputMascota: Mascota = new Mascota();
+
 
 }

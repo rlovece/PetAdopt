@@ -6,17 +6,21 @@ import { FooterComponent } from './shares/footer/footer.component';
 import { NavComponent } from './shares/nav/nav.component';
 import { HeaderComponent } from './shares/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { MascotasModule } from './modules/mascotas/mascotas.module';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    MascotasModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

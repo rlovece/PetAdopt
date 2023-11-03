@@ -14,6 +14,11 @@ import { ListaMascotasComponent } from './components/lista-mascotas/lista-mascot
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    ImagenComponent,
+    MascotaComponent,
+    ListaMascotasComponent
   ]
 })
 export class MascotasModule { }
