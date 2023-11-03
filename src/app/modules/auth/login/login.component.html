@@ -1,0 +1,25 @@
+<div class="fondo">
+  <div class="container">
+      <div class="rectangulo">
+        <div>
+          <div>
+            <p class="title">No tenes una cuenta?</p>
+            <p>Unite para ver las mascotas en adopcion!</p>
+            <button>Registrarse</button>
+          </div>
+        </div>
+      </div>
+      <div class="cuadradoLog">
+        <div class="login">
+          <h2>Iniciar Sesion</h2>
+          <form (ngSubmit)= "autenticar()">
+            <div class="form-group">
+            <input type="text" name="email" placeholder="Mail" [(ngModel)] ="usuario.email" required>
+            <input type="password" name="password" placeholder="  Contraseña" [(ngModel)] ="usuario.contrasenia" required>
+          </div>
+          <p>Olvidaste tu contraseña?</p>
+          <button type="submit">Iniciar</button>
+          </form>
+    </div>
+  </div>
+</div>

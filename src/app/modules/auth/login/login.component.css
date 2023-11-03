@@ -1,0 +1,43 @@
+.fondo{
+  width: 100%;
+  right: 100%;
+  align-items: center;background: rgb(233,148,151);
+  background: linear-gradient(90deg, rgba(233,148,151,1) 0%, rgba(230,129,132,1) 50%, rgba(164,74,149,1) 100%);  height: 10%;
+
+}
+
+.container{
+  align-items: center;background: rgb(233,148,151);
+  background: linear-gradient(90deg, rgba(233,148,151,1) 0%, rgba(230,129,132,1) 50%, rgba(164,74,149,1) 100%);  height: 10%;
+
+  width: 600px;
+  height: 350px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+
+}
+.rectangulo{
+
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  transform: translate(0,-50%);
+  top:50%;
+  display: inline-flex;
+}
+
+.cuadradoLog{
+  background-color: white;
+  border-radius: 20px;
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+  position: absolute;
+  right:0;
+  margin-right: 3%;
+  margin-left: 3%;
+  transition: right .8s ease-in-out;
+}
