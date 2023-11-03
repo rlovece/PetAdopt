@@ -1,12 +1,12 @@
-import { IMascota } from "./mascotas.interfaces";
+import { IMascota } from "./mascota.interfaces";
 
-export class Mastoca implements IMascota{
+export class Mascota implements IMascota{
   id: number | null = null;
   nombre: string = '';
   tipo: "Perro" | "Gato" | "" = "" ;
   sexo: "F" | "M" | "" = "";
   foto: string = "";
-  tamaño: "Pequeño" | "Mediano" | "Grande" | "" = "";
+  tamanio: "Pequeño" | "Mediano" | "Grande" | "" = "";
   edad: number | null = null;
   caracteristicas: string = "";
   estado: "En adopcion" | "En transito" | "Adoptado" | "" = "";
@@ -19,7 +19,7 @@ export class Mastoca implements IMascota{
     this.tipo = mascota == undefined ? null : mascota.tipo;
     this.sexo = mascota == undefined ? null : mascota.sexo;
     this.foto = mascota == undefined ? null : mascota.foto;
-    this.tamaño = mascota == undefined ? null : mascota.tamaño;
+    this.tamanio = mascota == undefined ? null : mascota.tamaño;
     this.edad = mascota == undefined ? null : mascota.edad;
     this.caracteristicas = mascota == undefined ? null : mascota.caracteristicas;
     this.estado = mascota == undefined ? null : mascota.estado;

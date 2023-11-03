@@ -1,19 +1,31 @@
 {
-  "Mascotas": [
+  "mascotas": [
     {
       "id": 1,
       "nombre": "Pepa",
       "tipo": "Perro",
       "Sexo": "F",
       "foto": "https://pixabay.com/es/photos/buldog-perro-mascota-animal-1224267/",
-      "tamaño": "Mediano",
+      "tamanio": "Mediano",
       "edad": 6,
       "caracteristicas": "Sociable, tranquila, le gustan los niños",
-      "estado": "Adoptada",
+      "estado": "Adoptado",
+      "idAdminCarga": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Michu",
+      "tipo": "Gato",
+      "Sexo": "M",
+      "foto": "https://pixabay.com/es/photos/gato-triste-linda-peque%C3%B1o-dulce-3266673/",
+      "tamanio": "Pequeño",
+      "edad": 0,
+      "caracteristicas": "6 meses, come solo",
+      "estado": "En adopcion",
       "idAdminCarga": 1
     }
   ],
-  "Usuarios": [
+  "usuarios": [
     {
       "id": 1,
       "nombre": "Ruth",
@@ -37,7 +49,7 @@
       "admin": false
     }
   ],
-  "Solicitudes":[
+  "solicitudes":[
     {
       "id": 1,
       "fecha": "12/10/23",
@@ -46,7 +58,7 @@
       "estado": "aprobada"
     }
   ],
-  "Adopciones":[
+  "adopciones":[
     {
       "id": 1,
       "idSolicitudAdopcion": 1,
@@ -56,7 +68,7 @@
       "idAdminCarga": 1
     }
   ],
-  "Comentarios":[
+  "comentarios":[
     {
       "id": 1,
       "idUsuario": 2,
