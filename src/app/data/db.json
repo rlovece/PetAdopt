@@ -5,7 +5,7 @@
       "nombre": "Pepa",
       "tipo": "Perro",
       "Sexo": "F",
-      "foto": "https://pixabay.com/es/photos/buldog-perro-mascota-animal-1224267/",
+      "foto": "https://cdn.pixabay.com/photo/2016/02/26/16/32/bulldog-1224267_1280.jpg",
       "tamanio": "Mediano",
       "edad": 6,
       "caracteristicas": "Sociable, tranquila, le gustan los niños",
@@ -17,7 +17,7 @@
       "nombre": "Michu",
       "tipo": "Gato",
       "Sexo": "M",
-      "foto": "https://pixabay.com/es/photos/gato-triste-linda-peque%C3%B1o-dulce-3266673/",
+      "foto": "https://cdn.pixabay.com/photo/2018/03/27/17/25/cat-3266673_1280.jpg",
       "tamanio": "Pequeño",
       "edad": 0,
       "caracteristicas": "6 meses, come solo",
@@ -63,7 +63,7 @@
       "id": 1,
       "idSolicitudAdopcion": 1,
       "fecha": "15/10/23",
-      "foto": "https://pixabay.com/es/photos/hombre-mujer-perro-mascota-2425121/",
+      "foto": "https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_1280.jpg",
       "comentarios": "Se realiza visita, se encuentra en excelente estado, y esterelizada",
       "idAdminCarga": 1
     }
