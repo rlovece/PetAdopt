@@ -12,7 +12,7 @@ import { AddComponent } from './components/add/add.component';
     ImagenComponent,
     MascotaComponent,
     ListaMascotasComponent,
-    AddComponent
+    AddComponent,
   ],
   imports: [
     CommonModule,

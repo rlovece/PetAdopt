@@ -39,7 +39,8 @@ export class MascotasService {
   }
 
   create(mascota: Mascota){
-    return this.http.post<Mascota>(this.baseURL, mascota);
+    console.log(mascota);
+    return this.http.post<Mascota>(`${this.baseURL}/mascotas`, mascota);
   }
 
   update(id: number, mascota: Partial<Mascota>){

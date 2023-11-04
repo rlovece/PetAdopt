@@ -23,54 +23,6 @@
       "caracteristicas": "6 meses, come solo",
       "estado": "En adopcion",
       "idAdminCarga": 1
-    },
-    {
-      "id": 3,
-      "nombre": "Mimosa",
-      "tipo": "Gato",
-      "sexo": "F",
-      "foto": "https://cdn.pixabay.com/photo/2016/03/28/10/05/kitten-1285341_640.jpg",
-      "tamanio": "Pequeño",
-      "edad": 2,
-      "caracteristicas": "Juguetona, usa las piedritas",
-      "estado": null,
-      "idAdminCarga": null
-    },
-    {
-      "id": 4,
-      "nombre": "Rocki",
-      "tipo": "Perro",
-      "sexo": "M",
-      "foto": "https://cdn.pixabay.com/photo/2020/11/12/13/44/dog-5735582_1280.jpg",
-      "tamanio": "Grande",
-      "edad": 10,
-      "caracteristicas": "Cariñoso, se lleva bien con los niños",
-      "estado": null,
-      "idAdminCarga": null
-    },
-    {
-      "id": 5,
-      "nombre": "Pumba",
-      "tipo": "Perro",
-      "sexo": "F",
-      "foto": "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg",
-      "tamanio": "Grande",
-      "edad": 0,
-      "caracteristicas": "Cariñosa",
-      "estado": null,
-      "idAdminCarga": null
-    },
-    {
-      "id": 6,
-      "nombre": "Milu",
-      "tipo": "Perro",
-      "sexo": "F",
-      "foto": "https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg",
-      "tamanio": "Pequeño",
-      "edad": 6,
-      "caracteristicas": "Compañera, muy educada",
-      "estado": null,
-      "idAdminCarga": null
     }
   ],
   "usuarios": [

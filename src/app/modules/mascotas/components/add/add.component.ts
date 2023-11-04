@@ -1,6 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Mascota } from 'src/app/core/models/mascota.models';
 import { MascotasService } from '../../services/mascotas.service';
+
+
 
 @Component({
   selector: 'app-addMascota',
@@ -9,15 +11,18 @@ import { MascotasService } from '../../services/mascotas.service';
 })
 export class AddComponent {
 
-  public newMascota: Mascota = new Mascota();
+  newMascota: Mascota = new Mascota();
 
   constructor(
-    private mascotaService: MascotasService
-  ){
+    private mascotaService: MascotasService,
+  ){  }
 
-  }
   addMascota() {
-
+    this.mascotaService.create(this.newMascota)
+    .subscribe(
+      (data) => {
+        alert (`${data.nombre} fue agregado en estado "En Adopcion"`);
+      }
+    )
   }
-
 }
