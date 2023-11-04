@@ -9,7 +9,7 @@ export class Mascota implements IMascota{
   tamanio: "Pequeño" | "Mediano" | "Grande" | "" = "";
   edad: number | null = null;
   caracteristicas: string = "";
-  estado: "En adopcion" | "En transito" | "Adoptado" | "" = "";
+  estado: "En adopcion" | "En transito" | "Adoptado" | "" = "En adopcion";
   idAdminCarga: number | null = null;
 
   constructor(mascota?:any){

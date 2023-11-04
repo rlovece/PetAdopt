@@ -1,0 +1,46 @@
+<div class="contenedor-add-mascota">
+  <h2>Agregar Mascota</h2>
+    <form (ngSubmit)="addMascota">
+      <div class="form-group">
+        <label for="nombre"></label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre"
+        [(ngModel)]="newMascota.nombre" required>
+      </div>
+      <div class="form-group">
+        <select id="tipo" name="tipo" [(ngModel)]="newMascota.tipo">
+          <option value="Perro">Perro</option>
+          <option value="Gato">Gato</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select id="sexo" name="sexo" [(ngModel)]="newMascota.sexo">
+          <option value="F">Hembra</option>
+          <option value="M">Macho</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="foto"></label>
+        <input type="url" id="foto" name="foto" placeholder="URL de la foto"
+        [(ngModel)]="newMascota.foto" required>
+      </div>
+      <div class="form-group">
+        <select id="tamanio" name="tamanio" [(ngModel)]="newMascota.tamanio">
+          <option value="Pequeño">Pequeño</option>
+          <option value="Mediano">Mediano</option>
+          <option value="Grande">Grande</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="edad"></label>
+        <input type="number" id="edad" name="edad" placeholder="Edad en años"
+        [(ngModel)]="newMascota.edad" required>
+      </div>
+      <div class="form-group">
+        <label for="caracteristicas"></label>
+        <input type="text" id="caracteristicas" name="caracteristicas" placeholder="Caracteristicas adicionales"
+        [(ngModel)]="newMascota.caracteristicas">
+      </div>
+      <button type="submit" (click)="addMascota()">Agregar</button>
+    </form>
+</div>
+
