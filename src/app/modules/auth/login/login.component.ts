@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/core/Models';
 import { ApiAuthService } from 'src/app/core/api-auth.service';
-import { AuthService } from '../auth.service';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -12,25 +11,37 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-  public usuario: Usuario = new Usuario();
+  constructor(private fb: FormBuilder,private apiService: ApiAuthService, private router: Router) { }
 
-  constructor(private authService: AuthService, private router: Router) {}
 
-  public async autenticar(){
+  formulario: FormGroup = this.fb.group({
+    email: ['', [Validators.required]],
+    contrasenia:  ['', [Validators.required, Validators.minLength(6)]],
+  })
 
-    const check = this.authService.autenticar(this.usuario.email, this.usuario.contrasenia);
+   usuario : Usuario [] = [];
 
-    if(await check){
-      if(this.usuario.admin){
-        this.router.navigate(['/home']);
+
+  iniciarSesion(){
+    if(this.formulario.invalid)return;
+
+    this.apiService.getUserToAuth(
+      this.formulario.controls['email'].value,
+      this.formulario.controls['contrasenia'].value).subscribe(
+        {
+          next: data => this.usuario=data,
+          error: e => console.log(e)
+        }
+      )
+
+      if(this.usuario.length == 1){
+       /* localStorage.setItem('token', this.usuario[0].id.toString()) */
+        this.router.navigate(['/landing']);
       }else{
-      this.router.navigate(['/home']);
+        alert('Usuario o contraseña incorrectos');
       }
-    }
-    else{
-      alert("No existe el usuario");
-    }
   }
+
 
 
 }

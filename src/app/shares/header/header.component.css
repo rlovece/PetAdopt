@@ -1,13 +1,12 @@
 
 header{
-  display: flexbox;
-  align-items: center;background: rgb(233,148,151);
+  display: flex;
+  align-items: center;
   background: linear-gradient(90deg, rgba(233,148,151,1) 0%, rgba(230,129,132,1) 50%, rgba(164,74,149,1) 100%);  height: 10%;
 }
 
 .container{
   display: flex;
-  flex-direction: row;
   padding: auto;
 }
 
@@ -17,15 +16,8 @@ header{
   width: 100%;
   height: 100%;
   margin-left: 10%;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: left;
-  inline-size: 1000px;
-}
-
-.imagen{
-  float: right;
-  margin-top: 10%;
-
 }
 
 .image1{
@@ -34,9 +26,10 @@ header{
 
 }
 .image2{
+  margin-top: 5%;
   width: 80%;
-  height: 80%;
-
+  height: 90%;
+  margin-right: 20%;
 }
 
 h2{
@@ -57,11 +50,26 @@ text-shadow: 0px 0px 9px #FBFFA5;
 
 
 @media only screen and (min-width: 320px) and (max-width:768px) {
-  .header,.imagen, .image2 {
-    justify-content: center;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10%;
+  }
+  p{
+    font-size: 25px;
+    text-align: center;
+  }
+  .imagen{
+    align-items: center;
+    margin-left: 20%;
+  }
+  .descripcion{
+    align-items: center;
   }
 
-
 }
+
+
 
 

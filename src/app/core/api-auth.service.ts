@@ -13,10 +13,10 @@ export class ApiAuthService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<Usuario[]>{
-    return this.http.get<Usuario[]>(`${this.baseURL}/usuarios`);
+    return this.http.get<Usuario[]>(`${this.baseURL}/usuario`);
   }
 
-  getUserToAuth(email:string, contraseña: string): Observable<Usuario[]>{
-    return this.http.get<Usuario[]>(`${this.baseURL}/usuarios?email=${email}&contraseña=${contraseña}`);
+  getUserToAuth(email:string, contrasenia: string): Observable<Usuario[]>{
+    return this.http.get<Usuario[]>(`${this.baseURL}/usuario?email=${email}&contrasenia=${contrasenia}`);
   }
 }

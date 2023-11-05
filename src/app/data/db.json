@@ -73,7 +73,7 @@
       "idAdminCarga": null
     }
   ],
-  "usuarios": [
+  "usuario": [
     {
       "id": 1,
       "nombre": "Ruth",
@@ -93,7 +93,7 @@
       "telefono": "2291627449",
       "direccion": "Calle 2 2314",
       "email": "belen@gmail.com",
-      "contraseña": "123456",
+      "contrasenia": "123456",
       "admin": false
     }
   ],

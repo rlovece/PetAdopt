@@ -1,25 +1,37 @@
+
 <div class="fondo">
   <div class="container">
       <div class="rectangulo">
-        <div>
-          <div>
+        <div class="loginMsg">
+          <div class="textcontent">
             <p class="title">No tenes una cuenta?</p>
             <p>Unite para ver las mascotas en adopcion!</p>
-            <button>Registrarse</button>
+            <button class="botonR">Registrarse</button>
           </div>
         </div>
       </div>
       <div class="cuadradoLog">
-        <div class="login">
-          <h2>Iniciar Sesion</h2>
-          <form (ngSubmit)= "autenticar()">
-            <div class="form-group">
-            <input type="text" name="email" placeholder="Mail" [(ngModel)] ="usuario.email" required>
-            <input type="password" name="password" placeholder="  Contraseña" [(ngModel)] ="usuario.contrasenia" required>
+
+      <fieldset>
+        <h2>Iniciar Sesion</h2>
+        <form [formGroup]= "formulario">
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="text" id="email" formControlName="email">
+            <span class="error" *ngIf="formulario.controls['email'].getError('required') && formulario.touched">El email es obligatorio</span>
           </div>
-          <p>Olvidaste tu contraseña?</p>
-          <button type="submit">Iniciar</button>
-          </form>
+          <div class="form-group">
+            <label for="contrasenia">Contraseña: </label>
+            <input type="password" id="contrasenia" formControlName="contrasenia">
+            <span class="error" *ngIf="formulario.controls['contrasenia'].getError('required') && formulario.touched">La contraseña es obligatoria</span>
+            <span class="error" *ngIf="formulario.controls['contrasenia'].getError('minlength')">Debe tener al menos 6 caracteres</span>
+          </div>
+          <div class="campo">
+            <input class="boton" type="submit" value="Enviar" (click)="iniciarSesion()">
+          </div>
+        </form>
+      </fieldset>
     </div>
+
   </div>
 </div>

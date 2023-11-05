@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './shares/footer/footer.component';
 import { NavComponent } from './shares/nav/nav.component';
 import { HeaderComponent } from './shares/header/header.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MascotasModule } from './modules/mascotas/mascotas.module';
 import { HttpClientModule} from '@angular/common/http';
 
@@ -18,7 +18,7 @@ import { HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     MascotasModule,
     HttpClientModule
   ],
