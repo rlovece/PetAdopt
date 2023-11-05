@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MascotasModule } from './modules/mascotas/mascotas.module';
 import { HttpClientModule} from '@angular/common/http';
 import { UltimasAdopcionesComponent } from './shares/ultimas-adopciones/ultimas-adopciones.component';
+import { ContactoComponent } from './shares/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UltimasAdopcionesComponent } from './shares/ultimas-adopciones/ultimas-
     FooterComponent,
     NavComponent,
     HeaderComponent,
-    UltimasAdopcionesComponent
+    UltimasAdopcionesComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
