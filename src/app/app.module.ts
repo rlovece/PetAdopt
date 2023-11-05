@@ -8,13 +8,15 @@ import { HeaderComponent } from './shares/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MascotasModule } from './modules/mascotas/mascotas.module';
 import { HttpClientModule} from '@angular/common/http';
+import { UltimasAdopcionesComponent } from './shares/ultimas-adopciones/ultimas-adopciones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavComponent,
-    HeaderComponent
+    HeaderComponent,
+    UltimasAdopcionesComponent
   ],
   imports: [
     BrowserModule,
