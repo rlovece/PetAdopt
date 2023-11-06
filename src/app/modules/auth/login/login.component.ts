@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/core/models/Models/Models';
+import { Usuario } from 'src/app/core/models/Models/usuario';
 import { ApiAuthService } from 'src/app/core/api-auth.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 

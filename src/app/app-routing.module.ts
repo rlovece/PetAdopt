@@ -12,11 +12,11 @@ const routes: Routes = [
   },
   {
     path:'login',
-    component: LoginComponent
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path:'landing',
-    component: LandingComponent
+    loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule)
   },
   {
     path:'**',

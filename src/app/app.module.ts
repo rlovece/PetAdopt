@@ -13,6 +13,7 @@ import { ContactoComponent } from './shares/contacto/contacto.component';
 import { RouterModule } from '@angular/router';
 import { LandingModule } from './modules/landing/landing.module';
 import { SharesModule } from './shares/shares.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SharesModule } from './shares/shares.module';
     HttpClientModule,
     RouterModule,
     LandingModule,
+    AuthModule,
     SharesModule
   ],
   providers: [],
