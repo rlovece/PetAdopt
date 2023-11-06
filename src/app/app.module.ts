@@ -10,21 +10,21 @@ import { MascotasModule } from './modules/mascotas/mascotas.module';
 import { HttpClientModule} from '@angular/common/http';
 import { UltimasAdopcionesComponent } from './shares/ultimas-adopciones/ultimas-adopciones.component';
 import { ContactoComponent } from './shares/contacto/contacto.component';
+import { RouterModule } from '@angular/router';
+import { LandingModule } from './modules/landing/landing.module';
+import { SharesModule } from './shares/shares.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    NavComponent,
-    HeaderComponent,
-    UltimasAdopcionesComponent,
-    ContactoComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    MascotasModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    LandingModule,
+    SharesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

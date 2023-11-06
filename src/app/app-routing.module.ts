@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { LandingComponent } from './modules/landing/components/landing/landing.component';
+import { NotFoundComponent } from './shares/pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
     path:'',
-    component: AppComponent
+    component: LandingComponent
   },
   {
     path:'login',
@@ -19,7 +20,7 @@ const routes: Routes = [
   },
   {
     path:'**',
-    component: LandingComponent
+    component: NotFoundComponent
   }
 ];
 
