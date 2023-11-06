@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Mascota } from 'src/app/core/models/mascota.models';
-import { MascotasService } from 'src/app/modules/mascotas/services/mascotas.service';
+import { Mascota } from 'src/app/core/models/Models/mascota';
+import { MascotasService } from 'src/app/core/services/mascotas.service';
 
 @Component({
   selector: 'app-lista-adopcion',

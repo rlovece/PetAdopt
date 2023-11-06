@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Mascota } from 'src/app/core/models/mascota.models';
-import { MascotasService } from '../../services/mascotas.service';
+import { Mascota } from 'src/app/core/models/Models/mascota';
+import { MascotasService } from '../../../../core/services/mascotas.service';
 
 
 
