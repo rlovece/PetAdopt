@@ -8,7 +8,7 @@
       "foto": "https://cdn.pixabay.com/photo/2016/02/26/16/32/bulldog-1224267_1280.jpg",
       "tamanio": "Mediano",
       "edad": 6,
-      "caracteristicas": "Sociable, tranquila, le gustan los niños",
+      "caracteristicas": "Castrada, vacunas al día, Sociable, tranquila, le gustan los niños",
       "estado": "Adoptado",
       "idAdminCarga": 1
     },
@@ -33,8 +33,8 @@
       "tamanio": "Pequeño",
       "edad": 2,
       "caracteristicas": "Juguetona, usa las piedritas",
-      "estado": null,
-      "idAdminCarga": null
+      "estado": "En adopcion",
+      "idAdminCarga": 1
     },
     {
       "id": 4,
@@ -45,8 +45,8 @@
       "tamanio": "Grande",
       "edad": 10,
       "caracteristicas": "Cariñoso, se lleva bien con los niños",
-      "estado": null,
-      "idAdminCarga": null
+      "estado": "En adopcion",
+      "idAdminCarga": 1
     },
     {
       "id": 5,
@@ -57,8 +57,8 @@
       "tamanio": "Grande",
       "edad": 0,
       "caracteristicas": "Cariñosa",
-      "estado": null,
-      "idAdminCarga": null
+      "estado": "En adopcion",
+      "idAdminCarga": 2
     },
     {
       "id": 6,
@@ -69,8 +69,8 @@
       "tamanio": "Pequeño",
       "edad": 6,
       "caracteristicas": "Compañera, muy educada",
-      "estado": null,
-      "idAdminCarga": null
+      "estado": "En adopcion",
+      "idAdminCarga": 1
     }
   ],
   "usuario": [
@@ -94,7 +94,7 @@
       "direccion": "Calle 2 2314",
       "email": "belen@gmail.com",
       "contrasenia": "123456",
-      "admin": false
+      "admin": true
     }
   ],
   "solicitudes": [
@@ -102,18 +102,17 @@
       "id": 1,
       "fecha": "12/10/23",
       "idAnimal": 1,
-      "idUsuario": 2,
-      "estado": "aprobada"
-    }
-  ],
-  "adopciones": [
-    {
-      "id": 1,
-      "idSolicitudAdopcion": 1,
-      "fecha": "15/10/23",
-      "foto": "https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_1280.jpg",
-      "comentarios": "Se realiza visita, se encuentra en excelente estado, y esterelizada",
-      "idAdminCarga": 1
+      "adoptante": {
+        "nombre": "Clara",
+        "apellido": "Alvarez",
+        "dni": "32145145",
+        "domicilio": "Catamarca 2154",
+        "celular": "2234561456"
+      },
+      "comentarios": "Se encuetra en buen estado",
+      "estado": "aprobada",
+      "fechaAdopción": "15/10/23",
+      "foto" : "https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_1280.jpg"
     }
   ],
   "comentarios": [
