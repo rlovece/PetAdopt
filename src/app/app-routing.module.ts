@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
+    path:'admin',
+    loadChildren: () => import('./modules/administracion/administracion.module').then(m => m.AdministracionModule)
+  },
+  {
     path:'**',
     component: NotFoundComponent
   }
