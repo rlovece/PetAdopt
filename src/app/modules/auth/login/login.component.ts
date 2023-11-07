@@ -22,8 +22,8 @@ export class LoginComponent {
     if (this.formulario.invalid) return;
 
     this.apiService.verificarUserAndPass(
-      this.formulario.controls['user'].value,
-      this.formulario.controls['password'].value)
+      this.formulario.controls['email'].value,
+      this.formulario.controls['contrasenia'].value)
 
   }
 

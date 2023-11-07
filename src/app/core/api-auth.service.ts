@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ApiAuthService {
 
-  private url: string = 'http://localhost:4000/usuario'
+  private url: string = 'http://localhost:3000/usuario'
   private usuario?: Usuario;
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -31,10 +31,11 @@ export class ApiAuthService {
         if (u.contrasenia === contrasenia && u.email === email) {
           this.usuario = u;
           localStorage.setItem('token', u.id.toString())
-          this.router.navigate(['/private'])
+          this.router.navigate(['/admin'])
         }
       });
     });
+
   }
 
   checkStatusAutenticacion(): Observable<boolean> {
