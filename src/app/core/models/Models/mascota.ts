@@ -21,7 +21,7 @@ export class Mascota implements IMascota{
     this.foto = mascota == undefined ? '' : mascota.foto;
     this.tamanio = mascota == undefined ? '' : mascota.tamaño;
     this.edad = mascota == undefined ? '' : mascota.edad;
-    this.caracteristicas = mascota == '' ? null : mascota.caracteristicas;
+    this.caracteristicas = mascota == undefined ? '' : mascota.caracteristicas;
     this.estado = mascota == undefined ? 'En adopcion' : mascota.estado;
     this.idAdminCarga = mascota == undefined ? null : mascota.idAdminCarga;
   }

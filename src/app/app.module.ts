@@ -8,6 +8,9 @@ import { RouterModule } from '@angular/router';
 import { LandingModule } from './modules/landing/landing.module';
 import { SharesModule } from './shares/shares.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { ListadosMascotasComponent } from './modules/administracion/listados-mascotas/listados-mascotas.component';
+import { AdministracionModule } from './modules/administracion/administracion.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,14 @@ import { AuthModule } from './modules/auth/auth.module';
     ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
     LandingModule,
     AuthModule,
-    SharesModule
+    SharesModule,
+    AdministracionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
