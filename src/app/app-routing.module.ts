@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './shares/pages/not-found/not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path:'admin',
-    loadChildren: () => import('./modules/administracion/administracion.module').then(m => m.AdministracionModule)
+    loadChildren: () => import('./modules/administracion/pages/panel-administracion/panel-administracion.component').then(m => m.PanelAdministracionComponent),
+    canActivate: [AuthGuard]
   },
   {
     path:'**',
