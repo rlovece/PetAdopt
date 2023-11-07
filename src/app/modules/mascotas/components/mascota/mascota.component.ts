@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Mascota } from 'src/app/core/models/mascota.models';
+import { Mascota } from 'src/app/core/models/Models/mascota';
 
 @Component({
   selector: 'app-mascota',

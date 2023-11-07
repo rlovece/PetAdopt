@@ -1,0 +1,33 @@
+<div class="contenedor">
+  <table class="tabla">
+    <thead>
+    <tr>
+    <th>id</th>
+    <th>Nombre</th>
+    <th>Tipo</th>
+    <th>Edad</th>
+    <th>Sexo</th>
+    <th>Tamaño</th>
+    <th>Estado</th>
+    <th>Ver más</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mascota of inputMascotas">
+        <td>{{ mascota.id }}</td>
+        <td>{{ mascota.nombre }}</td>
+        <td>{{ mascota.tipo }}</td>
+        <td>{{ mascota.edad }}</td>
+        <td>{{ mascota.sexo }}</td>
+        <td>{{ mascota.tamanio }}</td>
+        <td>{{ mascota.estado }}</td>
+        <td><button class="mas-button" (click)="mostrarDetalleMascota(mascota)">📋</button></td>
+        <td><button class="edit-button" (click)="editMascota(mascota)">✍🏻</button></td>
+        <td><button class="delete-button" (click)="deleteMascota(mascota.id!)">❌</button></td>
+      </tr>
+    </tbody>
+    </table>
+
+</div>

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Mascota } from 'src/app/core/models/mascota.models';
-import { MascotasService } from '../../services/mascotas.service';
+import { Mascota } from 'src/app/core/models/Models/mascota';
+import { MascotasService } from '../../../../core/services/mascotas.service';
 
 
 
 @Component({
-  selector: 'app-addMascota',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.css']
+  selector: 'app-add-Mascota',
+  templateUrl: './add-mascota.component.html',
+  styleUrls: ['./add-mascota.component.css']
 })
-export class AddComponent {
+export class AddMascotaComponent {
 
   newMascota: Mascota = new Mascota();
 
