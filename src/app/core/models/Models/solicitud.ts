@@ -3,7 +3,7 @@ import { ISolicitud } from "../Interfaces/ISolicitud";
 export class Solicitud implements ISolicitud{
   id : number | null= null;
   fecha: string = '';
-  idAnimal: number | null= null;
+  idAnimal: number ;
   idUsuario: number | null= null;
   estado: string = '';
   comentarios: string;

@@ -42,7 +42,7 @@ export class UltimasAdopcionesComponent implements OnInit{
   }
 
   getNombreMascota(id: number): string {
-     this.getMascotaDeSolicitud(id);
+     this.getMascotaDeSolicitud(id)
       return this.mascota.nombre;
   }
 
