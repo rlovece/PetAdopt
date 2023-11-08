@@ -6,6 +6,9 @@ export class Solicitud implements ISolicitud{
   idAnimal: number | null= null;
   idUsuario: number | null= null;
   estado: string = '';
+  comentarios: string;
+  fechaAdopcion: string;
+  foto: string;
 
   constructor(solicitud?:any){
     this.id =  solicitud == undefined ? null : solicitud.id;
@@ -13,5 +16,9 @@ export class Solicitud implements ISolicitud{
     this.idAnimal = solicitud == undefined ? null : solicitud.idAnimal;
     this.idUsuario = solicitud == undefined ? null : solicitud.idUsuario;
     this.estado = solicitud == undefined ? '' : solicitud.estado;
+    this.comentarios = solicitud == undefined ? '' : solicitud.comentarios;
+    this.fechaAdopcion = solicitud == undefined ? '' : solicitud.fechaAdopcion;
+    this.foto = solicitud == undefined ? '' : solicitud.foto;
   }
+
 }
