@@ -31,7 +31,7 @@ export class UltimasAdopcionesComponent implements OnInit{
     )
   }
 
-  getMascotaDeSolicitud(id: number){
+  getNombreMascota(id: number): string {
     this.mascotasService.getById(id)
     .subscribe(
       {
@@ -39,11 +39,7 @@ export class UltimasAdopcionesComponent implements OnInit{
         error: e => console.log(e)
       }
     )
-  }
-
-  getNombreMascota(id: number): string {
-     this.getMascotaDeSolicitud(id)
-      return this.mascota.nombre;
+    return this.mascota.nombre;
   }
 
 }
