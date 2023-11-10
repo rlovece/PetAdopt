@@ -1,6 +1,9 @@
 import { IMascota } from "../Interfaces/mascota";
 
 export class Mascota implements IMascota{
+  filter(arg0: (m: any) => boolean) {
+    throw new Error('Method not implemented.');
+  }
   id: number | null = null;
   nombre: string = '';
   tipo: "Perro" | "Gato" | "" = "" ;

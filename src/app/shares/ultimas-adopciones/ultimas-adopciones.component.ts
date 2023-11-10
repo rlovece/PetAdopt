@@ -13,33 +13,37 @@ export class UltimasAdopcionesComponent implements OnInit{
 
 
   adopciones: Solicitud[] = [];
-  mascota: Mascota = new Mascota();
+  mascotas: Mascota[] = [];
 
   constructor(private solicitudesService: ApiSolicitudesService, private mascotasService: MascotasService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getSolicitudesPorEstado();
   }
 
-  getSolicitudesPorEstado(){
-    this.solicitudesService.getSolicitudesPorEstado('aprobada')
-    .subscribe(
-      {
-        next: data => this.adopciones =data,
-        error: e => console.log(e)
-      }
-    )
+  //agregar get ADOPCION O BORRAR ESE MODELO AL PEDO
+
+  getSolicitudesPorEstado() {
+    this.solicitudesService.getSolicitudesPorEstado('aprobada').subscribe({
+      next: (data) => {
+        this.adopciones = data;
+        this.getAllMascotas();
+      },
+      error: (e) => console.log(e),
+    });
+  }
+
+  getAllMascotas() {
+    this.mascotasService.getAll().subscribe({
+      next: (data) => {
+        this.mascotas = data;
+      },
+      error: (e) => console.error(e),
+    });
   }
 
   getNombreMascota(id: number): string {
-    this.mascotasService.getById(id)
-    .subscribe(
-      {
-        next: data => this.mascota =data,
-        error: e => console.log(e)
-      }
-    )
-    return this.mascota.nombre;
+    return this.mascotas.filter((m) => m.id === id)[0].nombre;
   }
 
 }
