@@ -1,7 +1,7 @@
 import { IUsuario } from "../Interfaces/IUsuario";
 
 export class Usuario implements IUsuario{
-  id: number| null= null;
+  id: number;
   nombre: string ='';
   apellido: string ='';
   dni: string ='';

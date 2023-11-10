@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/core/models/Models/usuario';
 import { ApiAuthService } from 'src/app/core/api-auth.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
@@ -19,27 +18,13 @@ export class LoginComponent {
     contrasenia:  ['', [Validators.required, Validators.minLength(6)]],
   })
 
-   usuario : Usuario [] = [];
+  iniciarSesion() {
+    if (this.formulario.invalid) return;
 
-
-  iniciarSesion(){
-    if(this.formulario.invalid)return;
-
-    this.apiService.getUserToAuth(
+    this.apiService.verificarUserAndPass(
       this.formulario.controls['email'].value,
-      this.formulario.controls['contrasenia'].value).subscribe(
-        {
-          next: data => this.usuario=data,
-          error: e => console.log(e)
-        }
-      )
+      this.formulario.controls['contrasenia'].value)
 
-      if(this.usuario.length == 1){
-       /* localStorage.setItem('token', this.usuario[0].id.toString()) */
-        this.router.navigate(['/landing']);
-      }else{
-        alert('Usuario o contraseña incorrectos');
-      }
   }
 
 

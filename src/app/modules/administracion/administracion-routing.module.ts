@@ -5,10 +5,8 @@ import { PanelAdministracionComponent } from './pages/panel-administracion/panel
 const routes: Routes = [
   {
     path: '',
-    component: PanelAdministracionComponent
+    component: PanelAdministracionComponent,
   }
-
-
 ];
 
 @NgModule({

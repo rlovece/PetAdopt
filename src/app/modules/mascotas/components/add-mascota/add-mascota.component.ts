@@ -5,7 +5,7 @@ import { MascotasService } from '../../../../core/services/mascotas.service';
 
 
 @Component({
-  selector: 'app-add-Mascota',
+  selector: 'app-add-mascota',
   templateUrl: './add-mascota.component.html',
   styleUrls: ['./add-mascota.component.css']
 })
