@@ -12,9 +12,11 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder,private apiService: ApiAuthService, private router: Router) { }
 
+  private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
   formulario: FormGroup = this.fb.group({
-    email: ['', [Validators.required]],
+    email: ['', [Validators.required],Validators.pattern(this.emailPattern)],
     contrasenia:  ['', [Validators.required, Validators.minLength(6)]],
   })
 
