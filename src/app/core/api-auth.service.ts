@@ -24,19 +24,23 @@ export class ApiAuthService {
     return this.http.get<Usuario[]>(this.url)
   }
 
+
   verificarUserAndPass(email: string, contrasenia: string) {
 
     this.getUsers().subscribe(usuario => {
-      usuario.find(u => {
-        if (u.contrasenia === contrasenia && u.email === email) {
-          this.usuario = u;
-          localStorage.setItem('token', u.id.toString())
-          this.router.navigate(['/admin'])
-        }
-      });
+      const usuarioEncontrado = usuario.find(u => u.contrasenia === contrasenia && u.email === email);
+
+      if (usuarioEncontrado) {
+        this.usuario = usuarioEncontrado;
+        localStorage.setItem('token', usuarioEncontrado.id.toString());
+        this.router.navigate(['/admin']);
+      } else {
+        alert('Usuario o contraseña incorrectos, vuelva a intentarlo');
+      }
     });
 
-  }
+}
+
 
   checkStatusAutenticacion(): Observable<boolean> {
     const token = localStorage.getItem('token')
