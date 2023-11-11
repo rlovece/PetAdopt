@@ -11,10 +11,12 @@ export class ContactoComponent {
 
   constructor(private fb: FormBuilder, private router: Router) { }
 
+  private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
   formulario: FormGroup = this.fb.group({
     nombre: ['', [Validators.required]],
-    email: ['', [Validators.required]],
+    email: ['', [Validators.required],Validators.pattern(this.emailPattern)],
     telefono:  ['', [Validators.required, Validators.minLength(6)]],
     mensaje:  ['', [Validators.required, Validators.minLength(6)]],
   })

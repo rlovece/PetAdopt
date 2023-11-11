@@ -16,6 +16,8 @@
             <label for="email">Email: </label>
             <input type="text" id="email" formControlName="email">
             <span class="error" *ngIf="formulario.controls['email'].getError('required') && formulario.touched">El email es obligatorio</span>
+            <span class="error" *ngIf="formulario.controls['email'].getError('pattern') && formulario.touched"> Ingrese un email valido</span>
+
           </div>
           <div class="form-group">
             <label for="contrasenia">Contraseña: </label>
