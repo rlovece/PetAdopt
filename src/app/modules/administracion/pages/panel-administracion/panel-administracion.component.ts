@@ -11,11 +11,16 @@ export class PanelAdministracionComponent {
 
   listaCompletaMascotas: Mascota[] = [];
   listaFiltradaMascotas: Mascota[] = [];
-
+  opcionSeleccionada: string = 'bienvenida';
+  mostrarPanelAddMascota: boolean = false;
 
   constructor(
     private mascotasService: MascotasService,
   ){}
+
+  actualizarOpcion(opcion: string) {
+    this.opcionSeleccionada = opcion;
+  }
 
   ngOnInit(){
     this.getAll();
@@ -32,4 +37,7 @@ export class PanelAdministracionComponent {
     )
   }
 
+  verPanelAddMascota() {
+    this.mostrarPanelAddMascota = !this.mostrarPanelAddMascota;
+  }
 }

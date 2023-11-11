@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { MascotasService } from '../../../../core/services/mascotas.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 
@@ -10,19 +11,33 @@ import { MascotasService } from '../../../../core/services/mascotas.service';
   styleUrls: ['./add-mascota.component.css']
 })
 export class AddMascotaComponent {
-
-  newMascota: Mascota = new Mascota();
+  mascotaForm: FormGroup;
 
   constructor(
+    private fb: FormBuilder,
     private mascotaService: MascotasService,
-  ){  }
+  ) {
+    this.mascotaForm = this.fb.group({
+      nombre: ['', Validators.required],
+      tipo: ['', Validators.required],
+      sexo: ['', Validators.required],
+      foto: ['', Validators.required],
+      tamanio: ['', Validators.required],
+      nacimiento: [null, Validators.required],
+      caracteristicas: [''],
+    });
+  }
 
   addMascota() {
-    this.mascotaService.create(this.newMascota)
-    .subscribe(
-      (data) => {
-        alert (`${data.nombre} fue agregado en estado "En Adopcion"`);
-      }
-    )
+    if (this.mascotaForm.valid) {
+      const newMascota: Mascota = this.mascotaForm.value;
+      this.mascotaService.create(newMascota).subscribe(
+        (data) => {
+          alert(`${data.nombre} fue agregado en estado "En Adopcion"`);
+        }
+      );
+    } else {
+      alert('Por favor, completa todos los campos obligatorios.');
+    }
   }
 }

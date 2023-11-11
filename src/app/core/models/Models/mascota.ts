@@ -1,3 +1,4 @@
+import { Data } from "@angular/router";
 import { IMascota } from "../Interfaces/mascota";
 
 export class Mascota implements IMascota{
@@ -7,7 +8,7 @@ export class Mascota implements IMascota{
   sexo: "F" | "M" | "" = "";
   foto: string = "";
   tamanio: "Pequeño" | "Mediano" | "Grande" | "" = "";
-  edad: number | null = null;
+  nacimiento: Data | null = null;
   caracteristicas: string = "";
   estado: "En adopcion" | "En transito" | "Adoptado" | "" = "En adopcion";
   idAdminCarga: number | null = null;
@@ -20,7 +21,7 @@ export class Mascota implements IMascota{
     this.sexo = mascota == undefined ? '' : mascota.sexo;
     this.foto = mascota == undefined ? '' : mascota.foto;
     this.tamanio = mascota == undefined ? '' : mascota.tamaño;
-    this.edad = mascota == undefined ? '' : mascota.edad;
+    this.nacimiento = mascota == undefined ? '' : mascota.nacimiento;
     this.caracteristicas = mascota == undefined ? '' : mascota.caracteristicas;
     this.estado = mascota == undefined ? 'En adopcion' : mascota.estado;
     this.idAdminCarga = mascota == undefined ? null : mascota.idAdminCarga;

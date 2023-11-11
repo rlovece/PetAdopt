@@ -34,10 +34,6 @@ export class MascotasService {
     return this.http.get<Mascota[]>(`${this.baseURL}/mascotas?tamanio=${tamanio}`);
   }
 
-  getByEdad(edad: string): Observable<Mascota[]>{
-    return this.http.get<Mascota[]>(`${this.baseURL}/mascotas?edad=${edad}`);
-  }
-
   create(mascota: Mascota){
     console.log(mascota);
     return this.http.post<Mascota>(`${this.baseURL}/mascotas`, mascota);

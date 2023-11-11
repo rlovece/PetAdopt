@@ -1,0 +1,19 @@
+
+<nav id="nav-cabecera">
+  <div id="arriba">
+    <div>
+      <h2>Panel Administración PetAdop</h2>
+    </div>
+    <div id="user">
+      <img src="../../../../assets/images/hueso-removebg-preview.png" alt="">
+      <p>{{usuarioLogin.nombre}}</p>
+      <p><a (click)="onLogOut()" class="logout">LogOut</a></p>
+    </div>
+  </div>
+  <div id="opciones-nav-admin">
+
+  </div>
+  <button (click)="gestionMascotas()">Mascotas</button>
+  <button (click)="gestionSolicitudes()">Solicitudes</button>
+  <button (click)="gestionComentarios()">Comentarios</button>
+</nav>
