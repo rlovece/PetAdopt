@@ -7,7 +7,7 @@
       "Sexo": "F",
       "foto": "https://cdn.pixabay.com/photo/2016/02/26/16/32/bulldog-1224267_1280.jpg",
       "tamanio": "Mediano",
-      "edad": 6,
+      "nacimiento": "01/08/2017",
       "caracteristicas": "Castrada, vacunas al día, Sociable, tranquila, le gustan los niños",
       "estado": "Adoptado",
       "idAdminCarga": 1
@@ -19,7 +19,7 @@
       "Sexo": "M",
       "foto": "https://cdn.pixabay.com/photo/2018/03/27/17/25/cat-3266673_1280.jpg",
       "tamanio": "Pequeño",
-      "edad": 0,
+      "nacimiento": "01/08/2022",
       "caracteristicas": "6 meses, come solo",
       "estado": "En adopcion",
       "idAdminCarga": 1
@@ -31,7 +31,7 @@
       "sexo": "F",
       "foto": "https://cdn.pixabay.com/photo/2016/03/28/10/05/kitten-1285341_640.jpg",
       "tamanio": "Pequeño",
-      "edad": 2,
+      "nacimiento": "01/08/2021",
       "caracteristicas": "Juguetona, usa las piedritas",
       "estado": "En adopcion",
       "idAdminCarga": 1
@@ -43,7 +43,7 @@
       "sexo": "M",
       "foto": "https://cdn.pixabay.com/photo/2020/11/12/13/44/dog-5735582_1280.jpg",
       "tamanio": "Grande",
-      "edad": 10,
+      "nacimiento": "01/08/2013",
       "caracteristicas": "Cariñoso, se lleva bien con los niños",
       "estado": "En adopcion",
       "idAdminCarga": 1
@@ -55,7 +55,7 @@
       "sexo": "F",
       "foto": "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg",
       "tamanio": "Grande",
-      "edad": 0,
+      "nacimiento": "01/05/2023",
       "caracteristicas": "Cariñosa",
       "estado": "En adopcion",
       "idAdminCarga": 2
@@ -67,10 +67,20 @@
       "sexo": "F",
       "foto": "https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg",
       "tamanio": "Pequeño",
-      "edad": 6,
+      "nacimiento": "01/08/2020",
       "caracteristicas": "Compañera, muy educada",
       "estado": "En adopcion",
       "idAdminCarga": 1
+    },
+    {
+      "nombre": "Tom",
+      "tipo": "Gato",
+      "sexo": "M",
+      "foto": "https://cdn.pixabay.com/photo/2015/11/16/22/14/cat-1046544_640.jpg",
+      "tamanio": "Mediano",
+      "nacimiento": "2020-01-01",
+      "caracteristicas": "Mimoso, castrado",
+      "id": 7
     }
   ],
   "usuario": [
@@ -112,7 +122,7 @@
       "comentarios": "Se encuetra en buen estado",
       "estado": "aprobada",
       "fechaAdopción": "15/10/23",
-      "foto" : "https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_1280.jpg"
+      "foto": "https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_1280.jpg"
     }
   ],
   "comentarios": [

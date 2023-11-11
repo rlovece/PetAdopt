@@ -1,3 +1,4 @@
+
 .side-menu{
   position: fixed;
   top: 0;
@@ -102,7 +103,7 @@ button{
   .hide-mobile {
     display: block;
   }
- 
+
 }
 
 /* Large and up */
