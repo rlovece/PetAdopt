@@ -9,6 +9,10 @@ import { Mascota } from 'src/app/core/models/Models/mascota';
 export class MascotaComponent {
 
   @Input() inputMascota: Mascota = new Mascota();
+  mostrarPanelSolicitar: boolean = false;
 
+  solicitarMascota() {
+    this.mostrarPanelSolicitar = !this.mostrarPanelSolicitar;
+  }
 
 }

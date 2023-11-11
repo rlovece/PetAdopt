@@ -8,6 +8,7 @@ import { MascotaComponent } from './components/mascota/mascota.component';
 import { ListaMascotasComponent } from './components/lista-mascotas/lista-mascotas.component';
 import { AddMascotaComponent } from './components/add-mascota/add-mascota.component';
 import { EditMascotaComponent } from './components/edit-mascota/edit-mascota.component';
+import { SolicitarAdopcionComponent } from './components/solicitar-adopcion/solicitar-adopcion.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { EditMascotaComponent } from './components/edit-mascota/edit-mascota.com
     ListaMascotasComponent,
     AddMascotaComponent,
     EditMascotaComponent,
+    SolicitarAdopcionComponent,
   ],
   imports: [
     CommonModule,

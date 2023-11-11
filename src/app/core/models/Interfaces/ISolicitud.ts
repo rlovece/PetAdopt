@@ -2,7 +2,7 @@ export interface ISolicitud{
   id: number | null;
   fecha: string;
   idAnimal: number ;
-  idUsuario: number | null;
+  idAdoptante: number | null;
   comentarios: string;
   estado: string;
   fechaAdopcion: string;
