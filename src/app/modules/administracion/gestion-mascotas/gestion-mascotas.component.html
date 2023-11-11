@@ -1,0 +1,24 @@
+<div class="botones">
+  <button class="boton" (click)="verPanelAddMascota()">Agregar Mascota</button>
+  <button class="boton" (click)="verPerros()">Perros</button>
+  <button class="boton" (click)="verGatos()">Gatos</button>
+  <button class="boton" (click)="verAdopcion()">En Adopción</button>
+  <button class="boton" (click)="quitarFiltros()">Quitar Filtros</button>
+</div>
+<div class="conteiner-mascotas">
+  <app-listados-mascotas
+    [inputMascotas]="listaFiltradaMascotas"
+    (mascotaToEdit)="editMascota($event)"
+  ></app-listados-mascotas>
+</div>
+<div class="add-mascota" [class.active]="mostrarPanelAddMascota">
+  <div *ngIf="mostrarPanelAddMascota">
+    <button (click)="verPanelAddMascota()" class="boton">Cerrar</button>
+    <app-add-mascota (EmitAddMascota)="onAgregarMascota($event)"></app-add-mascota>
+  </div>
+</div>
+
+  <div *ngIf="mascotaSeleccionadaParaEdicion" class="edit-mascota" [class.active]="mostrarPanelEditMascota">
+    <button (click)="verPanelEditMascota()" class="boton">Cerrar</button>
+    <app-edit-mascota [mascota]="mascotaSeleccionadaParaEdicion"></app-edit-mascota>
+  </div>

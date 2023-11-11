@@ -1,1 +1,33 @@
-<p>edit-mascota works!</p>
+<div class="conteiner" >
+  <h2>Agregar Mascota</h2>
+  <form *ngIf="mascotaForm" [formGroup]="mascotaForm" (ngSubmit)="editMascota()">
+    <div class="form-group">
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+    </div>
+    <div class="form-group">
+      <label for="foto">Foto</label>
+      <input type="url" id="foto" formControlName="foto" placeholder="URL de la Foto">
+    </div>
+    <div class="form-group">
+      <label for="tamanio">Tamaño</label>
+      <select id="tipo" name="tamanio" formControlName="tamanio" required>
+        <option value="Pequeño">Pequeño</option>
+        <option value="Mediano">Mediano</option>
+        <option value="Grande">Grande</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <select id="tipo" name="estado" formControlName="estado" required>
+        <option value="En adopcion">En adopcion</option>
+        <option value="Adoptado">Adoptado</option>
+        <option value="En transito">En transito</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="caracteristicas">Caracteristicas</label>
+      <input type="text" id="caracteristicas" formControlName="caracteristicas" placeholder="Más caracteristicas">
+    </div>
+    <button type="submit" class="boton">Guardar</button>
+  </form>
