@@ -6,13 +6,15 @@ import { PanelAdministracionComponent } from './pages/panel-administracion/panel
 import { ListadosMascotasComponent } from './listados-mascotas/listados-mascotas.component';
 import { MascotasModule } from '../mascotas/mascotas.module';
 import { NavAdminComponent } from './nav-admin/nav-admin.component';
+import { GestionMascotasComponent } from './gestion-mascotas/gestion-mascotas.component';
 
 
 @NgModule({
   declarations: [
     PanelAdministracionComponent,
     ListadosMascotasComponent,
-    NavAdminComponent
+    NavAdminComponent,
+    GestionMascotasComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { MascotasService } from '../../../../core/services/mascotas.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -12,6 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddMascotaComponent {
   mascotaForm: FormGroup;
+  @Output() EmitAddMascota = new EventEmitter<Mascota>();
 
   constructor(
     private fb: FormBuilder,
@@ -30,9 +31,11 @@ export class AddMascotaComponent {
 
   addMascota() {
     if (this.mascotaForm.valid) {
-      const newMascota: Mascota = this.mascotaForm.value;
+      let newMascota: Mascota = this.mascotaForm.value;
+      newMascota.estado = "En adopcion";
       this.mascotaService.create(newMascota).subscribe(
         (data) => {
+          this.EmitAddMascota.emit(data);
           alert(`${data.nombre} fue agregado en estado "En Adopcion"`);
         }
       );

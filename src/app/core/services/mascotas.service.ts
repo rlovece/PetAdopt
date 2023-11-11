@@ -40,7 +40,7 @@ export class MascotasService {
   }
 
   update(id: number, mascota: Partial<Mascota>){
-    return this.http.put<Mascota>(`${this.baseURL}/${id}`, mascota);
+    return this.http.put<Mascota>(`${this.baseURL}/mascotas/${id}`, mascota);
   }
 
   delete(id: number){

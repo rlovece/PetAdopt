@@ -19,8 +19,9 @@ export class ListadosMascotasComponent {
     private mascotaService: MascotasService
   ){}
 
-  editMascota(product: Mascota) {
-    this.mascotaToEdit.emit(product);
+  editMascota(mascota: Mascota) {
+    console.log("Mascota emit ", mascota);
+    this.mascotaToEdit.emit(mascota);
   }
 
   deleteMascota (id: number) {

@@ -2,19 +2,11 @@
 <div id="contenido-dinamico">
 
   <div *ngIf="opcionSeleccionada === 'mascotas'">
-    <div class="conteiner-mascotas">
-      <app-listados-mascotas [inputMascotas]="listaCompletaMascotas"></app-listados-mascotas>
-    </div>
-    <button class="boton" (click)="verPanelAddMascota()">Agregar Mascota</button>
-    <div class="add-mascota" [class.active]="mostrarPanelAddMascota">
-      <div *ngIf="mostrarPanelAddMascota">
-        <button (click)="verPanelAddMascota()">Cerrar</button>
-        <app-add-mascota></app-add-mascota>
-      </div>
-    </div>
+    <app-gestion-mascotas></app-gestion-mascotas>
   </div>
-  <div *ngIf="opcionSeleccionada === 'bienvenida'">
-    <h2>Bienvenido a su panel de administracion!</h2>
+  <div id="bienvenida" *ngIf="opcionSeleccionada === 'bienvenida'">
+    <h2>Bienvenid@</h2>
+    <p>¡Excelente trabajo!</p>
   </div>
 </div>
 

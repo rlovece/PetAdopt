@@ -26,7 +26,8 @@ import { EditMascotaComponent } from './components/edit-mascota/edit-mascota.com
     ImagenComponent,
     MascotaComponent,
     ListaMascotasComponent,
-    AddMascotaComponent
+    AddMascotaComponent,
+    EditMascotaComponent
   ]
 })
 export class MascotasModule { }
