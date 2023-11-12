@@ -1,6 +1,7 @@
 .grilla-mascotas{
   display: flex;
   flex-direction: column;
+  
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9em) {

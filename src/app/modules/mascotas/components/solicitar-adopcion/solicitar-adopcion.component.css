@@ -1,0 +1,81 @@
+.contenedor-solicitar-mascota{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0%;;
+  padding: 10%;
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2);
+}
+
+.form-group{
+  display: flex;
+  flex-direction:row;
+  margin-left:10%;
+  margin-bottom: 10px;
+}
+label{
+
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  color: #ffffff;
+  text-shadow: 3px 3px 10px rgba(247, 200, 134, 0.929);
+}
+
+input{
+  text-align: center;
+  border:rgb(249, 199, 138);
+  border-bottom: 1px solid rgb(247, 167, 109);
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  color: rgb(247, 139, 62);
+  text-shadow: 3px 3px 10px rgba(247, 200, 134, 0.929);
+  transition: all .3s ease;
+  height: 25px;
+  margin-left: 20%;
+}
+
+.boton{
+  margin-top: 10%;
+  background-color: rgba(255, 255, 255, 0.918);
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(252, 176, 122);
+  cursor: pointer;
+  font-weight: 100;
+  padding: 8px;
+  width: 100px;
+  transition: all .3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.boton:hover{
+  background-color: rgb(226, 233, 148);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transform: scale(1.1);
+}
+
+.error{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 30%;
+  padding:2%;
+  text-align: center;
+  background-color: rgba(247, 124, 124, 0.489);
+  color: red;
+  font-size: 14px;
+}

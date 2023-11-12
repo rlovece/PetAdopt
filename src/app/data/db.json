@@ -135,13 +135,7 @@
       "id": 1,
       "fecha": "12/10/23",
       "idAnimal": 1,
-      "adoptante": {
-        "nombre": "Camila",
-        "apellido": "Alvarez",
-        "dni": "32145145",
-        "domicilio": "Catamarca 2154",
-        "celular": "2234561456"
-      },
+      "idAdoptante": 1,
       "comentarios": "Camila adopto a Pelusita hace ya un año! Todos los meses nos envia fotos con ella, nos cuenta que su momento favorito del dia es por la tarde cuando salen de pase juntas",
       "estado": "aprobada",
       "fechaAdopción": "15/10/23",
@@ -151,26 +145,40 @@
       "id": 2,
       "fecha": "20/10/23",
       "idAnimal": 2,
-      "adoptante": {
-        "nombre": "Clara",
-        "apellido": "Alvarez",
-        "dni": "32145145",
-        "domicilio": "Catamarca 2154",
-        "celular": "2234561456"
-      },
+      "idAdoptante": 2,
       "comentarios": "Él estaba muy asustado cuando llegó, ya tenia 2 añitos en la calle. Se recuperó y encontró un hogar con Laura y Esteban que lo incluyeron en su familia",
       "estado": "aprobada",
       "fechaAdopción": "30/10/23",
       "foto": "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg"
     }
   ],
-  "comentarios": [
+  "adoptantes": [
     {
       "id": 1,
-      "idUsuario": 2,
-      "puntaje": 5,
-      "fecha": "20/10/23",
-      "comentario": "Muy amables, me encanta como se preocupan por los animales.💚Gracias!💚"
+      "nombre": "Camila",
+      "apellido": "Alvarez",
+      "dni": "32145145",
+      "domicilio": "Catamarca 2154",
+      "telefono": "2234561456",
+      "email": "camila@gmail.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Clara",
+      "apellido": "Alvarez",
+      "dni": "32145145",
+      "domicilio": "Catamarca 2154",
+      "telefono": "2234561456",
+      "email": "clara@gmail.com"
+    },
+    {
+      "dni": "38441203",
+      "nombre": "Oriana Dafne",
+      "apellido": "Lucero",
+      "domicilio": "Italia 2985",
+      "telefono": "+542235578638",
+      "email": "dafneluceroaltamirano@gmail.com",
+      "id": 3
     }
   ]
 }

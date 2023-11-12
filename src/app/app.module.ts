@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { LandingModule } from './modules/landing/landing.module';
 import { SharesModule } from './shares/shares.module';
-import { AuthModule } from './modules/auth/auth.module';
-import { ListadosMascotasComponent } from './modules/administracion/listados-mascotas/listados-mascotas.component';
-import { AdministracionModule } from './modules/administracion/administracion.module';
+import { AuthModule } from './modules/auth/auth.module';import { AdministracionModule } from './modules/administracion/administracion.module';
 import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
     LandingModule,
     AuthModule,
     SharesModule,
-    AdministracionModule
+    AdministracionModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

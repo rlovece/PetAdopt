@@ -4,6 +4,12 @@
   <p>F. Nac: {{inputMascota.nacimiento}}</p>
   <p>Sexo: {{inputMascota.sexo}}, Tamaño: {{inputMascota.tamanio}}</p>
   <p>{{inputMascota.caracteristicas}}</p>
-  <button>Quiero Adoptar</button>
+<button class="botonSolicitar" (click)="solicitarMascota()">Quiero adoptar!</button>
+    <div class="solicitarMascota" [class.active]="mostrarPanelSolicitar">
+      <div *ngIf="mostrarPanelSolicitar">
+        <button class="cerrar" (click)="solicitarMascota()">X</button>
+        <app-solicitar-adopcion></app-solicitar-adopcion>
+      </div>
+    </div>
 </div>
 
