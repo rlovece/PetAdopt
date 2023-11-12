@@ -4,7 +4,9 @@
     <div class="form-group">
       <label for="dni">DNI:       </label>
       <input type="text" id="dni" formControlName="dni" placeholder="DNI">
-      <span class="error" *ngIf="formulario.controls['dni'].getError('required') && formulario.touched">El nombre es requerido</span>
+      <span class="error" *ngIf="formulario.controls['dni'].getError('required') && formulario.touched">El DNI es requerido</span>
+      <span class="error" *ngIf="formulario.controls['dni'].getError('minlength') && formulario.touched">El DNI debe tener al menos 6 digitos</span>
+
     </div>
     <div class="form-group">
       <label for="nombre">Nombre:    </label>
@@ -25,11 +27,14 @@
       <label for="telefono">Telefono:  </label>
       <input type="text" id="telefono" formControlName="telefono" placeholder="Telefono">
       <span class="error" *ngIf="formulario.controls['telefono'].getError('required') && formulario.touched">El telefono es requerido</span>
+      <span class="error" *ngIf="formulario.controls['telefono'].getError('minlength') && formulario.touched">El telefono debe tener al menos 8 digitos</span>
+
     </div>
     <div class="form-group">
       <label for="email">Mail:        </label>
       <input type="text" id="email" formControlName="email" placeholder="Email">
       <span class="error" *ngIf="formulario.controls['email'].getError('required') && formulario.touched">El email es requerido</span>
+      <span class="error" *ngIf="formulario.controls['email'].getError('pattern')&& formulario.touched">El formato de email no es valido</span>
     </div>
     <button class="boton" type="submit" (click)="addSolicitud()">Solicitar</button>
   </form>

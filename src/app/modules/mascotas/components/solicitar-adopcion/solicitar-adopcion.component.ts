@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiSolicitudesService } from 'src/app/core/api-solicitudes.service';
 import { Adoptante } from 'src/app/core/models/Models/adoptante';
@@ -13,22 +13,20 @@ export class SolicitarAdopcionComponent {
 
   constructor(private fb: FormBuilder, private solicitudService: ApiSolicitudesService) { }
 
-  private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+  @Input() idAnimal: number = 0;
 
   solicitud: Solicitud = new Solicitud();
   adoptantes: Adoptante[] = [];
-  fechaActual: string = '';
-  nuevoAdoptante: Adoptante = new Adoptante();
 
   formulario: FormGroup = this.fb.group({
     dni:  ['', [Validators.required, Validators.minLength(6)]],
     nombre: ['', [Validators.required]],
     apellido: ['', [Validators.required]],
     domicilio:  ['', [Validators.required, Validators.minLength(6)]],
-    telefono:  ['', [Validators.required, Validators.minLength(6)]],
-    email: ['', [Validators.required],Validators.pattern(this.emailPattern)],
-  })
+    telefono:  ['', [Validators.required, Validators.minLength(8)]],
+    email: ['', [Validators.required,Validators.pattern(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)]],
+  });
 
   getDNIAdoptante(dni :string): boolean {
     this.solicitudService.getAdoptantes().subscribe({
@@ -51,9 +49,10 @@ export class SolicitarAdopcionComponent {
 
   agregarSolicitud() {
 
-    this.solicitud.idAnimal = 3;
+    let new_Date: Date = new Date();
+    this.solicitud.idAnimal = this.idAnimal;
     this.solicitud.estado = 'pendiente';
-    this.solicitud.fecha = '20/30/2323';
+    this.solicitud.fecha = new_Date.toLocaleString();
 
       this.solicitudService.addSolictud(this.solicitud).subscribe({
         next: (data) => {

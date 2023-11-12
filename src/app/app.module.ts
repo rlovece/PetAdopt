@@ -24,7 +24,6 @@ import { CommonModule } from '@angular/common';
     AuthModule,
     SharesModule,
     AdministracionModule,
-    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
