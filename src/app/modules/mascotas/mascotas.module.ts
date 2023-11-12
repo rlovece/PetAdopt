@@ -10,6 +10,7 @@ import { AddMascotaComponent } from './components/add-mascota/add-mascota.compon
 import { EditMascotaComponent } from './components/edit-mascota/edit-mascota.component';
 import { SolicitarAdopcionComponent } from './components/solicitar-adopcion/solicitar-adopcion.component';
 
+
 @NgModule({
   declarations: [
     ImagenComponent,

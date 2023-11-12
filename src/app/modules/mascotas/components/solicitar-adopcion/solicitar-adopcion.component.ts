@@ -18,6 +18,8 @@ export class SolicitarAdopcionComponent {
 
   solicitud: Solicitud = new Solicitud();
   adoptantes: Adoptante[] = [];
+  fechaActual: string = '';
+  nuevoAdoptante: Adoptante = new Adoptante();
 
   formulario: FormGroup = this.fb.group({
     dni:  ['', [Validators.required, Validators.minLength(6)]],
@@ -28,32 +30,30 @@ export class SolicitarAdopcionComponent {
     email: ['', [Validators.required],Validators.pattern(this.emailPattern)],
   })
 
-  addSolicitud() {
-    if (this.formulario.invalid){
-      alert('Por favor, completa todos los campos obligatorios.');
-      return;
-    }
-
-    if(this.verificarAdoptante(this.formulario.controls['dni'].value)){
-      this.agregarSolicitud();
-    }else{
-      this.solicitudService.addAdoptante(this.formulario.value).subscribe({
-        next: (data) => {
-          alert('Adoptante agregado con éxito.');
-          this.agregarSolicitud();
-        },
-        error: (e) => console.error(e),
-      });
-
+  getDNIAdoptante(dni :string): boolean {
+    this.solicitudService.getAdoptantes().subscribe({
+      next: (data) => {
+        this.adoptantes = data;
+        console.log(this.adoptantes);
+        for(let a of this.adoptantes){
+          console.log(a.dni);
+          if(a.dni === dni){
+            return true;
+          }
+        }
+        return false;
+      },
+      error: (e) => console.error(e),
+    });
+    return false;
   }
-  }
+
+
   agregarSolicitud() {
 
-    this.solicitud.id = 3;
     this.solicitud.idAnimal = 3;
-    this.solicitud.idAdoptante = 3;
     this.solicitud.estado = 'pendiente';
-    this.solicitud.fecha = '';
+    this.solicitud.fecha = '20/30/2323';
 
       this.solicitudService.addSolictud(this.solicitud).subscribe({
         next: (data) => {
@@ -63,25 +63,32 @@ export class SolicitarAdopcionComponent {
       });
   }
 
-  getAllAdoptantes() {
-    this.solicitudService.getAdoptantes().subscribe({
-      next: (data) => {
-        this.adoptantes = data;
-      },
-      error: (e) => console.error(e),
-    });
-  }
 
-  verificarAdoptante(dni: string): boolean {
 
-    
-    if(this.adoptantes.filter((m) => m.dni === dni)){
-      console.log(this.adoptantes);
-      return true;
+
+  addSolicitud() {
+    if (this.formulario.invalid){
+      alert('Por favor, completa todos los campos obligatorios.');
+      return;
     }
 
-    else{   return false;}
+    console.log((this.getDNIAdoptante(this.formulario.value.dni)));
+    if(this.getDNIAdoptante(this.formulario.value.dni)){
+      console.log('entro');
+      this.agregarSolicitud();
+    }else{
+      this.solicitudService.addAdoptante(this.formulario.value).subscribe({
+        next: (data) => {
+          alert('Adoptante agregado con éxito.');
+          this.solicitud.idAdoptante = data.id;
+          this.agregarSolicitud();
+        },
+        error: (e) => console.error(e),
+      });
+
   }
+  }
+
 }
 
 

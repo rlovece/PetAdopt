@@ -4,8 +4,8 @@ body{
   flex-direction: column;
   text-align: center;
   margin: 0%;
-  background: rgb(251,255,165);
-  background: linear-gradient(0deg, rgba(251,255,165,1) 35%, rgba(255,224,81,1) 100%);
+  background: #fbffa5;
+  background: linear-gradient(0deg, rgba(251,255,165,1) 35%, #ffe051 100%);
 }
 
 

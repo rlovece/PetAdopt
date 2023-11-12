@@ -1,0 +1,48 @@
+.tarjeta-mascota{
+  padding: 10%;
+}
+
+.solicitarMascota {
+  height: 100%;
+  position: fixed;
+  top: 10px;
+  left: 60%;
+  bottom: 0;
+  right: 0;
+  background: rgb(252,220,122);
+background: radial-gradient(circle, rgba(252,220,122,1) 0%, rgba(252,191,122,1) 100%);
+  border-radius: 20px;
+  transition: all ease-out .5s;
+  transform: translateX(100%);
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+
+.cerrar, .botonSolicitar{
+  background-color: rgba(255, 255, 255, 0.918);
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(252, 176, 122);
+  cursor: pointer;
+  font-weight: 100;
+  padding: 8px;
+  transition: all .3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.cerrar:hover, .botonSolicitar:hover{
+  background-color: rgb(226, 233, 148);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transform: scale(1.1);
+}
+
+.cerrar{
+  height: 40px;
+  width: 40px;
+}

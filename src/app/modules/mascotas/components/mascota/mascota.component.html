@@ -7,7 +7,7 @@
 <button class="botonSolicitar" (click)="solicitarMascota()">Quiero adoptar!</button>
     <div class="solicitarMascota" [class.active]="mostrarPanelSolicitar">
       <div *ngIf="mostrarPanelSolicitar">
-        <button (click)="solicitarMascota()">Cerrar</button>
+        <button class="cerrar" (click)="solicitarMascota()">X</button>
         <app-solicitar-adopcion></app-solicitar-adopcion>
       </div>
     </div>

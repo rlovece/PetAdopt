@@ -147,6 +147,15 @@
       "domicilio": "Catamarca 2154",
       "telefono": "2234561456",
       "email": "clara@gmail.com"
+    },
+    {
+      "dni": "38441203",
+      "nombre": "Oriana Dafne",
+      "apellido": "Lucero",
+      "domicilio": "Italia 2985",
+      "telefono": "+542235578638",
+      "email": "dafneluceroaltamirano@gmail.com",
+      "id": 3
     }
   ]
 }
