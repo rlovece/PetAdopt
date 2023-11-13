@@ -3,9 +3,12 @@
   <div class="container">
       <div class="rectangulo">
           <div class="textcontent">
+            <div class="inicio">
+              <img src="../../../assets/images/enCompu.jpg" alt="">
             <p class="title">Inicio de sesion para adminitradores</p>
+            </div>
             <p>Para ver todas las mascotas en adopcion volver a la pagina anterior</p>
-            <button class="botonR">Regresar</button>
+            <button class="botonR" (click)="volverHome()">Regresar</button>
           </div>
         </div>
       <div class="cuadradoLog">
@@ -14,14 +17,14 @@
         <form [formGroup]= "formulario">
           <div class="form-group">
             <label for="email">Email: </label>
-            <input type="text" id="email" formControlName="email">
+            <input type="text" id="email" formControlName="email" placeholder="E-mail">
             <span class="error" *ngIf="formulario.controls['email'].getError('required') && formulario.touched">El email es obligatorio</span>
             <span class="error" *ngIf="formulario.controls['email'].getError('pattern') && formulario.touched"> Ingrese un email valido</span>
 
           </div>
           <div class="form-group">
             <label for="contrasenia">Contraseña: </label>
-            <input type="password" id="contrasenia" formControlName="contrasenia">
+            <input type="password" id="contrasenia" formControlName="contrasenia" placeholder="Contraseña">
             <span class="error" *ngIf="formulario.controls['contrasenia'].getError('required') && formulario.touched">La contraseña es obligatoria</span>
             <span class="error" *ngIf="formulario.controls['contrasenia'].getError('minlength')">Debe tener al menos 6 caracteres</span>
           </div>

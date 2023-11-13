@@ -17,4 +17,9 @@ export class MascotaComponent {
   }
 
 
+  addSolicitud(){
+    this.mostrarPanelSolicitar = false;
+  }
+
+
 }
