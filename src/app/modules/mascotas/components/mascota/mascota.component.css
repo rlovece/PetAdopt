@@ -1,5 +1,14 @@
 .tarjeta-mascota{
   padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.8em;
+  margin: 0.4em;
+  height: 90%;
+  background-color: #e7fad5;
+  border-radius: 20px;
 }
 
 .solicitarMascota {
@@ -31,11 +40,39 @@ background: radial-gradient(circle, rgba(252,220,122,1) 0%, rgba(252,191,122,1) 
   cursor: pointer;
   font-weight: 100;
   padding: 8px;
+}
+
+
+h2{
+  text-align: center;
+  font-family: Arial Black;
+  font-weight: bold;
+  font-size: 20px;
+  color: #f77c7c7d;
+  text-shadow: 5px 3px 10px rgba(248, 144, 24, 0.744);
+}
+
+p{
+  color: #4c3625;
+}
+
+.boton{
+  background-color: rgba(255, 255, 255, 0.918);
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fcb07a;
+  cursor: pointer;
+  font-weight: 100;
+  padding: 8px;
+  width: 100px;
   transition: all .3s ease;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.cerrar:hover, .botonSolicitar:hover{
+
+.cerrar:hover, .botonSolicitar:hover, .boton:hover{
   background-color: rgb(226, 233, 148);
   color: rgb(255, 255, 255);
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -45,4 +82,16 @@ background: radial-gradient(circle, rgba(252,220,122,1) 0%, rgba(252,191,122,1) 
 .cerrar{
   height: 40px;
   width: 40px;
+}
+
+.tarjeta-mascota-admin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8em;
+  margin: 0.4em;
+}
+
+#img-admin{
+  width: 60%;
 }

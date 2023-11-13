@@ -7,7 +7,7 @@
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
   .grilla-mascotas{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
   }
 }
@@ -15,7 +15,7 @@
 @media screen and (min-width: 64em) {
   .grilla-mascotas{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
   }
 }
