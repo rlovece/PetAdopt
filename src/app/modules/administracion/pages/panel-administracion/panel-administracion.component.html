@@ -4,6 +4,9 @@
   <div *ngIf="opcionSeleccionada === 'mascotas'">
     <app-gestion-mascotas></app-gestion-mascotas>
   </div>
+  <div *ngIf="opcionSeleccionada === 'solicitudes'">
+    <app-gestion-solicitudes></app-gestion-solicitudes>
+  </div>
   <div id="bienvenida" *ngIf="opcionSeleccionada === 'bienvenida'">
     <h2>Bienvenid@</h2>
     <p>¡Excelente trabajo!</p>
