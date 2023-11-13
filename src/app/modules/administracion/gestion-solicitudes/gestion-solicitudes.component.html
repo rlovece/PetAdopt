@@ -1,1 +1,12 @@
-<p>gestion-solicitudes works!</p>
+<div class="botones">
+   <button class="boton" >Perros</button>
+  <button class="boton" >Gatos</button>
+  <button class="boton" >En Adopción</button>
+  <button class="boton">Quitar Filtros</button>
+</div>
+
+<div class="conteiner-mascotas">
+  <app-listado-solicitudes
+    [inputSolicitudes]="listaFiltradaSolicitudes"
+  ></app-listado-solicitudes>
+</div>

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Mascota } from 'src/app/core/models/Models/mascota';
-import { MascotasService } from 'src/app/core/services/mascotas.service';
 
 @Component({
   selector: 'app-listados-mascotas',
@@ -16,9 +15,7 @@ export class ListadosMascotasComponent {
   vistaDetallaMascota = false;
   mascotaEnVista: Mascota = new Mascota;
 
-  constructor(
-    private mascotaService: MascotasService
-  ){}
+  constructor(){}
 
   editMascota(mascota: Mascota) {
     this.mascotaToEdit.emit(mascota);
@@ -35,15 +32,6 @@ export class ListadosMascotasComponent {
   mostrarDetalleMascota(mascota: Mascota) {
     this.cambiarEstadoVistaDetalle();
     this.mascotaToView.emit(mascota);
-    // if (mascota.id !== null) {
-    //   this.mascotaService.getById(mascota.id)
-    //   .subscribe({
-    //     next: (data) => {
-    //       this.mascotaEnVista = data;
-    //     },
-    //     error: (e) => console.log(e)
-    //   });
-    // }
   }
 
 }

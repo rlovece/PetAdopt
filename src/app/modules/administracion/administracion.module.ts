@@ -8,23 +8,25 @@ import { MascotasModule } from '../mascotas/mascotas.module';
 import { NavAdminComponent } from './nav-admin/nav-admin.component';
 import { GestionMascotasComponent } from './gestion-mascotas/gestion-mascotas.component';
 import { GestionSolicitudesComponent } from './gestion-solicitudes/gestion-solicitudes.component';
+import { SolicitudesModule } from "../solicitudes/solicitudes.module";
 
 
 @NgModule({
-  declarations: [
-    PanelAdministracionComponent,
-    ListadosMascotasComponent,
-    NavAdminComponent,
-    GestionMascotasComponent,
-    GestionSolicitudesComponent
-  ],
-  imports: [
-    CommonModule,
-    AdministracionRoutingModule,
-    MascotasModule
-  ],
-  exports: [
-    ListadosMascotasComponent,
-  ]
+    declarations: [
+        PanelAdministracionComponent,
+        ListadosMascotasComponent,
+        NavAdminComponent,
+        GestionMascotasComponent,
+        GestionSolicitudesComponent
+    ],
+    exports: [
+        ListadosMascotasComponent,
+    ],
+    imports: [
+        CommonModule,
+        AdministracionRoutingModule,
+        MascotasModule,
+        SolicitudesModule
+    ]
 })
 export class AdministracionModule { }
