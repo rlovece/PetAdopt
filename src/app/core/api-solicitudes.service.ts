@@ -32,7 +32,7 @@ export class ApiSolicitudesService {
   }
 
   getAdoptanteByDNI(dni: string): Observable<Adoptante>{
-    return this.http.get<Adoptante>(`${this.baseURL}/adoptantes/${dni}`);
+    return this.http.get<Adoptante>(`${this.baseURL}/adoptantes?dni=${dni}`);
   }
 
   addAdoptante(adoptante: Adoptante): Observable<Adoptante>{

@@ -21,7 +21,7 @@ export class UltimasAdopcionesComponent implements OnInit{
     this.getSolicitudesPorEstado();
   }
 
-  //agregar get ADOPCION O BORRAR ESE MODELO AL PEDO
+  //agregar get ADOPCION O BORRAR ESE MODELO 
 
   getSolicitudesPorEstado() {
     this.solicitudesService.getSolicitudesPorEstado('aprobada').subscribe({

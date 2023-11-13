@@ -6,6 +6,7 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(90deg, rgba(233,148,151,1) 0%, rgba(230,129,132,1) 50%, rgba(164,74,149,1) 100%);
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -32,6 +33,7 @@
   height: 1px;
   background: linear-gradient(90deg, rgba(233,148,151,1) 0%, rgba(230,129,132,1) 50%, rgba(164,74,149,1) 100%);
   box-shadow: 0px 2px 5px rgba(97, 97, 97, 0.9);
+  border-radius: 5px;
 }
 
 .hide-mobile {

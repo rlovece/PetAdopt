@@ -16,14 +16,13 @@ export class ContactoComponent {
 
   formulario: FormGroup = this.fb.group({
     nombre: ['', [Validators.required]],
-    email: ['', [Validators.required],Validators.pattern(this.emailPattern)],
-    telefono:  ['', [Validators.required, Validators.minLength(6)]],
+    email: ['', [Validators.required,Validators.pattern(this.emailPattern)]],
+    telefono:  ['', [Validators.required, Validators.minLength(8)]],
     mensaje:  ['', [Validators.required, Validators.minLength(6)]],
   })
 
-  guardar() {
-    console.log(this.formulario.value);
-    this.router.navigate(['/home']);
+  volverHome() {
+    this.router.navigate(['/']);
   }
 
 }

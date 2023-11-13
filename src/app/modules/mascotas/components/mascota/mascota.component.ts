@@ -15,4 +15,8 @@ export class MascotaComponent {
     this.mostrarPanelSolicitar = !this.mostrarPanelSolicitar;
   }
 
+  addSolicitud(){
+    this.mostrarPanelSolicitar = false;
+  }
+
 }

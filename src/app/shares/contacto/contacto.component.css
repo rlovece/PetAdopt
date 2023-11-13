@@ -14,7 +14,7 @@
 
 .container{
   align-items: center;
-  background: rgba(156, 31, 185, 0.699);
+  background: rgba(157, 31, 185, 0.315);
   width: 70%;
   height: 60%;
   position: absolute;
@@ -25,6 +25,21 @@
   transform: translate(-50%, -50%);
   display: inline-flex;
 }
+.textcontent{
+  display: flex;
+  flex-direction: column;
+  padding: 0%;
+}
+
+img{
+  margin-left: 20%;
+  width: 60%;
+  height: 60%;
+  margin-top:3%;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
 .rectangulo{
   padding: 5%;
   text-align: rigth;
@@ -36,14 +51,15 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   border-radius: 20px;
   height: 140%;
-  width: 50%;
+  width: 80%;
   margin-top:5%;
   text-align: center;
+  margin-right: 3%;
 }
 
 .title{
   text-align: center;
-  line-height: 50px;
+  line-height: 20px;
 font-weight: bold;
 font-size: 30px;
 color: #fff;

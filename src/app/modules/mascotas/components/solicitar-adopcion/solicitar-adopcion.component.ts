@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiSolicitudesService } from 'src/app/core/api-solicitudes.service';
 import { Adoptante } from 'src/app/core/models/Models/adoptante';
@@ -15,6 +15,7 @@ export class SolicitarAdopcionComponent {
 
 
   @Input() idAnimal: number = 0;
+  @Output() EmitAddSolicitud = new EventEmitter();
 
   solicitud: Solicitud = new Solicitud();
   adoptantes: Adoptante[] = [];
@@ -28,31 +29,34 @@ export class SolicitarAdopcionComponent {
     email: ['', [Validators.required,Validators.pattern(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)]],
   });
 
-  getDNIAdoptante(dni :string): boolean {
+  ngOnInit() {
+    this.getAdoptantes();
+  }
+
+  //agregar get ADOPCION O BORRAR ESE MODELO
+
+  getAdoptantes() {
     this.solicitudService.getAdoptantes().subscribe({
       next: (data) => {
         this.adoptantes = data;
-        console.log(this.adoptantes);
-        for(let a of this.adoptantes){
-          console.log(a.dni);
-          if(a.dni === dni){
-            return true;
-          }
-        }
-        return false;
       },
-      error: (e) => console.error(e),
+      error: (e) => console.log(e),
     });
-    return false;
+  }
+
+  getDNIAdoptante(dni: string): Adoptante {
+    console.log(this.adoptantes);
+    return this.adoptantes.filter((m) => m.dni === dni)[0];
   }
 
 
-  agregarSolicitud() {
+  agregarSolicitud(dni: string) {
 
     let new_Date: Date = new Date();
     this.solicitud.idAnimal = this.idAnimal;
     this.solicitud.estado = 'pendiente';
     this.solicitud.fecha = new_Date.toLocaleString();
+    this.solicitud.idAdoptante = this.getDNIAdoptante(dni).id;
 
       this.solicitudService.addSolictud(this.solicitud).subscribe({
         next: (data) => {
@@ -71,21 +75,20 @@ export class SolicitarAdopcionComponent {
       return;
     }
 
-    console.log((this.getDNIAdoptante(this.formulario.value.dni)));
     if(this.getDNIAdoptante(this.formulario.value.dni)){
       console.log('entro');
-      this.agregarSolicitud();
+      this.agregarSolicitud(this.formulario.value.dni);
     }else{
       this.solicitudService.addAdoptante(this.formulario.value).subscribe({
         next: (data) => {
           alert('Adoptante agregado con éxito.');
-          this.solicitud.idAdoptante = data.id;
-          this.agregarSolicitud();
+          this.agregarSolicitud(this.formulario.value.dni);
+          this.EmitAddSolicitud.emit(data);
         },
         error: (e) => console.error(e),
       });
-
   }
+
   }
 
 }

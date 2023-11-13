@@ -3,27 +3,34 @@
   <div class="container">
       <div class="rectangulo">
           <div class="textcontent">
+            <img src="../../../assets/images/gatotelefono.jpg" alt="">
             <p class="title">¿Confundido?</p>
-            <p>Regresa a la pagina anterior si entraste por erro</p>
-            <button class="botonR">Home</button>
+            <p>Regresa a la pagina anterior si entraste por error</p>
+            <button class="botonR" (click)="volverHome()">Home</button>
           </div>
       </div>
       <div class="cuadradoLog">
 
         <h2>Contactanos!</h2>
-        <form  action="https://formsubmit.co/dafneluceroaltamirano@gmail.com" method="POST">
+        <form  action="https://formsubmit.co/dafneluceroaltamirano@gmail.com" method="POST" >
           <div class="form-group">
             <label for="nombre">Nombre: </label>
             <input type="name" id="nombre" name="nombre">  </div>
+            <span class="error" *ngIf="formulario.controls['nombre'].getError('required') && formulario.touched">El nombre es obligatorio</span>
           <div class="form-group">
             <label for="email">Email de contacto: </label>
             <input type="text" id="email" name="email">    </div>
-          <div class="form-group">
+            <span class="error" *ngIf="formulario.controls['email'].getError('required') && formulario.touched">El email es obligatorio</span>
+            <span class="error" *ngIf="formulario.controls['email'].getError('pattern') && formulario.touched"> Ingrese un email valido</span>
+            <div class="form-group">
             <label for="telefono">Telefono: </label>
             <input type="number" id="telefono" name="telefono"> </div>
-          <div class="form-group">
+            <span class="error" *ngIf="formulario.controls['telefono'].getError('required') && formulario.touched">El telefono es obligatorio</span>
+            <span class="error" *ngIf="formulario.controls['telefono'].getError('minlength') && formulario.touched">El telefono debe tener al menos 8 digitos</span>
+            <div class="form-group">
             <label for="consulta">Consulta: </label>
             <input type="string" id="consulta" name="consulta">      </div>
+            <span class="error" *ngIf="formulario.controls['consulta'].getError('required') && formulario.touched">La consulta es obligatoria</span>
           <div class="campo">
             <input class="boton" type="submit" value="Enviar">
           </div>

@@ -12,11 +12,8 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder,private apiService: ApiAuthService, private router: Router) { }
 
-  private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
   formulario: FormGroup = this.fb.group({
-    email: ['', [Validators.required],Validators.pattern(this.emailPattern)],
+    email: ['', [Validators.required,Validators.pattern(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)]],
     contrasenia:  ['', [Validators.required, Validators.minLength(6)]],
   })
 
@@ -27,6 +24,10 @@ export class LoginComponent {
       this.formulario.controls['email'].value,
       this.formulario.controls['contrasenia'].value)
 
+  }
+
+  volverHome() {
+    this.router.navigate(['/']);
   }
 
 

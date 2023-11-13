@@ -3,14 +3,15 @@
   flex-direction: column;
   background: rgb(255,224,81);
 background: linear-gradient(0deg, rgba(255,224,81,1) 25%, rgba(230,129,132,1) 100%);
-
+ border-radius: 5px;
+ margin-bottom: 1px;
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
   .grilla-mascotas{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+    grid-gap: 10px;
   }
 }
 
@@ -18,7 +19,7 @@ background: linear-gradient(0deg, rgba(255,224,81,1) 25%, rgba(230,129,132,1) 10
   .grilla-mascotas{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 15px;
+    grid-gap: 10px;
   }
 }
 

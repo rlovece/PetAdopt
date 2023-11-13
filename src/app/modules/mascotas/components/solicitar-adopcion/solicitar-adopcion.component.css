@@ -17,7 +17,7 @@ h2{
 
 .form-group{
   display: flex;
-  flex-direction:row;
+  flex-wrap: wrap;
   margin-left:10%;
   margin-bottom: 10px;
 }
@@ -38,6 +38,7 @@ input{
   border-bottom: 1px solid rgb(247, 167, 109);
   border-radius: 5px;
   outline: none;
+  width: 50%;
   font-size: 15px;
   color: rgb(247, 139, 62);
   text-shadow: 3px 3px 10px rgba(247, 200, 134, 0.929);
@@ -71,11 +72,15 @@ input{
 
 .error{
   display: flex;
-  flex-direction: row-reverse;
-  width: 30%;
-  padding:2%;
-  text-align: center;
+  flex-wrap: wrap;
+  width: 50%;
+  padding:1%;
+  margin-top: 0%;
+  text-align: right;
+  margin-left: 30%;
   background-color: rgba(247, 124, 124, 0.489);
-  color: red;
-  font-size: 14px;
+  color: rgba(255, 0, 0, 0.881);
+  font-size: 12px;
+  border:red 0.5px solid;
+  border-radius: 5px;
 }
