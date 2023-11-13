@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { ApiSolicitudesService } from 'src/app/core/api-solicitudes.service';
+import { Adoptante } from 'src/app/core/models/Models/adoptante';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
 import { MascotasService } from 'src/app/core/services/mascotas.service';
@@ -14,6 +15,7 @@ export class UltimasAdopcionesComponent implements OnInit{
 
   adopciones: Solicitud[] = [];
   mascotas: Mascota[] = [];
+  adoptantes: Adoptante[] = [];
 
   constructor(private solicitudesService: ApiSolicitudesService, private mascotasService: MascotasService) { }
 
@@ -21,13 +23,14 @@ export class UltimasAdopcionesComponent implements OnInit{
     this.getSolicitudesPorEstado();
   }
 
-  //agregar get ADOPCION O BORRAR ESE MODELO 
+  //agregar get ADOPCION O BORRAR ESE MODELO
 
   getSolicitudesPorEstado() {
     this.solicitudesService.getSolicitudesPorEstado('aprobada').subscribe({
       next: (data) => {
         this.adopciones = data;
         this.getAllMascotas();
+        this.getAllAdoptantes();
       },
       error: (e) => console.log(e),
     });
@@ -44,6 +47,19 @@ export class UltimasAdopcionesComponent implements OnInit{
 
   getNombreMascota(id: number): string {
     return this.mascotas.filter((m) => m.id === id)[0].nombre;
+  }
+
+  getAllAdoptantes() {
+    this.solicitudesService.getAdoptantes().subscribe({
+      next: (data) => {
+        this.adoptantes = data;
+      },
+      error: (e) => console.error(e),
+    });
+  }
+
+  getNombreAdoptante(id: number): string {
+    return this.adoptantes.filter((m) => m.id === id)[0].nombre;
   }
 
 }
