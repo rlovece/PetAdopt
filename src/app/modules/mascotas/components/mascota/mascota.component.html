@@ -1,9 +1,17 @@
-<div class="tarjeta-mascota">
+<div class="tarjeta-mascota" *ngIf="!isAdmin">
   <app-imagen [archivo]="inputMascota.foto"></app-imagen>
   <h2>{{inputMascota.nombre}}</h2>
   <p>F. Nac: {{inputMascota.nacimiento}}</p>
   <p>Sexo: {{inputMascota.sexo}}, Tamaño: {{inputMascota.tamanio}}</p>
   <p>{{inputMascota.caracteristicas}}</p>
-  <button>Quiero Adoptar</button>
+  <button class="boton">Quiero Adoptar</button>
+</div>
+
+<div class="tarjeta-mascota-admin" *ngIf="isAdmin">
+  <app-imagen id="img-admin" [archivo]="inputMascota.foto"></app-imagen>
+  <h2>{{inputMascota.nombre}}</h2>
+  <p>F. Nac: {{inputMascota.nacimiento}}, Estado {{inputMascota.estado}}</p>
+  <p>Sexo: {{inputMascota.sexo}}, Tamaño: {{inputMascota.tamanio}}</p>
+  <p>{{inputMascota.caracteristicas}}</p>
 </div>
 

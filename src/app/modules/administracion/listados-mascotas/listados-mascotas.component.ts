@@ -12,6 +12,7 @@ export class ListadosMascotasComponent {
   @Input() inputMascotas: Array<Mascota> = [];
   @Output() mascotaToEdit: EventEmitter<Mascota> = new EventEmitter();
   @Output() mascotaToDelete: EventEmitter<Mascota> = new EventEmitter();
+  @Output() mascotaToView: EventEmitter<Mascota> = new EventEmitter();
   vistaDetallaMascota = false;
   mascotaEnVista: Mascota = new Mascota;
 
@@ -33,15 +34,16 @@ export class ListadosMascotasComponent {
 
   mostrarDetalleMascota(mascota: Mascota) {
     this.cambiarEstadoVistaDetalle();
-    if (mascota.id !== null) {
-      this.mascotaService.getById(mascota.id)
-      .subscribe({
-        next: (data) => {
-          this.mascotaEnVista = data;
-        },
-        error: (e) => console.log(e)
-      });
-    }
+    this.mascotaToView.emit(mascota);
+    // if (mascota.id !== null) {
+    //   this.mascotaService.getById(mascota.id)
+    //   .subscribe({
+    //     next: (data) => {
+    //       this.mascotaEnVista = data;
+    //     },
+    //     error: (e) => console.log(e)
+    //   });
+    // }
   }
 
 }

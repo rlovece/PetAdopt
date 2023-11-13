@@ -9,6 +9,6 @@ import { Mascota } from 'src/app/core/models/Models/mascota';
 export class MascotaComponent {
 
   @Input() inputMascota: Mascota = new Mascota();
-
+  @Input() isAdmin: boolean = false;
 
 }

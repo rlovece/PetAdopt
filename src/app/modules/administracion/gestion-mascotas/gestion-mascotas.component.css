@@ -29,7 +29,7 @@
   transform: scale(1.1);
 }
 
-.add-mascota, .edit-mascota {
+.add-mascota, .edit-mascota, .view-mascota{
   position: fixed;
   top: 120px;
   left: 60%;
@@ -42,6 +42,10 @@
   &.active {
     transform: translateX(0);
   }
+}
+
+app-mascota{
+  width: 90%;
 }
 
 p{
