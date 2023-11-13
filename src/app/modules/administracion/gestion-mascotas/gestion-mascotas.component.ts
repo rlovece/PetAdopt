@@ -76,11 +76,25 @@ export class GestionMascotasComponent {
   }
 
   editMascota(mascota: Mascota){
-    console.log("Mascota recibida ", mascota);
+    this.mostrarPanelEditMascota = true;
     this.mascotaSeleccionadaParaEdicion = mascota;
   }
 
   deleteMascota(mascota: Mascota){
+    if (mascota.id){
+      this.mascotasService.delete(mascota.id)
+      .subscribe(
+        {
+          next: data => {
+            alert(`${mascota.nombre} fue eliminada`)
+            this.listaCompletaMascotas= this.listaCompletaMascotas.filter(m => m.id != mascota.id);
+            this.listaFiltradaMascotas = this.listaCompletaMascotas.slice();
+          },
+          error: e => console.log(e)
+        }
+      )
+    }
+
 
   }
 

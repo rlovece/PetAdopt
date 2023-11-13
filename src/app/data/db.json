@@ -61,18 +61,6 @@
       "idAdminCarga": 2
     },
     {
-      "id": 6,
-      "nombre": "Milu",
-      "tipo": "Perro",
-      "sexo": "F",
-      "foto": "https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg",
-      "tamanio": "Pequeño",
-      "nacimiento": "01/08/2020",
-      "caracteristicas": "Compañera, muy educada",
-      "estado": "En adopcion",
-      "idAdminCarga": 1
-    },
-    {
       "nombre": "Tom",
       "tipo": "Gato",
       "sexo": "M",

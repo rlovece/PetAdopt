@@ -11,7 +11,7 @@ export class ListadosMascotasComponent {
 
   @Input() inputMascotas: Array<Mascota> = [];
   @Output() mascotaToEdit: EventEmitter<Mascota> = new EventEmitter();
-  @Output() mascotaToDelete: EventEmitter<number> = new EventEmitter();
+  @Output() mascotaToDelete: EventEmitter<Mascota> = new EventEmitter();
   vistaDetallaMascota = false;
   mascotaEnVista: Mascota = new Mascota;
 
@@ -20,12 +20,11 @@ export class ListadosMascotasComponent {
   ){}
 
   editMascota(mascota: Mascota) {
-    console.log("Mascota emit ", mascota);
     this.mascotaToEdit.emit(mascota);
   }
 
-  deleteMascota (id: number) {
-    this.mascotaToDelete.emit(id);
+  deleteMascota (mascota: Mascota) {
+    this.mascotaToDelete.emit(mascota);
   }
 
   cambiarEstadoVistaDetalle() {

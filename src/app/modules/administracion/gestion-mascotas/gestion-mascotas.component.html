@@ -9,6 +9,7 @@
   <app-listados-mascotas
     [inputMascotas]="listaFiltradaMascotas"
     (mascotaToEdit)="editMascota($event)"
+    (mascotaToDelete)="deleteMascota($event)"
   ></app-listados-mascotas>
 </div>
 <div class="add-mascota" [class.active]="mostrarPanelAddMascota">
@@ -19,6 +20,9 @@
 </div>
 
   <div *ngIf="mascotaSeleccionadaParaEdicion" class="edit-mascota" [class.active]="mostrarPanelEditMascota">
-    <button (click)="verPanelEditMascota()" class="boton">Cerrar</button>
-    <app-edit-mascota [mascota]="mascotaSeleccionadaParaEdicion"></app-edit-mascota>
+    <div *ngIf="mostrarPanelEditMascota">
+      <button (click)="verPanelEditMascota()" class="boton">Cerrar</button>
+      <app-edit-mascota [mascota]="mascotaSeleccionadaParaEdicion"></app-edit-mascota>
+      <p>Guarde los cambios y luego pulse cerrar</p>
+    </div>
   </div>
