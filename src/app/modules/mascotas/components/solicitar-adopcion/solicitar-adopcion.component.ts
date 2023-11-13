@@ -14,7 +14,7 @@ export class SolicitarAdopcionComponent {
   constructor(private fb: FormBuilder, private solicitudService: ApiSolicitudesService) { }
 
 
-  @Input() idAnimal: number = 0;
+  @Input() idAnimal: number=0;
 
   solicitud: Solicitud = new Solicitud();
   adoptantes: Adoptante[] = [];

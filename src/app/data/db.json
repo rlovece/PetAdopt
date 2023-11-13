@@ -138,6 +138,16 @@
       "estado": "aprobada",
       "fechaAdopción": "30/10/23",
       "foto": "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg"
+    },
+    {
+      "id": 3,
+      "fecha": "13/11/2023, 11:42:05",
+      "idAdoptante": 4,
+      "estado": "pendiente",
+      "idAnimal": 4,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
     }
   ],
   "adoptantes": [
@@ -167,6 +177,15 @@
       "telefono": "+542235578638",
       "email": "dafneluceroaltamirano@gmail.com",
       "id": 3
+    },
+    {
+      "dni": "31421111",
+      "nombre": "Manuela",
+      "apellido": "Perez",
+      "domicilio": "Calle 1 213",
+      "telefono": "2234564123",
+      "email": "manu@gmail.com",
+      "id": 4
     }
   ]
 }

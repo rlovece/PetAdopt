@@ -7,6 +7,7 @@ import { ListadosMascotasComponent } from './listados-mascotas/listados-mascotas
 import { MascotasModule } from '../mascotas/mascotas.module';
 import { NavAdminComponent } from './nav-admin/nav-admin.component';
 import { GestionMascotasComponent } from './gestion-mascotas/gestion-mascotas.component';
+import { GestionSolicitudesComponent } from './gestion-solicitudes/gestion-solicitudes.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { GestionMascotasComponent } from './gestion-mascotas/gestion-mascotas.co
     PanelAdministracionComponent,
     ListadosMascotasComponent,
     NavAdminComponent,
-    GestionMascotasComponent
+    GestionMascotasComponent,
+    GestionSolicitudesComponent
   ],
   imports: [
     CommonModule,
