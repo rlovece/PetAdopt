@@ -8,5 +8,32 @@
 <div class="conteiner-mascotas">
   <app-listado-solicitudes
     [inputSolicitudes]="listaFiltradaSolicitudes"
+    [inputMascotas]="listaMascotas"
+    (solicitudToView)="verSolicitud($event)"
   ></app-listado-solicitudes>
+</div>
+
+<div class="detalle-solicitud" [class.active]="mostrarPanelViewSolicitud">
+  <div *ngIf="mostrarPanelViewSolicitud">
+    <button (click)="verDetalleSolicitud()" class="boton">Cerrar</button>
+    <div class="contenido-detalle-Solicitud">
+      <div id="solicitud-en-Detalle">
+        <h2>Solicitud n° {{solicitudSeleccionada.id}}</h2>
+        <p>Fecha: {{solicitudSeleccionada.fecha}}, Estado: {{solicitudSeleccionada.estado}}</p>
+        <p *ngIf="solicitudSeleccionada.comentarios != ''"
+            >Comentarios: {{solicitudSeleccionada.comentarios}}</p>
+        <app-imagen [archivo]="solicitudSeleccionada.foto"></app-imagen>
+        <p *ngIf="solicitudSeleccionada.fechaAdopcion != null">Adopcion: {{solicitudSeleccionada.fechaAdopcion}}</p>
+       </div>
+       <div id="mascota-en-Solicitud">
+         <app-mascota [inputMascota]="mascotaEnSolicitud" [isAdmin]=true></app-mascota>
+       </div>
+       <div id="adoptante-en-Solicitud">
+         <h2>Adoptante: {{adoptanteEnSolicitud.nombre}} {{adoptanteEnSolicitud.apellido}}</h2>
+         <p>Telefono: {{adoptanteEnSolicitud.telefono}}</p>
+         <p>Telefono: {{adoptanteEnSolicitud.email}}</p>
+       </div>
+    </div>
+
+  </div>
 </div>

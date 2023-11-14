@@ -29,10 +29,10 @@
   transform: scale(1.1);
 }
 
-.add-mascota, .edit-mascota, .view-mascota{
+.detalle-solicitud{
   position: fixed;
-  top: 120px;
-  left: 60%;
+  top: 0;
+  left: 0%;
   bottom: 0;
   right: 0;
   background: #F8FACB;

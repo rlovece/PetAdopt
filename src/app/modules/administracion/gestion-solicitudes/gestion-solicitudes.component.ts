@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { ApiSolicitudesService } from 'src/app/core/api-solicitudes.service';
+import { Adoptante } from 'src/app/core/models/Models/adoptante';
+import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
+import { MascotasService } from 'src/app/core/services/mascotas.service';
 
 @Component({
   selector: 'app-gestion-solicitudes',
@@ -10,17 +13,29 @@ import { Solicitud } from 'src/app/core/models/Models/solicitud';
 export class GestionSolicitudesComponent {
 
   listaCompletaSolicitudes: Solicitud[] = [];
+  listaMascotas: Mascota[] = [];
+  listaAdoptantes: Adoptante[] = [];
   listaFiltradaSolicitudes: Solicitud[] = [];
 
+  mostrarPanelViewSolicitud: boolean = false;
+
+  mascotaEnSolicitud: Mascota = new Mascota;
+  adoptanteEnSolicitud: Adoptante = new Adoptante;
+  mostrarPanelEditSolicitud: boolean = false;
+  solicitudSeleccionada: any;
+
   constructor(
-    private solicitudesService: ApiSolicitudesService
+    private solicitudesService: ApiSolicitudesService,
+    private mascotasService: MascotasService
   ){}
 
   ngOnInit(){
-    this.getAll();
+    this.getAllSolicitudes();
+    this.getAllMascotas();
+    this.getAllAdoptantes();
   }
 
-  getAll(){
+  getAllSolicitudes(){
     this.solicitudesService.getAllSolicitudes()
     .subscribe(
       {
@@ -32,27 +47,55 @@ export class GestionSolicitudesComponent {
       }
     )
   }
+
+  getAllMascotas(){
+    this.mascotasService.getAll()
+    .subscribe(
+      {
+        next: data => {
+          this.listaMascotas=data;
+        },
+        error: e => console.log(e)
+      }
+    )
+  }
+
+  getAllAdoptantes(){
+    this.solicitudesService.getAdoptantes()
+    .subscribe(
+      {
+        next: data => {
+          this.listaAdoptantes = data;
+        },
+        error: e => console.log(e)
+      }
+    )
+  }
+
+
+  editSolicitud(solicitud: Solicitud){
+    this.mostrarPanelEditSolicitud = true;
+    this.solicitudSeleccionada = solicitud;
+  }
+
+  verDetalleSolicitud(){
+    this.mostrarPanelViewSolicitud = !this.mostrarPanelViewSolicitud;
+  }
+
+
+  verSolicitud(solicitud: Solicitud){
+    this.mascotaEnSolicitud =
+      this.listaMascotas.filter(m => m.id = solicitud.idAnimal)[0];
+    this.adoptanteEnSolicitud=
+      this.listaAdoptantes.filter(a => a.id = solicitud.idAdoptante)[0];
+    this.mostrarPanelViewSolicitud = true;
+    this.solicitudSeleccionada = solicitud;
+  }
+
+
+
   /*
-  opcionSeleccionada: string = 'bienvenida';
-  mostrarPanelAddMascota: boolean = false;
-  mostrarPanelEditMascota: boolean = false;
-  mascotaSeleccionadaParaEdicion: Mascota | null = null;
-  mostrarPanelViewMascota: boolean = false;
-  mascotaSeleccionadaView: Mascota | null = null;
 
-  constructor(
-    private mascotasService: MascotasService,
-  ){}
-
-  actualizarOpcion(opcion: string) {
-    this.opcionSeleccionada = opcion;
-  }
-
-
-
-  verPanelAddMascota() {
-    this.mostrarPanelAddMascota = !this.mostrarPanelAddMascota;
-  }
 
   onAgregarMascota(newMascota : Mascota){
     this.mostrarPanelAddMascota = false;
@@ -84,10 +127,7 @@ export class GestionSolicitudesComponent {
     this.mostrarPanelEditMascota = !this.mostrarPanelEditMascota;
   }
 
-  editMascota(mascota: Mascota){
-    this.mostrarPanelEditMascota = true;
-    this.mascotaSeleccionadaParaEdicion = mascota;
-  }
+
 
   deleteMascota(mascota: Mascota){
     if (mascota.id){

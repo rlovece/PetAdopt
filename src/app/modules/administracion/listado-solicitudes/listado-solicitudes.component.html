@@ -5,6 +5,7 @@
     <th>id</th>
     <th>Fecha</th>
     <th>idMascota</th>
+    <th>Mascota</th>
     <th>idAdoptante</th>
     <th>Estado</th>
     <th>F. Adop</th>
@@ -18,14 +19,14 @@
         <td>{{ solicitud.id }}</td>
         <td>{{ solicitud.fecha }}</td>
         <td>{{ solicitud.idAnimal }}</td>
+        <td>{{ getNombreMascota(solicitud.idAnimal) }}</td>
         <td>{{ solicitud.idAdoptante }}</td>
         <td>{{ solicitud.estado }}</td>
         <td>{{ solicitud.fechaAdopcion }}</td>
-        <td><button class="mas-button">📋</button></td>
+        <td><button class="mas-button" (click)="mostrarDetalleSolicitud(solicitud)">📋</button></td>
         <td><button class="edit-button">✍🏻</button></td>
         <td><button class="delete-button">❌</button></td>
       </tr>
     </tbody>
     </table>
-
 </div>
