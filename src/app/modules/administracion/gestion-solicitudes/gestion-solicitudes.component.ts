@@ -79,15 +79,17 @@ export class GestionSolicitudesComponent {
   }
 
   verDetalleSolicitud(){
+    this.listaFiltradaSolicitudes = this.listaCompletaSolicitudes.slice();
     this.mostrarPanelViewSolicitud = !this.mostrarPanelViewSolicitud;
   }
 
 
   verSolicitud(solicitud: Solicitud){
     this.mascotaEnSolicitud =
-      this.listaMascotas.filter(m => m.id = solicitud.idAnimal)[0];
+      this.listaMascotas.filter(m => m.id == solicitud.idAnimal)[0];
     this.adoptanteEnSolicitud=
-      this.listaAdoptantes.filter(a => a.id = solicitud.idAdoptante)[0];
+      this.listaAdoptantes.filter(a => a.id == solicitud.idAdoptante)[0];
+    this.listaFiltradaSolicitudes = this.listaCompletaSolicitudes.filter(s => s.idAdoptante == solicitud.idAdoptante);
     this.mostrarPanelViewSolicitud = true;
     this.solicitudSeleccionada = solicitud;
   }

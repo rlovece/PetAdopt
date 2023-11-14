@@ -1,4 +1,4 @@
-<div class="contenedor">
+<div class="contenedor" *ngIf="!paraAdoptante">
   <table class="tabla">
     <thead>
     <tr>
@@ -26,6 +26,27 @@
         <td><button class="mas-button" (click)="mostrarDetalleSolicitud(solicitud)">📋</button></td>
         <td><button class="edit-button">✍🏻</button></td>
         <td><button class="delete-button">❌</button></td>
+      </tr>
+    </tbody>
+    </table>
+</div>
+
+<div class="contenedor" *ngIf="paraAdoptante">
+  <table class="tabla">
+    <thead>
+    <tr>
+    <th>id</th>
+    <th>Fecha</th>
+    <th>Mascota</th>
+    <th>Estado</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let solicitud of inputSolicitudes">
+        <td>{{ solicitud.id }}</td>
+        <td>{{ solicitud.fecha }}</td>
+        <td>{{ solicitud.idAnimal }} {{ getNombreMascota(solicitud.idAnimal) }}</td>
+        <td>{{ solicitud.estado }}</td>
       </tr>
     </tbody>
     </table>

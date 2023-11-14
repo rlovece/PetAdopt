@@ -13,6 +13,7 @@ export class ListadoSolicitudesComponent {
 
   @Input() inputSolicitudes: Array<Solicitud> = [];
   @Input() inputMascotas: Array<Mascota> = [];
+  @Input() paraAdoptante: boolean = false;
   @Output() solicitudToEdit: EventEmitter<Solicitud> = new EventEmitter();
   @Output() solicitudToDelete: EventEmitter<Solicitud> = new EventEmitter();
   @Output() solicitudToView: EventEmitter<Solicitud> = new EventEmitter();
@@ -25,7 +26,7 @@ export class ListadoSolicitudesComponent {
   constructor(){}
 
   getNombreMascota(id: number): string {
-    return this.inputMascotas.filter((m) => m.id === id)[0].nombre;
+    return this.inputMascotas.filter((m) => m.id == id)[0]?.nombre;
   }
 
   editSolicitud (solicitud: Solicitud) {

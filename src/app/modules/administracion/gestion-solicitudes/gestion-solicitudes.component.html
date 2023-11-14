@@ -9,7 +9,9 @@
   <app-listado-solicitudes
     [inputSolicitudes]="listaFiltradaSolicitudes"
     [inputMascotas]="listaMascotas"
+    [paraAdoptante]=false
     (solicitudToView)="verSolicitud($event)"
+
   ></app-listado-solicitudes>
 </div>
 
@@ -31,7 +33,14 @@
        <div id="adoptante-en-Solicitud">
          <h2>Adoptante: {{adoptanteEnSolicitud.nombre}} {{adoptanteEnSolicitud.apellido}}</h2>
          <p>Telefono: {{adoptanteEnSolicitud.telefono}}</p>
-         <p>Telefono: {{adoptanteEnSolicitud.email}}</p>
+         <p>Email: {{adoptanteEnSolicitud.email}}</p>
+         <div class="conteiner-mascotas">
+          <app-listado-solicitudes id="tabla-para-adoptante"
+            [inputSolicitudes]="listaFiltradaSolicitudes"
+            [inputMascotas]="listaMascotas"
+            [paraAdoptante]=true
+          ></app-listado-solicitudes>
+        </div>
        </div>
     </div>
 
