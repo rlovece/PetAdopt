@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { MascotasService } from 'src/app/core/services/mascotas.service';
 
@@ -11,6 +12,7 @@ export class PanelAdministracionComponent {
   opcionSeleccionada: string = 'bienvenida';
 
   constructor(
+    private router: Router,
   ){}
 
   actualizarOpcion(opcion: string) {

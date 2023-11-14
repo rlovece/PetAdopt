@@ -38,4 +38,8 @@ export class ApiSolicitudesService {
   addAdoptante(adoptante: Adoptante): Observable<Adoptante>{
     return this.http.post<Adoptante>(`${this.baseURL}/adoptantes`, adoptante);
   }
+
+  update(id: number, solicitud: Partial<Solicitud>){
+    return this.http.put<Solicitud>(`${this.baseURL}/solicitudes/${id}`, solicitud);
+  }
 }

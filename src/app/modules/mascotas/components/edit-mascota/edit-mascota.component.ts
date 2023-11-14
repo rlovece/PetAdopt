@@ -51,10 +51,8 @@ export class EditMascotaComponent {
             alert(`${data.nombre} fue editado`);
           }
         );
-      } else {
-        alert('Por favor, completa todos los campos obligatorios.');
       }
-      }
+    }
   }
 }
 

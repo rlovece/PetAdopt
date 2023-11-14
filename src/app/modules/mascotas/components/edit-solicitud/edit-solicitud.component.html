@@ -1,0 +1,22 @@
+<div class="conteiner" >
+  <h2>Editar Solicitud</h2>
+  <form *ngIf="solicitudForm" [formGroup]="solicitudForm" (ngSubmit)="editSolicitud()">
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <select id="tipo" name="estado" formControlName="estado" required>
+        <option value="Pendiente">Pendiente</option>
+        <option value="Aprobada">Aprobada</option>
+        <option value="Rechazada">Rechazada</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="foto">Foto</label>
+      <input type="url" id="foto" formControlName="foto" placeholder="URL de la Foto">
+    </div>
+    <div class="form-group">
+      <label for="comentarios">Comentarios</label>
+      <input type="text" id="comentarios" formControlName="comentarios">
+    </div>
+    <button type="submit" class="boton">Guardar</button>
+  </form>
+

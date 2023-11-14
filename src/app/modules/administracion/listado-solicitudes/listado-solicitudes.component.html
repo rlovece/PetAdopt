@@ -24,7 +24,7 @@
         <td>{{ solicitud.estado }}</td>
         <td>{{ solicitud.fechaAdopcion }}</td>
         <td><button class="mas-button" (click)="mostrarDetalleSolicitud(solicitud)">📋</button></td>
-        <td><button class="edit-button">✍🏻</button></td>
+        <td><button class="edit-button" (click)="editSolicitud(solicitud)">✍🏻</button></td>
         <td><button class="delete-button">❌</button></td>
       </tr>
     </tbody>

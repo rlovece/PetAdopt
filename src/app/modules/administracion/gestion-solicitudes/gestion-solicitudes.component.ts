@@ -18,11 +18,11 @@ export class GestionSolicitudesComponent {
   listaFiltradaSolicitudes: Solicitud[] = [];
 
   mostrarPanelViewSolicitud: boolean = false;
+  mostrarPanelEditSolicitud: boolean = false;
 
   mascotaEnSolicitud: Mascota = new Mascota;
   adoptanteEnSolicitud: Adoptante = new Adoptante;
-  mostrarPanelEditSolicitud: boolean = false;
-  solicitudSeleccionada: any;
+  solicitudSeleccionada: Solicitud = new Solicitud;
 
   constructor(
     private solicitudesService: ApiSolicitudesService,
@@ -73,6 +73,30 @@ export class GestionSolicitudesComponent {
   }
 
 
+  verPendientes(){
+    this.listaFiltradaSolicitudes =
+    this.listaFiltradaSolicitudes.filter(s => s.estado == 'Pendiente');
+  }
+
+
+  verAprobadas(){
+    this.listaFiltradaSolicitudes =
+    this.listaFiltradaSolicitudes.filter(s => s.estado == 'Aprobada');
+  }
+
+  // verSolicitudesDelDía(){
+  //   this.listaFiltradaSolicitudes =
+  //   this.listaFiltradaSolicitudes.filter(s => s.fecha == new Date);
+  // }
+
+  quitarFiltros(){
+    this.listaFiltradaSolicitudes = this.listaCompletaSolicitudes.slice();
+  }
+
+  verPanelEditSolicitud(){
+    this.mostrarPanelEditSolicitud = !this.mostrarPanelEditSolicitud;
+  }
+
   editSolicitud(solicitud: Solicitud){
     this.mostrarPanelEditSolicitud = true;
     this.solicitudSeleccionada = solicitud;
@@ -93,6 +117,7 @@ export class GestionSolicitudesComponent {
     this.mostrarPanelViewSolicitud = true;
     this.solicitudSeleccionada = solicitud;
   }
+
 
 
 
