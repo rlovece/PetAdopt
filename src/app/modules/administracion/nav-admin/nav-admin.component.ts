@@ -33,8 +33,8 @@ export class NavAdminComponent {
     this.opcionSeleccionada.emit('solicitudes');
   }
 
-  gestionComentarios() {
-    this.opcionSeleccionada.emit('comentarios');
+  gestionUsuarios() {
+    this.opcionSeleccionada.emit('usuarios');
   }
 
 

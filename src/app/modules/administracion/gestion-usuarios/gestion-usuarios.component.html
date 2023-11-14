@@ -1,0 +1,16 @@
+<div class="botones">
+  <button class="boton" (click)="agregarUsuario()">Agregar Usuario</button>
+  <button class="boton" (click)="verUsuarios()">Usuarios</button>
+</div>
+<div>
+  <app-listados-usuarios
+    [inputUsuarios]="usuarios"
+    (usuarioAeditar)="editarUsuario($event)"
+  ></app-listados-usuarios>
+</div>
+<button class="botonAgregar" (click)="agregarUsuario()">Agregar Usuario</button>
+    <div class="agregarUsuario" [class.active]="mostrarPanelAgregar">
+      <div *ngIf="mostrarPanelAgregar">
+        <button class="cerrar" (click)="agregarUsuario()">X</button>
+      </div>
+    </div>

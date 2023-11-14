@@ -1,0 +1,33 @@
+<div class="contenedor">
+  <table class="tabla">
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>DNI</th>
+    <th>Telefono</th>
+    <th>Direccion</th>
+    <th>E-Mail</th>
+    <th>Contraseña</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usu of inputUsuarios">
+        <td>{{ usu.id }}</td>
+        <td>{{ usu.nombre }}</td>
+        <td>{{ usu.apellido }}</td>
+        <td>{{ usu.dni}}</td>
+        <td>{{ usu.telefono }}</td>
+        <td>{{ usu.direccion }}</td>
+        <td>{{ usu.email }}</td>
+        <td>{{ usu.contrasenia }}</td>
+        <td><button  (click)="editarUsuario(usu)">✍🏻</button></td>
+        <td><button (click)="borrarUsuario(usu.id!)">❌</button></td>
+      </tr>
+    </tbody>
+    </table>
+
+</div>
