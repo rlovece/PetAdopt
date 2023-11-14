@@ -5,12 +5,16 @@
   <button class="boton" (click)="verAdopcion()">En Adopción</button>
   <button class="boton" (click)="quitarFiltros()">Quitar Filtros</button>
 </div>
+
 <div class="conteiner-mascotas">
   <app-listados-mascotas
     [inputMascotas]="listaFiltradaMascotas"
     (mascotaToEdit)="editMascota($event)"
+    (mascotaToDelete)="deleteMascota($event)"
+    (mascotaToView)="verMascota($event)"
   ></app-listados-mascotas>
 </div>
+
 <div class="add-mascota" [class.active]="mostrarPanelAddMascota">
   <div *ngIf="mostrarPanelAddMascota">
     <button (click)="verPanelAddMascota()" class="boton">Cerrar</button>
@@ -18,7 +22,18 @@
   </div>
 </div>
 
-  <div *ngIf="mascotaSeleccionadaParaEdicion" class="edit-mascota" [class.active]="mostrarPanelEditMascota">
+<div *ngIf="mascotaSeleccionadaParaEdicion" class="edit-mascota" [class.active]="mostrarPanelEditMascota">
+  <div *ngIf="mostrarPanelEditMascota">
     <button (click)="verPanelEditMascota()" class="boton">Cerrar</button>
     <app-edit-mascota [mascota]="mascotaSeleccionadaParaEdicion"></app-edit-mascota>
+    <p>Guarde los cambios y luego pulse cerrar</p>
   </div>
+</div>
+
+<div *ngIf="mascotaSeleccionadaView" class="view-mascota" [class.active]="mostrarPanelViewMascota">
+  <div *ngIf="mostrarPanelViewMascota">
+    <button (click)="verPanelViewMascota()" class="boton">Cerrar</button>
+    <app-mascota [inputMascota]="mascotaSeleccionadaView" [isAdmin]=true></app-mascota>
+  </div>
+</div>
+

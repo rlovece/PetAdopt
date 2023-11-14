@@ -15,6 +15,8 @@ export class GestionMascotasComponent {
   mostrarPanelAddMascota: boolean = false;
   mostrarPanelEditMascota: boolean = false;
   mascotaSeleccionadaParaEdicion: Mascota | null = null;
+  mostrarPanelViewMascota: boolean = false;
+  mascotaSeleccionadaView: Mascota | null = null;
 
   constructor(
     private mascotasService: MascotasService,
@@ -76,12 +78,32 @@ export class GestionMascotasComponent {
   }
 
   editMascota(mascota: Mascota){
-    console.log("Mascota recibida ", mascota);
+    this.mostrarPanelEditMascota = true;
     this.mascotaSeleccionadaParaEdicion = mascota;
   }
 
   deleteMascota(mascota: Mascota){
-
+    if (mascota.id){
+      this.mascotasService.delete(mascota.id)
+      .subscribe(
+        {
+          next: () => {
+            alert(`${mascota.nombre} fue eliminada`)
+            this.listaCompletaMascotas= this.listaCompletaMascotas.filter(m => m.id != mascota.id);
+            this.listaFiltradaMascotas = this.listaCompletaMascotas.slice();
+          },
+          error: e => console.log(e)
+        }
+      )
+    }
   }
 
+  verPanelViewMascota() {
+    this.mostrarPanelViewMascota = !this.mostrarPanelViewMascota;
+  }
+
+  verMascota(mascota: Mascota){
+    this.mostrarPanelViewMascota = true;
+    this.mascotaSeleccionadaView = mascota;
+  }
 }

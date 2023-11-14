@@ -44,7 +44,7 @@ export class MascotasService {
   }
 
   delete(id: number){
-    return this.http.delete<boolean>(`${this.baseURL}/${id}`);
+    return this.http.delete<boolean>(`${this.baseURL}/mascotas/${id}`);
   }
 
 }

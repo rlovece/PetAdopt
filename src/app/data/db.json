@@ -61,18 +61,6 @@
       "idAdminCarga": 2
     },
     {
-      "id": 6,
-      "nombre": "Milu",
-      "tipo": "Perro",
-      "sexo": "F",
-      "foto": "https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg",
-      "tamanio": "Pequeño",
-      "nacimiento": "01/08/2020",
-      "caracteristicas": "Compañera, muy educada",
-      "estado": "En adopcion",
-      "idAdminCarga": 1
-    },
-    {
       "nombre": "Tom",
       "tipo": "Gato",
       "sexo": "M",
@@ -149,7 +137,7 @@
       "idAdoptante": 1,
       "comentarios": "Todos los meses nos envia fotos con ella, nos cuenta que su momento favorito del dia es por la tarde cuando salen de pase juntas",
       "estado": "aprobada",
-      "fechaAdopción": "15/10/23",
+      "fechaAdopcion": "15/10/23",
       "foto": "https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_1280.jpg"
     },
     {
@@ -159,7 +147,7 @@
       "idAdoptante": 2,
       "comentarios": "Se fue siendo el mas chiquito de nuestra familia! Marcos lo adopto y lo llevo a vivir a su casa con sus 3 hijos.",
       "estado": "aprobada",
-      "fechaAdopción": "30/10/23",
+      "fechaAdopcion": "30/10/23",
       "foto": "https://cdn.pixabay.com/photo/2016/11/29/08/59/man-1868563_1280.jpg"
     },
     {
@@ -169,8 +157,28 @@
       "idAdoptante": 3,
       "comentarios": "Él estaba muy asustado cuando llegó, ya tenia 2 añitos en la calle. Se recuperó y encontró un hogar con Dafne y Esteban que lo incluyeron en su familia",
       "estado": "aprobada",
-      "fechaAdopción": "2/11/23",
+      "fechaAdopcion": "2/11/23",
       "foto": "https://cdn.pixabay.com/photo/2016/11/26/23/45/dog-1861839_1280.jpg"
+    },
+    {
+      "id": 4,
+      "fecha": "13/11/23",
+      "idAnimal": 5,
+      "idAdoptante": 4,
+      "comentarios": "",
+      "estado": "pendiente",
+      "fechaAdopción": "",
+      "foto": ""
+    },
+    {
+      "id": 5,
+      "fecha": "14/11/2023, 14:59:42",
+      "idAdoptante": 1,
+      "estado": "pendiente",
+      "idAnimal": 9,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
     }
   ],
   "adoptantes": [
@@ -200,6 +208,15 @@
       "telefono": "+542235578638",
       "email": "dafneluceroaltamirano@gmail.com",
       "id": 3
+    },
+    {
+      "dni": "31421111",
+      "nombre": "Manuela",
+      "apellido": "Perez",
+      "domicilio": "Calle 1 213",
+      "telefono": "2234564123",
+      "email": "manu@gmail.com",
+      "id": 4
     }
   ]
 }

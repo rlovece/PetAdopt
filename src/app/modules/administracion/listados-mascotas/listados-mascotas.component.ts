@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Mascota } from 'src/app/core/models/Models/mascota';
-import { MascotasService } from 'src/app/core/services/mascotas.service';
 
 @Component({
   selector: 'app-listados-mascotas',
@@ -11,21 +10,19 @@ export class ListadosMascotasComponent {
 
   @Input() inputMascotas: Array<Mascota> = [];
   @Output() mascotaToEdit: EventEmitter<Mascota> = new EventEmitter();
-  @Output() mascotaToDelete: EventEmitter<number> = new EventEmitter();
+  @Output() mascotaToDelete: EventEmitter<Mascota> = new EventEmitter();
+  @Output() mascotaToView: EventEmitter<Mascota> = new EventEmitter();
   vistaDetallaMascota = false;
   mascotaEnVista: Mascota = new Mascota;
 
-  constructor(
-    private mascotaService: MascotasService
-  ){}
+  constructor(){}
 
   editMascota(mascota: Mascota) {
-    console.log("Mascota emit ", mascota);
     this.mascotaToEdit.emit(mascota);
   }
 
-  deleteMascota (id: number) {
-    this.mascotaToDelete.emit(id);
+  deleteMascota (mascota: Mascota) {
+    this.mascotaToDelete.emit(mascota);
   }
 
   cambiarEstadoVistaDetalle() {
@@ -34,15 +31,7 @@ export class ListadosMascotasComponent {
 
   mostrarDetalleMascota(mascota: Mascota) {
     this.cambiarEstadoVistaDetalle();
-    if (mascota.id !== null) {
-      this.mascotaService.getById(mascota.id)
-      .subscribe({
-        next: (data) => {
-          this.mascotaEnVista = data;
-        },
-        error: (e) => console.log(e)
-      });
-    }
+    this.mascotaToView.emit(mascota);
   }
 
 }

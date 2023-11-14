@@ -12,6 +12,7 @@ export class ListaMascotasComponent implements OnInit{
   mascotas: Mascota[] = [];
 
 
+
   constructor(
     private mascotasService: MascotasService,
   ){}
