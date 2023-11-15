@@ -27,7 +27,8 @@ img{
 
 .container{
   align-items: center;
-  background: rgba(250, 163, 48, 0.699);
+  background: rgb(255,224,81);
+background: linear-gradient(0deg, rgba(255,224,81,0.7148984593837535) 25%, rgba(250,162,48,0.751313025210084) 100%);
   width: 70%;
   height: 60%;
   position: absolute;
@@ -65,7 +66,7 @@ img{
 font-weight: bold;
 font-size: 30px;
 color: #fff;
-text-shadow:1px 1px 10px rgba(255, 255, 255, 0.3);
+text-shadow:1px 1px 10px rgba(255, 255, 255, 0.594);
 }
 
 .textcontent{
@@ -82,8 +83,7 @@ p{
   margin-top: 10px;
   letter-spacing: 0.5px;
   width: auto;
-  color: rgb(249, 199, 138);
-  text-shadow: 3px 3px 10px rgba(2, 2, 2, 0.3);
+  text-shadow: 3px 3px 10px rgb(255, 255, 255);
 }
 
 #R{

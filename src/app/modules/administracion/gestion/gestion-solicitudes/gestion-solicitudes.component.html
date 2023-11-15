@@ -46,7 +46,7 @@
   </div>
 </div>
 
-<div *ngIf="solicitudSeleccionada" class="panel-lateral" [class.active]="mostrarPanelEditSolicitud">
+<div *ngIf="solicitudSeleccionada" class="menuDesplegable" [class.active]="mostrarPanelEditSolicitud">
   <div *ngIf="mostrarPanelEditSolicitud">
     <button (click)="verPanelEditSolicitud()" class="boton">Cerrar</button>
     <app-edit-solicitud [solicitud]="solicitudSeleccionada"></app-edit-solicitud>

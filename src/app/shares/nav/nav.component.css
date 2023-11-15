@@ -1,7 +1,9 @@
 .active, .lista:hover {
   color: #B3E283;
 }
-
+.lista{
+  font-size: 1.2rem;
+}
 #toggleMenu{
   border: none;
   background-color: transparent;

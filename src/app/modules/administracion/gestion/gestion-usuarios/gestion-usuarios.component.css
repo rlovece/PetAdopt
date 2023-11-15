@@ -1,0 +1,10 @@
+
+#cerrar{
+ width: 40px;
+}
+
+
+app-agregar-usuario .contenedor {
+  width: 90%;
+  justify-content: baseline;
+}

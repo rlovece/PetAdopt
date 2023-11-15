@@ -4,6 +4,7 @@ import { Adoptante } from 'src/app/core/models/Models/adoptante';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
 import { MascotasService } from 'src/app/core/services/mascotas.service';
+import { ApiAdoptantesService } from 'src/app/core/services/api-adoptantes.service';
 
 @Component({
   selector: 'app-gestion-solicitudes',
@@ -26,7 +27,8 @@ export class GestionSolicitudesComponent {
 
   constructor(
     private solicitudesService: ApiSolicitudesService,
-    private mascotasService: MascotasService
+    private mascotasService: MascotasService,
+    private adoptanteService : ApiAdoptantesService
   ){}
 
   ngOnInit(){
@@ -61,7 +63,7 @@ export class GestionSolicitudesComponent {
   }
 
   getAllAdoptantes(){
-    this.solicitudesService.getAdoptantes()
+    this.adoptanteService.getAdoptantes()
     .subscribe(
       {
         next: data => {

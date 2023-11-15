@@ -4,6 +4,7 @@ import { Adoptante } from 'src/app/core/models/Models/adoptante';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
 import { MascotasService } from 'src/app/core/services/mascotas.service';
+import { ApiAdoptantesService } from 'src/app/core/services/api-adoptantes.service';
 
 @Component({
   selector: 'app-ultimas-adopciones',
@@ -17,7 +18,7 @@ export class UltimasAdopcionesComponent implements OnInit{
   mascotas: Mascota[] = [];
   adoptantes: Adoptante[] = [];
 
-  constructor(private solicitudesService: ApiSolicitudesService, private mascotasService: MascotasService) { }
+  constructor(private solicitudesService: ApiSolicitudesService, private mascotasService: MascotasService, private adoptanteService: ApiAdoptantesService) { }
 
   ngOnInit() {
     this.getSolicitudesPorEstado();
@@ -28,7 +29,7 @@ export class UltimasAdopcionesComponent implements OnInit{
   getSolicitudesPorEstado() {
     this.solicitudesService.getSolicitudesPorEstado('Aprobada').subscribe({
       next: (data) => {
-        this.adopciones = data;
+        this.adopciones = data.slice(-3);
         this.getAllMascotas();
         this.getAllAdoptantes();
       },
@@ -50,7 +51,7 @@ export class UltimasAdopcionesComponent implements OnInit{
   }
 
   getAllAdoptantes() {
-    this.solicitudesService.getAdoptantes().subscribe({
+    this.adoptanteService.getAdoptantes().subscribe({
       next: (data) => {
         this.adoptantes = data;
       },

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiSolicitudesService } from 'src/app/core/services/api-solicitudes.service';
 import { Adoptante } from 'src/app/core/models/Models/adoptante';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
+import { ApiAdoptantesService } from 'src/app/core/services/api-adoptantes.service';
 
 @Component({
   selector: 'app-solicitar-adopcion',
@@ -11,7 +12,7 @@ import { Solicitud } from 'src/app/core/models/Models/solicitud';
 })
 export class SolicitarAdopcionComponent {
 
-  constructor(private fb: FormBuilder, private solicitudService: ApiSolicitudesService) { }
+  constructor(private fb: FormBuilder, private solicitudService: ApiSolicitudesService, private adoptanteService : ApiAdoptantesService) { }
 
 
 
@@ -38,7 +39,7 @@ export class SolicitarAdopcionComponent {
   //agregar get ADOPCION O BORRAR ESE MODELO
 
   getAdoptantes() {
-    this.solicitudService.getAdoptantes().subscribe({
+    this.adoptanteService.getAdoptantes().subscribe({
       next: (data) => {
         this.adoptantes = data;
       },
@@ -81,7 +82,7 @@ export class SolicitarAdopcionComponent {
       console.log('entro');
       this.agregarSolicitud(this.formulario.value.dni);
     }else{
-      this.solicitudService.addAdoptante(this.formulario.value).subscribe({
+      this.adoptanteService.addAdoptante(this.formulario.value).subscribe({
         next: (data) => {
           alert('Adoptante agregado con éxito.');
           this.agregarSolicitud(this.formulario.value.dni);
