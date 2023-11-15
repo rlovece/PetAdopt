@@ -26,7 +26,7 @@ export class UltimasAdopcionesComponent implements OnInit{
   //agregar get ADOPCION O BORRAR ESE MODELO
 
   getSolicitudesPorEstado() {
-    this.solicitudesService.getSolicitudesPorEstado('aprobada').subscribe({
+    this.solicitudesService.getSolicitudesPorEstado('Aprobada').subscribe({
       next: (data) => {
         this.adopciones = data;
         this.getAllMascotas();

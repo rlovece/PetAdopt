@@ -42,19 +42,15 @@ export class EditMascotaComponent {
       this.mascota.estado = newMascota.estado;
       this.mascota.tamanio = newMascota.tamanio;
       this.mascota.caracteristicas = newMascota.caracteristicas;
-      console.log(this.mascota);
       if (this.mascota.id != null) {
-        console.log(this.mascota);
         this.mascotaService.update(this.mascota.id, this.mascota).subscribe(
           (data) => {
-            this.EmitEditMascota.emit(data);
+            // this.EmitEditMascota.emit(data);
             alert(`${data.nombre} fue editado`);
           }
         );
-      } else {
-        alert('Por favor, completa todos los campos obligatorios.');
       }
-      }
+    }
   }
 }
 

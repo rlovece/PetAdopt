@@ -18,11 +18,11 @@ export class GestionSolicitudesComponent {
   listaFiltradaSolicitudes: Solicitud[] = [];
 
   mostrarPanelViewSolicitud: boolean = false;
+  mostrarPanelEditSolicitud: boolean = false;
 
   mascotaEnSolicitud: Mascota = new Mascota;
   adoptanteEnSolicitud: Adoptante = new Adoptante;
-  mostrarPanelEditSolicitud: boolean = false;
-  solicitudSeleccionada: any;
+  solicitudSeleccionada: Solicitud = new Solicitud;
 
   constructor(
     private solicitudesService: ApiSolicitudesService,
@@ -73,6 +73,25 @@ export class GestionSolicitudesComponent {
   }
 
 
+  verPendientes(){
+    this.listaFiltradaSolicitudes =
+    this.listaFiltradaSolicitudes.filter(s => s.estado == 'Pendiente');
+  }
+
+
+  verAprobadas(){
+    this.listaFiltradaSolicitudes =
+    this.listaFiltradaSolicitudes.filter(s => s.estado == 'Aprobada');
+  }
+
+  quitarFiltros(){
+    this.listaFiltradaSolicitudes = this.listaCompletaSolicitudes.slice();
+  }
+
+  verPanelEditSolicitud(){
+    this.mostrarPanelEditSolicitud = !this.mostrarPanelEditSolicitud;
+  }
+
   editSolicitud(solicitud: Solicitud){
     this.mostrarPanelEditSolicitud = true;
     this.solicitudSeleccionada = solicitud;
@@ -96,42 +115,9 @@ export class GestionSolicitudesComponent {
 
 
 
-  /*
 
 
-  onAgregarMascota(newMascota : Mascota){
-    this.mostrarPanelAddMascota = false;
-    this.listaCompletaMascotas.push(newMascota);
-    this.listaFiltradaMascotas.push(newMascota);
-  }
-
-  verPerros(){
-    this.listaFiltradaMascotas =
-    this.listaFiltradaMascotas.filter(m => m.tipo == 'Perro');
-  }
-
-
-  verGatos(){
-    this.listaFiltradaMascotas =
-    this.listaFiltradaMascotas.filter(m => m.tipo == 'Gato');
-  }
-
-  verAdopcion(){
-    this.listaFiltradaMascotas =
-    this.listaFiltradaMascotas.filter(m => m.estado == 'En adopcion');
-  }
-
-  quitarFiltros(){
-    this.listaFiltradaMascotas = this.listaCompletaMascotas.slice();
-  }
-
-  verPanelEditMascota() {
-    this.mostrarPanelEditMascota = !this.mostrarPanelEditMascota;
-  }
-
-
-
-  deleteMascota(mascota: Mascota){
+  /*  deleteMascota(mascota: Mascota){
     if (mascota.id){
       this.mascotasService.delete(mascota.id)
       .subscribe(
@@ -145,14 +131,5 @@ export class GestionSolicitudesComponent {
         }
       )
     }
-  }
-
-  verPanelViewMascota() {
-    this.mostrarPanelViewMascota = !this.mostrarPanelViewMascota;
-  }
-
-  verMascota(mascota: Mascota){
-    this.mostrarPanelViewMascota = true;
-    this.mascotaSeleccionadaView = mascota;
   }*/
 }
