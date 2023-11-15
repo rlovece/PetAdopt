@@ -14,6 +14,7 @@
 
 .container{
   align-items: center;
+  text-align: center;
   background: rgba(157, 31, 185, 0.315);
   width: 70%;
   height: 60%;
@@ -28,7 +29,9 @@
 .textcontent{
   display: flex;
   flex-direction: column;
+  text-align: center;
   padding: 0%;
+  justify-content: center;
 }
 
 img{
@@ -42,7 +45,7 @@ img{
 
 .rectangulo{
   padding: 5%;
-  text-align: rigth;
+  text-align: center;
 }
 
 
@@ -64,34 +67,26 @@ font-weight: bold;
 font-size: 30px;
 color: #fff;
 text-shadow:1px 1px 10px rgba(255, 255, 255, 0.3);
+
 }
 
 p{
+  margin-left: 10%;
   font-size: 14px;
   font-weight: 100;
   text-align: center;
   letter-spacing: 0.5px;
-  margin: 20px 0 30px;
   color: rgb(249, 199, 138);
   text-shadow: 3px 3px 10px rgba(2, 2, 2, 0.3);
+  width: auto;
 }
 
-.botonR{
-  background-color: rgba(255, 255, 255, 0.918);
-  border-radius: 20px;
-  border: none;
-  color: rgb(249, 199, 138);
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 100;
-  padding: 10px;
-  width: 100px;
-  transition: all .3s ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  margin-left: 40%;
+#R{
+  margin-left: 38%;
+  margin-bottom: 15px;
 }
 
-.botonR:hover{
+#R:hover{
   background-color: rgba(233,148,151,1);
   color: rgb(255, 255, 255);
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -142,39 +137,16 @@ input{
  height: 60px;
 }
 .boton{
-  background-color: rgba(255, 255, 255, 0.918);
   border-radius: 20px;
   border: none;
   height: 40px;
   font-size: 20px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: rgb(252, 176, 122);
-  cursor: pointer;
   font-weight: 100;
   padding: 8px;
   width: 100px;
-  transition: all .3s ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
 }
 
-.boton:hover{
-  background-color: rgb(226, 233, 148);
-  color: rgb(255, 255, 255);
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  transform: scale(1.1);
-}
-
-.error{
-  display: flex;
-  flex-wrap: wrap;
-  width: 60%;
-  padding:2%;
-  margin-left:15%;
-  text-align: center;
-  background-color: rgba(247, 124, 124, 0.489);
-  color: red;
-  font-size: 14px;
-}
 
 
 @media only screen and (min-width: 320px) and (max-width:768px) {

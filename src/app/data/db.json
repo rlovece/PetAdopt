@@ -122,11 +122,21 @@
       "nombre": "Belen",
       "apellido": "Perez",
       "dni": 33111112,
-      "telefono": "2291627449",
-      "direccion": "Calle 2 2314",
+      "telefono": "22386744934",
+      "direccion": "Chaco 3482",
       "email": "belen@gmail.com",
       "contrasenia": "123456",
       "admin": true
+    },
+    {
+      "dni": "38441203",
+      "nombre": "Oriana Dafne",
+      "apellido": "Lucero",
+      "direccion": "Italia 2985",
+      "telefono": "+542235578638",
+      "email": "dafne@gmail.com",
+      "contrasenia": "benito123",
+      "id": 3
     }
   ],
   "solicitudes": [

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ApiSolicitudesService } from 'src/app/core/api-solicitudes.service';
+import { ApiSolicitudesService } from 'src/app/core/services/api-solicitudes.service';
 import { Adoptante } from 'src/app/core/models/Models/adoptante';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
 

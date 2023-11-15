@@ -1,0 +1,19 @@
+.contenedor{
+  background-color:  rgba(233,148,151,1);
+  margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+
+
+}
+
+img{
+  width: 30%;
+  height: 40%;
+  background-position: center;
+}

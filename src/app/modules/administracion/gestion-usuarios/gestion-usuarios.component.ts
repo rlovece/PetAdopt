@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ApiUsuariosService } from 'src/app/core/api-usuarios.service';
+import { ApiUsuariosService } from 'src/app/core/services/api-usuarios.service';
 import { Usuario } from 'src/app/core/models/Models/usuario';
 
 @Component({
@@ -11,22 +11,13 @@ export class GestionUsuariosComponent {
 
   usuarios: Usuario[] = [];
   opcionSeleccionada: string = 'bienvenida';
-  mostrarPanelAddMascota: boolean = false;
-  mostrarPanelEditMascota: boolean = false;
+  mostrarPanelAgregarUsuario: boolean = false;
+  mostrarPanelEditarUsuario: boolean = false;
   usuarioAeditar: Usuario | null = null;
 
   constructor( private usuarioService: ApiUsuariosService ){}
 
   @Input() inputUsuarios: Usuario = new Usuario();
-  mostrarPanelAgregar: boolean = false;
-
-  agregarUsuario() {
-    this.mostrarPanelAgregar = !this.mostrarPanelAgregar;
-  }
-
-  addUsuario(){
-    this.mostrarPanelAgregar = false;
-  }
 
   actualizarOpcion(opcion: string) {
     this.opcionSeleccionada = opcion;
@@ -48,15 +39,37 @@ export class GestionUsuariosComponent {
     )
   }
 
+  verPanelAgregar() {
+    this.mostrarPanelAgregarUsuario= !this.mostrarPanelAgregarUsuario;
+  }
 
+  onAgregarUsuario(nuevoUsuario : Usuario){
+    this.mostrarPanelAgregarUsuario = false;
+    this.usuarios.push(nuevoUsuario);
+  }
 
-  verUsuarios(){
-    this.usuarios ;
+  verPanelEditarUsuario() {
+    this.mostrarPanelEditarUsuario = !this.mostrarPanelEditarUsuario;
   }
 
   editarUsuario(usu: Usuario){
+    this.mostrarPanelEditarUsuario = true;
     this.usuarioAeditar = usu;
   }
 
+  borrarUsuario(usu: Usuario){
+    if (usu.id){
+      this.usuarioService.deleteUsuario(usu.id)
+      .subscribe(
+        {
+          next: () => {
+            alert(`${usu.nombre} fue eliminada`)
+            this.usuarios= this.usuarios.filter(u => u.id != usu.id);
+          },
+          error: e => console.log(e)
+        }
+      )
+    }
+  }
 }
 

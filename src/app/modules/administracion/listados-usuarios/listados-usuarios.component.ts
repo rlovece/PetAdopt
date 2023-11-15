@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ApiUsuariosService } from 'src/app/core/api-usuarios.service';
+import { ApiUsuariosService } from 'src/app/core/services/api-usuarios.service';
 import { Usuario } from 'src/app/core/models/Models/usuario';
 
 @Component({
@@ -11,7 +11,7 @@ export class ListadosUsuariosComponent {
 
   @Input() inputUsuarios: Array<Usuario> = [];
   @Output() usuarioAeditar: EventEmitter<Usuario> = new EventEmitter();
-  @Output() usuarioAborrar: EventEmitter<number> = new EventEmitter();
+  @Output() usuarioAborrar: EventEmitter<Usuario> = new EventEmitter();
 
   constructor( private usuarioService: ApiUsuariosService){}
 
@@ -19,8 +19,8 @@ export class ListadosUsuariosComponent {
     this.usuarioAeditar.emit(usu);
   }
 
-  borrarUsuario (id: number) {
-    this.usuarioAborrar.emit(id);
+  borrarUsuario (usu: Usuario) {
+    this.usuarioAborrar.emit(usu);
   }
 
 

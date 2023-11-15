@@ -1,5 +1,5 @@
 import { CanActivateFn, Router } from '@angular/router';
-import { ApiAuthService } from '../core/api-auth.service';
+import { ApiAuthService } from '../core/services/api-auth.service';
 import { inject } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { Usuario } from '../core/models/Models/usuario';

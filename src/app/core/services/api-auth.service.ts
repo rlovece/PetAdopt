@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of, tap } from 'rxjs';
-import { Usuario } from './models/Models/usuario';
+import { Usuario } from '../models/Models/usuario';
 import { Router } from '@angular/router';
 
 @Injectable({

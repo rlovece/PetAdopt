@@ -15,6 +15,10 @@ import { EditarUsuariosComponent } from './editar-usuarios/editar-usuarios.compo
     CommonModule,
     UsuariosRoutingModule,
     ReactiveFormsModule,
+  ],
+  exports:[
+    AgregarUsuariosComponent,
+    EditarUsuariosComponent,
   ]
 })
 export class UsuariosModule { }

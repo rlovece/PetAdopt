@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
-import { ApiAuthService } from '../core/api-auth.service';
+import { ApiAuthService } from '../core/services/api-auth.service';
 import { Observable, map, tap } from 'rxjs';
 
 function checkAuthStatus(): boolean | Observable<boolean>{

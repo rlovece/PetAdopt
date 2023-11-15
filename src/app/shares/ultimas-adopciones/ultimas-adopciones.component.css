@@ -30,33 +30,6 @@ body{
 }
 
 
-h2{
-  margin-top: 5%;
-    color: #ffffff;
-    text-align: center;
-    font-size: 3.5em;
-    font-weight: bold;
-    font-family: Helvetica;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2);
-}
-
-h3{
-  color: rgb(255, 153, 0);
-  text-align: center;
-  font-size: 2rem;
-  font-weight: lighter;
-  width: 70%;
-  text-shadow: 0px 0px 19px rgba(250, 131, 131, 0.719);
-}
-
-p{
-  text-align: center;
-  color:  #fb9a54;
-  font-size: 1rem;
-  text-shadow: 4px 4px 36px hsl(28, 90%, 59%);
-  width: 60%;
-  line-height: 25px;
-}
 
 
 @media only screen and (min-width: 320px) and (max-width:768px) {

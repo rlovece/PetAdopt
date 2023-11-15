@@ -9,7 +9,9 @@ import { NavAdminComponent } from './nav-admin/nav-admin.component';
 import { GestionMascotasComponent } from './gestion-mascotas/gestion-mascotas.component';
 import { GestionSolicitudesComponent } from './gestion-solicitudes/gestion-solicitudes.component';
 import { ListadoSolicitudesComponent } from './listado-solicitudes/listado-solicitudes.component';
-
+import { ListadosUsuariosComponent } from './listados-usuarios/listados-usuarios.component';
+import { GestionUsuariosComponent } from './gestion-usuarios/gestion-usuarios.component';
+import { UsuariosModule } from '../usuarios/usuarios.module';
 
 @NgModule({
     declarations: [
@@ -18,15 +20,19 @@ import { ListadoSolicitudesComponent } from './listado-solicitudes/listado-solic
         NavAdminComponent,
         GestionMascotasComponent,
         GestionSolicitudesComponent,
-        ListadoSolicitudesComponent
+        ListadoSolicitudesComponent,
+        ListadosUsuariosComponent,
+        GestionUsuariosComponent,
     ],
     exports: [
         ListadosMascotasComponent,
+        ListadosUsuariosComponent,
     ],
     imports: [
         CommonModule,
         AdministracionRoutingModule,
         MascotasModule,
+        UsuariosModule,
     ]
 
 })

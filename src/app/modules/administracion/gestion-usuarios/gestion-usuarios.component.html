@@ -1,16 +1,28 @@
 <div class="botones">
-  <button class="boton" (click)="agregarUsuario()">Agregar Usuario</button>
-  <button class="boton" (click)="verUsuarios()">Usuarios</button>
+  <button class="boton" (click)="verPanelAgregar()">Agregar Usuario</button>
 </div>
-<div>
+
+
+<div class="conteiner-usuarios">
   <app-listados-usuarios
     [inputUsuarios]="usuarios"
     (usuarioAeditar)="editarUsuario($event)"
+    (usuarioAborrar)="borrarUsuario($event)"
   ></app-listados-usuarios>
 </div>
-<button class="botonAgregar" (click)="agregarUsuario()">Agregar Usuario</button>
-    <div class="agregarUsuario" [class.active]="mostrarPanelAgregar">
-      <div *ngIf="mostrarPanelAgregar">
-        <button class="cerrar" (click)="agregarUsuario()">X</button>
-      </div>
-    </div>
+
+<div class="addUsuario" [class.active]="mostrarPanelAgregarUsuario">
+  <div *ngIf="mostrarPanelAgregarUsuario">
+    <button (click)="verPanelAgregar()" class="boton">Cerrar</button>
+    <app-agregar-usuarios (EmitAgregarUsuario)="onAgregarUsuario($event)"></app-agregar-usuarios>
+  </div>
+</div>
+
+<div *ngIf="usuarioAeditar" class="edit-usuario" [class.active]="mostrarPanelEditarUsuario">
+  <div *ngIf="mostrarPanelEditarUsuario">
+    <button (click)="verPanelEditarUsuario()" class="boton">Cerrar</button>
+    <app-editar-usuarios [usuario]="usuarioAeditar"></app-editar-usuarios>
+    <p>Guarde los cambios y luego pulse cerrar</p>
+  </div>
+</div>
+

@@ -1,5 +1,5 @@
 <div class="contenedor">
-  <h2>Crear nuevo usuario administrador</h2>
+  <h2>Crear nuevo usuario</h2>
   <form [formGroup]= "formulario" >
     <div class="form-group">
       <label for="dni">DNI:       </label>
@@ -19,9 +19,9 @@
       <span class="error" *ngIf="formulario.controls['apellido'].getError('required') && formulario.touched">El apellido es requerido</span>
     </div>
     <div class="form-group">
-      <label for="domicilio">Domicilio: </label>
-      <input type="text" id="domicilio" formControlName="domicilio" placeholder="Domicilio">
-      <span class="error" *ngIf="formulario.controls['domicilio'].getError('required') && formulario.touched">El domicilio es requerido</span>
+      <label for="direccion">Domicilio: </label>
+      <input type="text" id="direccion" formControlName="direccion" placeholder="Domicilio">
+      <span class="error" *ngIf="formulario.controls['direccion'].getError('required') && formulario.touched">El domicilio es requerido</span>
     </div>
     <div class="form-group">
       <label for="telefono">Telefono:  </label>
@@ -41,5 +41,5 @@
       <input type="password" id="contrasenia" formControlName="contrasenia" placeholder="Nueva Contraseña">
       <span class="error" *ngIf="formulario.controls['contrasenia'].getError('required') && formulario.touched">El email es requerido</span>
     </div>
-    <button class="boton" type="submit" (click)="agregarUsuario()">Crear</button>
+    <button id="crear" class="boton" type="submit" (click)="agregarUsuario()">Crear</button>
   </form>
