@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { map } from 'rxjs';
 import { ApiSolicitudesService } from 'src/app/core/api-solicitudes.service';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
@@ -14,7 +15,9 @@ import { MascotasService } from 'src/app/core/services/mascotas.service';
 export class EditSolicitudComponent {
   solicitudForm: FormGroup | undefined;
   @Output() EmitEditSolicitud = new EventEmitter<Solicitud>();
+  @Output() EmitEditMascota = new EventEmitter<Mascota>();
   @Input() solicitud: Solicitud | undefined;
+
   mascotaEdit: Mascota = new Mascota;
 
   constructor(
@@ -39,38 +42,38 @@ export class EditSolicitudComponent {
     }
   }
 
-  getMascota(){
-    if (this.solicitud){
-      this.mascotaService.getById(this.solicitud.idAnimal)
+   getMascota(){
+     if (this.solicitud){
+       this.mascotaService.getById(this.solicitud.idAnimal)
       .subscribe({
         next: data => this.mascotaEdit = data,
         error: e => console.log(e)
-      })
+       })
     }
-
   }
 
   editSolicitud() {
     if (this.solicitudForm && this.solicitudForm.valid && this.solicitud) {
       let newSolicitud: Solicitud = this.solicitudForm.value;
-      if (this.solicitud.estado != 'Aprobada' && newSolicitud.estado == 'Aprobada'){
-        this.solicitud.fechaAdopcion = new Date().toLocaleString();
-        this.mascotaEdit.estado='Adoptado';
-        this.mascotaService.update(this.solicitud.idAnimal, this.mascotaEdit);
-      }
-      this.solicitud.estado = newSolicitud.estado;
       this.solicitud.foto = newSolicitud.foto;
       this.solicitud.comentarios = newSolicitud.comentarios;
-
-
-      if (this.solicitud.id != null) {
-        this.solicitudesService.update(this.solicitud.id, this.solicitud)
-        .subscribe(
-          (data) => {
-            this.EmitEditSolicitud.emit(data);
-            alert(`${data.id} fue editado!`);
-          }
-        );
+      if (this.solicitud.estado != 'Aprobada' && newSolicitud.estado == 'Aprobada'){
+        this.solicitud.fechaAdopcion = new Date().toLocaleString();
+        this.solicitud.estado = newSolicitud.estado;
+        this.mascotaEdit.estado = 'Adoptado';
+        this.mascotaService.update(this.solicitud.idAnimal, this.mascotaEdit)
+        .subscribe(data => {
+          console.log(data);
+            if (this.solicitud != undefined && this.solicitud.id!= null) {
+              this.solicitudesService.update(this.solicitud.id, this.solicitud)
+              .subscribe(
+                (data) => {
+                  this.EmitEditSolicitud.emit(data);
+                  alert(`${data.id} fue editado!`);
+                }
+              );
+            }
+          })
       }
     }
   }

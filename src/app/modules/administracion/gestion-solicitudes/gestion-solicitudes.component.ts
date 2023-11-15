@@ -84,11 +84,6 @@ export class GestionSolicitudesComponent {
     this.listaFiltradaSolicitudes.filter(s => s.estado == 'Aprobada');
   }
 
-  // verSolicitudesDelDía(){
-  //   this.listaFiltradaSolicitudes =
-  //   this.listaFiltradaSolicitudes.filter(s => s.fecha == new Date);
-  // }
-
   quitarFiltros(){
     this.listaFiltradaSolicitudes = this.listaCompletaSolicitudes.slice();
   }
@@ -121,42 +116,8 @@ export class GestionSolicitudesComponent {
 
 
 
-  /*
 
-
-  onAgregarMascota(newMascota : Mascota){
-    this.mostrarPanelAddMascota = false;
-    this.listaCompletaMascotas.push(newMascota);
-    this.listaFiltradaMascotas.push(newMascota);
-  }
-
-  verPerros(){
-    this.listaFiltradaMascotas =
-    this.listaFiltradaMascotas.filter(m => m.tipo == 'Perro');
-  }
-
-
-  verGatos(){
-    this.listaFiltradaMascotas =
-    this.listaFiltradaMascotas.filter(m => m.tipo == 'Gato');
-  }
-
-  verAdopcion(){
-    this.listaFiltradaMascotas =
-    this.listaFiltradaMascotas.filter(m => m.estado == 'En adopcion');
-  }
-
-  quitarFiltros(){
-    this.listaFiltradaMascotas = this.listaCompletaMascotas.slice();
-  }
-
-  verPanelEditMascota() {
-    this.mostrarPanelEditMascota = !this.mostrarPanelEditMascota;
-  }
-
-
-
-  deleteMascota(mascota: Mascota){
+  /*  deleteMascota(mascota: Mascota){
     if (mascota.id){
       this.mascotasService.delete(mascota.id)
       .subscribe(
@@ -170,14 +131,5 @@ export class GestionSolicitudesComponent {
         }
       )
     }
-  }
-
-  verPanelViewMascota() {
-    this.mostrarPanelViewMascota = !this.mostrarPanelViewMascota;
-  }
-
-  verMascota(mascota: Mascota){
-    this.mostrarPanelViewMascota = true;
-    this.mascotaSeleccionadaView = mascota;
   }*/
 }

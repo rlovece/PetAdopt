@@ -9,8 +9,7 @@
       "tamanio": "Mediano",
       "nacimiento": "01/08/2017",
       "caracteristicas": "Castrada, vacunas al día, Sociable, tranquila, le gustan los niños",
-      "estado": "Adoptado",
-      "idAdminCarga": 1
+      "estado": "Adoptado"
     },
     {
       "id": 2,
@@ -21,8 +20,7 @@
       "tamanio": "Pequeño",
       "nacimiento": "01/08/2022",
       "caracteristicas": "6 meses, come solo",
-      "estado": "Adoptado",
-      "idAdminCarga": 1
+      "estado": "Adoptado"
     },
     {
       "id": 3,
@@ -33,8 +31,7 @@
       "tamanio": "Pequeño",
       "nacimiento": "01/08/2021",
       "caracteristicas": "Juguetona, usa las piedritas",
-      "estado": "En adopcion",
-      "idAdminCarga": 1
+      "estado": "En adopcion"
     },
     {
       "id": 4,
@@ -45,20 +42,18 @@
       "tamanio": "Grande",
       "nacimiento": "01/08/2013",
       "caracteristicas": "Cariñoso, se lleva bien con los niños",
-      "estado": "En adopcion",
-      "idAdminCarga": 1
+      "estado": "En adopcion"
     },
     {
       "id": 5,
       "nombre": "Pumba",
-      "tipo": "Grande",
+      "tipo": "Perro",
       "sexo": "F",
       "foto": "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_640.jpg",
       "tamanio": "Grande",
       "nacimiento": "01/05/2023",
       "caracteristicas": "Cariñosa",
-      "estado": "En adopcion",
-      "idAdminCarga": 2
+      "estado": "Adoptado"
     },
     {
       "nombre": "Tom",
@@ -166,10 +161,10 @@
       "idAnimal": 5,
       "idAdoptante": 4,
       "comentarios": "Pumba se encuentra muy bien, fue castrada y tiene todas las vacunas al día",
-      "estado": "Pendiente",
+      "estado": "Aprobada",
       "fechaAdopción": "14/11/23",
       "foto": "https://cdn.pixabay.com/photo/2016/11/26/23/45/dog-1861839_640.jpg",
-      "fechaAdopcion": "14/11/2023, 16:51:08"
+      "fechaAdopcion": "14/11/2023, 22:58:54"
     },
     {
       "id": 5,
