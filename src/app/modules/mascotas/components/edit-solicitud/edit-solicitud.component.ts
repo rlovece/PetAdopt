@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { map } from 'rxjs';
-import { ApiSolicitudesService } from 'src/app/core/api-solicitudes.service';
+import { ApiSolicitudesService } from 'src/app/core/services/api-solicitudes.service';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
 import { MascotasService } from 'src/app/core/services/mascotas.service';

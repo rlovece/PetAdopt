@@ -1,7 +1,7 @@
 export interface IComentario{
     id: number | null;
-    idUsuario: number | null;
-    puntaje: number | null;
-    fecha: string;
+    nombre: string;
+    puntaje: '⭐' | '⭐⭐' | '⭐⭐⭐' | '⭐⭐⭐⭐'| '⭐⭐⭐⭐⭐' | '';
+    fecha: Date | null;
     comentario: string;
   }

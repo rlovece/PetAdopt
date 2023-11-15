@@ -1,0 +1,12 @@
+#tarjeta-comentario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f4e1;
+  border-radius: 10px;
+
+}
+
+#tarjeta-comentario p {
+  width: 100%;
+}

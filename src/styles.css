@@ -100,7 +100,7 @@ button{
   background-color: transparent;
 }
 
-.addUsuario, .edit-usuario, .add-mascota, .edit-mascota, .view-mascota, .agregar-usuario{
+.addUsuario, .edit-usuario, .add-mascota, .edit-mascota, .view-mascota, .agregar-usuario, .panel-lateral{
   position: fixed;
   top: 15px;
   left: 60%;

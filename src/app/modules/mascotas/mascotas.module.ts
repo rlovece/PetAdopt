@@ -9,6 +9,7 @@ import { AddMascotaComponent } from './components/add-mascota/add-mascota.compon
 import { EditMascotaComponent } from './components/edit-mascota/edit-mascota.component';
 import { SolicitarAdopcionComponent } from './components/solicitar-adopcion/solicitar-adopcion.component';
 import { EditSolicitudComponent } from './components/edit-solicitud/edit-solicitud.component';
+import { ComentarioComponent } from '../comentarios/comentario/comentario.component';
 
 
 @NgModule({

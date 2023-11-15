@@ -6,9 +6,10 @@ import { HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { LandingModule } from './modules/landing/landing.module';
 import { SharesModule } from './shares/shares.module';
-import { AuthModule } from './modules/auth/auth.module';import { AdministracionModule } from './modules/administracion/administracion.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { AdministracionModule } from './modules/administracion/administracion.module';
 import { AppRoutingModule } from './app-routing.module';
-import { CommonModule } from '@angular/common';
+import { ComentariosModule } from './modules/comentarios/comentarios.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CommonModule } from '@angular/common';
     AuthModule,
     SharesModule,
     AdministracionModule,
+    ComentariosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
