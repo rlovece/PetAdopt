@@ -77,13 +77,13 @@ export class GestionSolicitudesComponent {
 
   verPendientes(){
     this.listaFiltradaSolicitudes =
-    this.listaFiltradaSolicitudes.filter(s => s.estado == 'Pendiente');
+    this.listaCompletaSolicitudes.filter(s => s.estado == 'Pendiente');
   }
 
 
   verAprobadas(){
     this.listaFiltradaSolicitudes =
-    this.listaFiltradaSolicitudes.filter(s => s.estado == 'Aprobada');
+    this.listaCompletaSolicitudes.filter(s => s.estado == 'Aprobada');
   }
 
   quitarFiltros(){
