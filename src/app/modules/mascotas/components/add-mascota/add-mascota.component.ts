@@ -7,8 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-mascota',
-  templateUrl: './add-mascota.component.html',
-  styleUrls: ['./add-mascota.component.css']
+  templateUrl: './add-mascota.component.html'
 })
 export class AddMascotaComponent {
   mascotaForm: FormGroup;

@@ -58,7 +58,7 @@ export class SolicitarAdopcionComponent {
     let new_Date: Date = new Date();
     this.solicitud.idAnimal = this.idAnimal;
     this.solicitud.estado = 'Pendiente';
-    this.solicitud.fecha = new_Date.toLocaleString();
+    this.solicitud.fecha = new_Date.toLocaleDateString()
     this.solicitud.idAdoptante = this.getDNIAdoptante(dni).id;
 
       this.solicitudService.addSolictud(this.solicitud).subscribe({

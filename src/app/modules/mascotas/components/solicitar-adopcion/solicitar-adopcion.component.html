@@ -4,36 +4,35 @@
     <div class="form-group">
       <label for="dni">DNI:       </label>
       <input type="text" id="dni" formControlName="dni" placeholder="DNI">
-      <span class="error" *ngIf="formulario.controls['dni'].getError('required') && formulario.touched">El DNI es requerido</span>
+      <span class="error" *ngIf="formulario.controls['dni'].hasError('required') && formulario.controls['dni'].touched">El dni es requerido</span>
       <span class="error" *ngIf="formulario.controls['dni'].getError('minlength') && formulario.touched">El DNI debe tener al menos 6 digitos</span>
 
     </div>
     <div class="form-group">
       <label for="nombre">Nombre:    </label>
       <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
-      <span class="error" *ngIf="formulario.controls['nombre'].getError('required') && formulario.touched">El nombre es requerido</span>
+      <span class="error" *ngIf="formulario.controls['nombre'].hasError('required') && formulario.controls['nombre'].touched">El nombre es requerido</span>
     </div>
     <div class="form-group">
       <label for="apellido">Apellido:  </label>
       <input type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
-      <span class="error" *ngIf="formulario.controls['apellido'].getError('required') && formulario.touched">El apellido es requerido</span>
+      <span class="error" *ngIf="formulario.controls['apellido'].hasError('required') && formulario.controls['apellido'].touched">El apellido es requerido</span>
     </div>
     <div class="form-group">
       <label for="domicilio">Domicilio: </label>
       <input type="text" id="domicilio" formControlName="domicilio" placeholder="Domicilio">
-      <span class="error" *ngIf="formulario.controls['domicilio'].getError('required') && formulario.touched">El domicilio es requerido</span>
+      <span class="error" *ngIf="formulario.controls['domicilio'].hasError('required') && formulario.controls['domicilio'].touched">El domicilio es requerido</span>
     </div>
     <div class="form-group">
       <label for="telefono">Telefono:  </label>
       <input type="text" id="telefono" formControlName="telefono" placeholder="Telefono">
-      <span class="error" *ngIf="formulario.controls['telefono'].getError('required') && formulario.touched">El telefono es requerido</span>
+      <span class="error" *ngIf="formulario.controls['telefono'].hasError('required') && formulario.controls['telefono'].touched">El telefono es requerido</span>
       <span class="error" *ngIf="formulario.controls['telefono'].getError('minlength') && formulario.touched">El telefono debe tener al menos 8 digitos</span>
-
     </div>
     <div class="form-group">
       <label for="email">Mail:        </label>
       <input type="text" id="email" formControlName="email" placeholder="Email">
-      <span class="error" *ngIf="formulario.controls['email'].getError('required') && formulario.touched">El email es requerido</span>
+      <span class="error" *ngIf="formulario.controls['email'].hasError('required') && formulario.controls['email'].touched">El email es requerido</span>
       <span class="error" *ngIf="formulario.controls['email'].getError('pattern')&& formulario.touched">El formato de email no es valido</span>
     </div>
     <button class="boton" type="submit" (click)="addSolicitud()">Solicitar</button>

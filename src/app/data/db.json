@@ -229,43 +229,84 @@
       "id": 1,
       "nombre": "Carla",
       "puntaje": "⭐⭐⭐⭐⭐",
-      "fecha": "12/10/23",
+      "fecha": "12/03/23",
       "comentario": "Me encanta lo que hacen, se nota que le ponen mucho amor! Los felicito!!"
     },
     {
       "id": 2,
       "nombre": "Belen",
       "puntaje": "⭐⭐⭐⭐",
-      "fecha": "13/10/23",
+      "fecha": "13/03/23",
       "comentario": "Buena experiencia, los recomiendo."
     },
     {
       "id": 3,
       "nombre": "Ana",
       "puntaje": "⭐⭐⭐⭐⭐",
-      "fecha": "14/10/23",
+      "fecha": "14/04/23",
       "comentario": "Son lo más 🐶♥😺"
     },
     {
       "id": 4,
       "nombre": "Pedro",
       "puntaje": "⭐⭐⭐",
-      "fecha": "15/10/23",
+      "fecha": "15/04/23",
       "comentario": "Buen servicio, pero quisiera ver más mascotas publicadas."
     },
     {
       "id": 5,
       "nombre": "Laura",
       "puntaje": "⭐⭐⭐⭐",
-      "fecha": "16/10/23",
+      "fecha": "16/04/23",
       "comentario": "Excelente atención, responden de inmediato."
     },
     {
       "id": 6,
       "nombre": "Camila",
       "puntaje": "⭐⭐⭐⭐",
-      "fecha": "16/10/23",
+      "fecha": "16/05/23",
       "comentario": "Re felices con Pepa y el seguimiento que le han hecho. Gracias💕"
+    },
+    {
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "comentario": "Los amo!! Son re dedicados a los animalitos 💜",
+      "nombre": "Mariela",
+      "id": 7
+    },
+    {
+      "puntaje": "⭐⭐⭐⭐",
+      "fecha": "16/06/23",
+      "comentario": "Quiero Adoptar!! Me llaman  2234556612",
+      "nombre": "Martin",
+      "id": 8
+    },
+    {
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "08/07/23",
+      "comentario": "Gracias por su trabajo",
+      "nombre": "Belen",
+      "id": 9
+    },
+    {
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "09/07/23",
+      "comentario": "Son todos hermosos, no entiendo pq la gente compra!!",
+      "nombre": "Andrea",
+      "id": 10
+    },
+    {
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "10/07/23",
+      "comentario": "Son todos tan lindos que no sabes con cuál quedarte!!",
+      "nombre": "Camila",
+      "id": 11
+    },
+    {
+      "puntaje": "⭐⭐⭐",
+      "fecha": "15/07/23",
+      "comentario": "No entiendo como adoptar",
+      "nombre": "Adolfo",
+      "id": 12
     }
   ]
 }

@@ -5,8 +5,7 @@ import { MascotasService } from 'src/app/core/services/mascotas.service';
 
 @Component({
   selector: 'app-edit-mascota',
-  templateUrl: './edit-mascota.component.html',
-  styleUrls: ['./edit-mascota.component.css']
+  templateUrl: './edit-mascota.component.html'
 })
 export class EditMascotaComponent {
   mascotaForm: FormGroup | undefined;

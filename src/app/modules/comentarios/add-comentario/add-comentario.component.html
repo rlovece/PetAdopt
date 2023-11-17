@@ -1,1 +1,32 @@
-<p>add-comentario works!</p>
+<div class="conteiner">
+  <h2 class="titulo-form">Agregar Comentario</h2>
+  <form [formGroup]="comentarioForm" (ngSubmit)="addComentario()">
+    <div class="form-group">
+      <label for="puntaje">Puntaje</label>
+      <select id="tipo" name="puntaje" formControlName="puntaje" required>
+        <option value="⭐">⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+      </select>
+      <span class="error" *ngIf="comentarioForm.controls['puntaje'].hasError('required') && comentarioForm.controls['puntaje'].touched">El puntaje es requerido</span>
+
+
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+      <span class="error" *ngIf="comentarioForm.controls['nombre'].hasError('required') && comentarioForm.controls['nombre'].touched">El nombre es requerido</span>
+
+    </div>
+
+    <div class="form-group">
+      <label for="comentario">Comentario</label>
+      <input type="text" id="comentario" formControlName="comentario" placeholder="Su comentario...">
+      <span class="error" *ngIf="comentarioForm.controls['comentario'].hasError('required') && comentarioForm.controls['comentario'].touched">El comentario es requerido</span>
+    </div>
+
+    <button type="submit" class="boton">Agregar</button>
+  </form>

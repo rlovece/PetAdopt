@@ -5,8 +5,7 @@ import { Usuario } from 'src/app/core/models/Models/usuario';
 
 @Component({
   selector: 'app-editar-usuarios',
-  templateUrl: './editar-usuarios.component.html',
-  styleUrls: ['./editar-usuarios.component.css']
+  templateUrl: './editar-usuarios.component.html'
 })
 export class EditarUsuariosComponent {
 

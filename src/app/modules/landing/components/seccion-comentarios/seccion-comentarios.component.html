@@ -1,8 +1,13 @@
 <div id="contenedor-comentarios">
   <h2>Últimos comentarios</h2>
-  <button class="boton">Añadir comentario</button>
-  <app-lista-comentarios></app-lista-comentarios>
-
+  <button class="boton" (click)="verPanelAddComentario()">Añadir comentario</button>
+  <app-lista-comentarios
+  [inputComentarios] = "listaComentarios"
+  ></app-lista-comentarios>
+  <div class="menuDesplegable" [class.active]="mostrarPanelAddComentario">
+    <button (click)="verPanelAddComentario()" class="boton">Cerrar</button>
+    <app-add-comentario (EmitAddComentario)="onAgregarMascota($event)"></app-add-comentario>
+  </div>
 </div>
 
 

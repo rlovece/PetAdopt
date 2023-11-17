@@ -1,10 +1,10 @@
-<div class="conteiner">
-  <h2>Agregar Mascota</h2>
+<div class="container">
+  <h2 class="titulo-form">Agregar Mascota</h2>
   <form [formGroup]="mascotaForm" (ngSubmit)="addMascota()">
     <div class="form-group">
       <label for="nombre">Nombre: </label>
       <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
-      <span class="error" *ngIf="mascotaForm.controls['nombre'].getError('required') && mascotaForm.touched">El nombre es requerido</span>
+      <span class="error" *ngIf="mascotaForm.controls['nombre'].hasError('required') && mascotaForm.controls['nombre'].touched">El nombre es requerido</span>
     </div>
     <div class="form-group">
       <label for="tipo">Tipo</label>
@@ -12,7 +12,7 @@
         <option value="Perro">Perro</option>
         <option value="Gato">Gato</option>
       </select>
-      <span class="error" *ngIf="mascotaForm.controls['tipo'].getError('required') && mascotaForm.touched">El tipo es requerido</span>
+      <span class="error" *ngIf="mascotaForm.controls['nombre'].hasError('required') && mascotaForm.controls['nombre'].touched">El nombre es requerido</span>
     </div>
     <div class="form-group">
       <label for="sexo">Sexo</label>
@@ -20,12 +20,12 @@
         <option value="F">Hembra</option>
         <option value="M">Macho</option>
       </select>
-      <span class="error" *ngIf="mascotaForm.controls['sexo'].getError('required') && mascotaForm.touched">El sexo es requerido</span>
+      <span class="error" *ngIf="mascotaForm.controls['sexo'].hasError('required') && mascotaForm.controls['sexo'].touched">El sexo es requerido</span>
     </div>
     <div class="form-group">
       <label for="foto">Foto</label>
       <input type="url" id="foto" formControlName="foto" placeholder="URL de la Foto">
-      <span class="error" *ngIf="mascotaForm.controls['foto'].getError('required') && mascotaForm.touched">El foto es requerido</span>
+      <span class="error" *ngIf="mascotaForm.controls['foto'].hasError('required') && mascotaForm.controls['foto'].touched">La foto es requerida</span>
     </div>
     <div class="form-group">
       <label for="tamanio">Tamaño</label>
@@ -34,63 +34,19 @@
         <option value="Mediano">Mediano</option>
         <option value="Grande">Grande</option>
       </select>
-      <span class="error" *ngIf="mascotaForm.controls['tamanio'].getError('required') && mascotaForm.touched">El tamaño es requerido</span>
+      <span class="error" *ngIf="mascotaForm.controls['tamanio'].hasError('required') && mascotaForm.controls['tamanio'].touched">El tamaño es requerido</span>
     </div>
     <div class="form-group">
       <label for="nacimiento">Fecha Nac</label>
       <input type="date" id="nacimiento" formControlName="nacimiento">
-      <span class="error" *ngIf="mascotaForm.controls['nacimiento'].hasError('required') && mascotaForm.touched">La fecha de nacimiento es requerida</span>
+      <span class="error" *ngIf="mascotaForm.controls['nacimiento'].hasError('required') && mascotaForm.controls['nacimiento'].touched">Fecha requerida</span>
     </div>
     <div class="form-group">
       <label for="caracteristicas">Caracteristicas</label>
       <input type="text" id="caracteristicas" formControlName="caracteristicas" placeholder="Más caracteristicas">
-      <span class="error" *ngIf="mascotaForm.controls['caracteristicas'].getError('required') && mascotaForm.touched">El foto es requerido</span>
+      <span class="error" *ngIf="mascotaForm.controls['caracteristicas'].hasError('required') && mascotaForm.controls['caracteristicas'].touched">Completa caracteristicas</span>
     </div>
     <button type="submit" class="boton">Agregar</button>
   </form>
-
-<!--
-    <form (ngSubmit)="addMascota">
-      <div class="form-group">
-        <label for="nombre"></label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre"
-        [(ngModel)]="newMascota.nombre" required>
-      </div>
-      <div class="form-group">
-        <select id="tipo" name="tipo" [(ngModel)]="newMascota.tipo">
-          <option value="Perro">Perro</option>
-          <option value="Gato">Gato</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <select id="sexo" name="sexo" [(ngModel)]="newMascota.sexo">
-          <option value="F">Hembra</option>
-          <option value="M">Macho</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="foto"></label>
-        <input type="url" id="foto" name="foto" placeholder="URL de la foto"
-        [(ngModel)]="newMascota.foto" required>
-      </div>
-      <div class="form-group">
-        <select id="tamanio" name="tamanio" [(ngModel)]="newMascota.tamanio">
-          <option value="Pequeño">Pequeño</option>
-          <option value="Mediano">Mediano</option>
-          <option value="Grande">Grande</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="edad"></label>
-        <input type="number" id="edad" name="edad" placeholder="Edad en años"
-        [(ngModel)]="newMascota.edad" required>
-      </div>
-      <div class="form-group">
-        <label for="caracteristicas"></label>
-        <input type="text" id="caracteristicas" name="caracteristicas" placeholder="Caracteristicas adicionales"
-        [(ngModel)]="newMascota.caracteristicas">
-      </div>
-      <button type="submit" (click)="addMascota()">Agregar</button>
-    </form> -->
 </div>
 

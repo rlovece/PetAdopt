@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddComentarioComponent } from './add-comentario/add-comentario.component';
 import { ComentarioComponent } from './comentario/comentario.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,8 @@ import { ComentarioComponent } from './comentario/comentario.component';
     ComentarioComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     AddComentarioComponent,

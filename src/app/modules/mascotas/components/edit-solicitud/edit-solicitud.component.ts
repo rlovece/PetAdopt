@@ -8,8 +8,7 @@ import { MascotasService } from 'src/app/core/services/mascotas.service';
 
 @Component({
   selector: 'app-edit-solicitud',
-  templateUrl: './edit-solicitud.component.html',
-  styleUrls: ['./edit-solicitud.component.css']
+  templateUrl: './edit-solicitud.component.html'
 })
 export class EditSolicitudComponent {
   solicitudForm: FormGroup | undefined;
