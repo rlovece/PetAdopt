@@ -1,4 +1,6 @@
 #nav-cabecera {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(90deg, rgba(233,148,151,1) 0%, rgba(230,129,132,1) 50%, rgba(164,74,149,1) 100%);
   border: 2px solid rgb(250, 233, 250);
   border-radius: 5px;
@@ -6,24 +8,20 @@
   text-align: center;
 }
 
-#arriba {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#user {
-  display: flex;
-  align-items: center;
+h2 {
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 #user img {
   width: 30px;
   margin-right: 10px;
-}
-
-#opciones-nav-admin {
-  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
 }
 
 .logout, button{
@@ -33,7 +31,7 @@
   margin-left: 10px;
 }
 
-p, a, h2, img, button{
+p, a, img, button{
   font-family: 'Kanit', sans-serif;
   text-shadow: 0px 0px 2px #FBFFA5;
   text-decoration: none;
@@ -42,6 +40,6 @@ p, a, h2, img, button{
   padding-right: 1em;
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 

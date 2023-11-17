@@ -1,10 +1,10 @@
 .grilla-mascotas{
   display: flex;
   flex-direction: column;
-  
+
 }
 
-@media screen and (min-width: 40em) and (max-width: 63.9em) {
+@media screen and (min-width: 45em) and (max-width: 63.9em) {
   .grilla-mascotas{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

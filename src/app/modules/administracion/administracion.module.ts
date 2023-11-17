@@ -12,6 +12,8 @@ import { ListadoSolicitudesComponent } from './listados/listado-solicitudes/list
 import { ListadosUsuariosComponent } from './listados/listados-usuarios/listados-usuarios.component';
 import { GestionUsuariosComponent } from './gestion/gestion-usuarios/gestion-usuarios.component';
 import { UsuariosModule } from '../usuarios/usuarios.module';
+import { GestionComentariosComponent } from './gestion/gestion-comentarios/gestion-comentarios.component';
+import { ListadoComentariosComponent } from './listados/listado-comentarios/listado-comentarios.component';
 
 @NgModule({
     declarations: [
@@ -23,6 +25,8 @@ import { UsuariosModule } from '../usuarios/usuarios.module';
         ListadoSolicitudesComponent,
         ListadosUsuariosComponent,
         GestionUsuariosComponent,
+        GestionComentariosComponent,
+        ListadoComentariosComponent,
     ],
     exports: [
         ListadosMascotasComponent,

@@ -1,0 +1,21 @@
+<div class="contenedor">
+  <table class="tabla">
+    <thead>
+    <tr>
+    <th>id</th>
+    <th>Fecha</th>
+    <th>Puntaje</th>
+    <th>Comentario</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let comentario of inputComentarios">
+        <td>{{ comentario.id }}</td>
+        <td>{{ comentario.fecha }}</td>
+        <td>{{ comentario.puntaje }}</td>
+        <td>{{ comentario.comentario}}</td>
+      </tr>
+    </tbody>
+    </table>
+
+</div>

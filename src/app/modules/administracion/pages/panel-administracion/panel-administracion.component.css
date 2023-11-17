@@ -8,14 +8,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 28em;
+  border-radius: 10px;
 }
 
 #bienvenida h2, p {
   text-align: center;
   font-family: Arial Black;
   font-weight: bold;
-  font-size: 5em;
+  font-size: 4em;
+  width: 90%;
   color: white;
   text-shadow: 5px 3px 10px rgba(248, 144, 24, 0.744);
 }

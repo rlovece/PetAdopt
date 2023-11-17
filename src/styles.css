@@ -1,3 +1,4 @@
+
 .fondo-degrade{
   display: flex;
   align-items: center;
@@ -51,7 +52,7 @@ p{
   cursor: pointer;
   font-weight: 100;
   padding: 8px;
-  width: 100px;
+  width: 2empx;
   transition: all .3s ease;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }

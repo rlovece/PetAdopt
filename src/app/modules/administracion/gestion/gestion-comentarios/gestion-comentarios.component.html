@@ -1,0 +1,12 @@
+<div class="botones">
+  <button class="boton" (click)="ver1()">⭐</button>
+  <button class="boton" (click)="ver2()">⭐⭐</button>
+  <button class="boton" (click)="ver3()">⭐⭐⭐</button>
+  <button class="boton" (click)="ver4()">⭐⭐⭐⭐</button>
+  <button class="boton" (click)="ver5()">⭐⭐⭐⭐⭐</button>
+  <button class="boton" (click)="quitarFiltros()">Quitar Filtros</button>
+</div>
+
+<div class="conteiner-comentarios">
+  <app-listado-comentarios [inputComentarios]="listaFiltradaComentario"></app-listado-comentarios>
+</div>

@@ -17,14 +17,14 @@
 
 <div class="menuDesplegable" [class.active]="mostrarPanelAddMascota">
   <div *ngIf="mostrarPanelAddMascota">
-    <button (click)="verPanelAddMascota()" class="boton">Cerrar</button>
+    <button (click)="verPanelAddMascota()" class="boton">X</button>
     <app-add-mascota (EmitAddMascota)="onAgregarMascota($event)"></app-add-mascota>
   </div>
 </div>
 
 <div *ngIf="mascotaSeleccionadaParaEdicion" class="menuDesplegable" [class.active]="mostrarPanelEditMascota">
   <div *ngIf="mostrarPanelEditMascota">
-    <button (click)="verPanelEditMascota()" class="boton">Cerrar</button>
+    <button (click)="verPanelEditMascota()" class="boton">X</button>
     <app-edit-mascota [mascota]="mascotaSeleccionadaParaEdicion"></app-edit-mascota>
     <p>Guarde los cambios y luego pulse cerrar</p>
   </div>
@@ -32,7 +32,7 @@
 
 <div *ngIf="mascotaSeleccionadaView" class="menuDesplegable" [class.active]="mostrarPanelViewMascota">
   <div *ngIf="mostrarPanelViewMascota">
-    <button (click)="verPanelViewMascota()" class="boton">Cerrar</button>
+    <button (click)="verPanelViewMascota()" class="boton">X</button>
     <app-mascota [inputMascota]="mascotaSeleccionadaView" [isAdmin]=true></app-mascota>
   </div>
 </div>
