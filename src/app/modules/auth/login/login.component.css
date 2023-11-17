@@ -87,9 +87,9 @@ p{
 }
 
 #R{
-  padding: 5px;
+  padding: 10px;
   margin-left: 35%;
-
+  width: 110px;
 }
 
 #R:hover{

@@ -9,6 +9,7 @@
 h2{
   margin-top: 5%;
     color: #ffffff;
+    text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
     font-family: Helvetica;
@@ -28,7 +29,7 @@ p{
   text-align: center;
   color:  #fb9a54;
   font-size: 1rem;
-  text-shadow: 4px 4px 36px hsl(28, 90%, 59%);
+  text-shadow: 4px 4px 36px hsl(0, 0%, 100%);
   width: 60%;
   line-height: 25px;
 }
@@ -42,7 +43,7 @@ p{
 
 }
 
-.boton{
+.boton, .cerrar{
   background-color: rgba(255, 255, 255, 0.918);
   border-radius: 20px;
   border: none;
@@ -63,6 +64,18 @@ p{
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
   transform: scale(1.1);
 }
+
+#cerrar{
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+
+ }
+
+ #cerrar:hover{
+  background-color: #E99497;
+  color: white;
+ }
 
 .contenedor {
   margin: 0 auto;

@@ -16,7 +16,7 @@
 
 <div class="detalle-solicitud" [class.active]="mostrarPanelViewSolicitud">
   <div *ngIf="mostrarPanelViewSolicitud">
-    <button (click)="verDetalleSolicitud()" class="boton">X</button>
+    <button (click)="verDetalleSolicitud()" class="boton" id="cerrar">X</button>
     <div class="contenido-detalle-Solicitud">
       <div id="solicitud-en-Detalle">
         <h2>Solicitud n° {{solicitudSeleccionada.id}}</h2>
@@ -48,7 +48,7 @@
 
 <div *ngIf="solicitudSeleccionada" class="menuDesplegable" [class.active]="mostrarPanelEditSolicitud">
   <div *ngIf="mostrarPanelEditSolicitud">
-    <button (click)="verPanelEditSolicitud()" class="boton">Cerrar</button>
+    <button (click)="verPanelEditSolicitud()" class="boton" id="cerrar">X</button>
     <app-edit-solicitud [solicitud]="solicitudSeleccionada"></app-edit-solicitud>
     <p>Guarde los cambios y luego pulse cerrar</p>
   </div>
