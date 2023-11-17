@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './shares/pages/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
-import { ContactoComponent } from './shares/contacto/contacto.component';
+import { ContactoComponent } from './modules/landing/components/contacto/contacto.component';
 import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [

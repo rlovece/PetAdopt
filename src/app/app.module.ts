@@ -10,6 +10,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { AdministracionModule } from './modules/administracion/administracion.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ComentariosModule } from './modules/comentarios/comentarios.module';
+import { ContactoComponent } from './modules/landing/components/contacto/contacto.component';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { ComentariosModule } from './modules/comentarios/comentarios.module';
     AuthModule,
     SharesModule,
     AdministracionModule,
-    ComentariosModule
+    ComentariosModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
