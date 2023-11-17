@@ -1,6 +1,6 @@
 .container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin-bottom: 5%;
   padding: 2%;
@@ -25,16 +25,19 @@
 
 .image2{
   border-radius: 50%;
-  width: 60%
+  width: 15rem;
+  height: 15rem;
 }
 
 h2{
   font-size: 3em;
 }
 
-@media screen and (min-width: 45em) and (max-width:75em) {
+@media only screen and (min-width: 320px) and (max-width:768px) {
   .container{
-    flex-direction: row
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   h2{
     font-size: 3.5em;

@@ -2,6 +2,7 @@
 #crear{
   margin-top: 10px;
   position: fixed;
+  width: 100px;
 }
 
 .form-group {

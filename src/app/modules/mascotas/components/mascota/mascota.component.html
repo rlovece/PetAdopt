@@ -3,14 +3,14 @@
   <app-imagen [archivo]="inputMascota.foto"></app-imagen>
 
   <h2>{{inputMascota.nombre}}</h2>
-  <p>F. Nac: {{inputMascota.nacimiento}}</p>
+  <p>Nació: {{inputMascota.nacimiento}}</p>
   <p>Sexo: {{inputMascota.sexo}} </p>
   <p>Tamaño: {{inputMascota.tamanio}}</p>
   <p>{{inputMascota.caracteristicas}}</p>
-  <button class="botonSolicitar" (click)="solicitarMascota()">Quiero adoptar!</button>
+  <button class="boton" (click)="solicitarMascota()">Quiero adoptar!</button>
     <div class="solicitarMascota" [class.active]="mostrarPanelSolicitar">
       <div *ngIf="mostrarPanelSolicitar">
-        <button class="cerrar" (click)="solicitarMascota()">X</button>
+        <button class="cerrar" (click)="solicitarMascota()" id="cerrar">X</button>
         <app-solicitar-adopcion *ngIf="inputMascota.id" [idAnimal]="inputMascota.id"></app-solicitar-adopcion>
 
       </div>
