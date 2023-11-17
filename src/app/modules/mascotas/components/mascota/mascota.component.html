@@ -11,7 +11,7 @@
     <div class="solicitarMascota" [class.active]="mostrarPanelSolicitar">
       <div *ngIf="mostrarPanelSolicitar">
         <button class="cerrar" (click)="solicitarMascota()" id="cerrar">X</button>
-        <app-solicitar-adopcion *ngIf="inputMascota.id" [idAnimal]="inputMascota.id"></app-solicitar-adopcion>
+        <app-solicitar-adopcion *ngIf="inputMascota.id" [idMascota]="inputMascota.id"></app-solicitar-adopcion>
 
       </div>
     </div>

@@ -140,7 +140,7 @@
       "fecha": "12/10/23",
       "idAdoptante": 1,
       "estado": "Aprobada",
-      "idAnimal": 9,
+      "idMascota": 9,
       "comentarios": "En excelente estado, vacunas al día",
       "fechaAdopcion": "15/10/23",
       "foto": "https://cdn.pixabay.com/photo/2020/10/03/11/08/girl-5623231_640.jpg"
@@ -148,7 +148,7 @@
     {
       "id": 2,
       "fecha": "19/10/23",
-      "idAnimal": 5,
+      "idMascota": 5,
       "idAdoptante": 4,
       "comentarios": "Pumba se encuentra muy bien, fue castrada y tiene todas las vacunas al día",
       "estado": "Aprobada",
@@ -158,7 +158,7 @@
     {
       "id": 3,
       "fecha": "29/10/23",
-      "idAnimal": 10,
+      "idMascota": 10,
       "idAdoptante": 3,
       "comentarios": "Él estaba muy asustado cuando llegó, ya tenia tiempo en la calle. Se recuperó y encontró un hogar con Dafne y Esteban.",
       "estado": "Aprobada",
@@ -168,7 +168,7 @@
     {
       "id": 4,
       "fecha": "13/10/23",
-      "idAnimal": 2,
+      "idMascota": 2,
       "idAdoptante": 2,
       "comentarios": "Se fue siendo el mas chiquito de nuestra familia! Marcos lo adopto y lo llevo a vivir a su casa con sus 3 hijos.",
       "estado": "Aprobada",
@@ -178,7 +178,7 @@
     {
       "id": 5,
       "fecha": "10/11/23",
-      "idAnimal": 1,
+      "idMascota": 1,
       "idAdoptante": 1,
       "comentarios": "Todos los meses nos envia fotos con ella, nos cuenta que su momento favorito del dia es por la tarde cuando salen de pase juntas",
       "estado": "Aprobada",
