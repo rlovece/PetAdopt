@@ -17,8 +17,8 @@
       <tr *ngFor="let solicitud of inputSolicitudes">
         <td>{{ solicitud.id }}</td>
         <td>{{ solicitud.fecha }}</td>
-        <td>{{ solicitud.idAnimal }}</td>
-        <td>{{ getNombreMascota(solicitud.idAnimal) }}</td>
+        <td>{{ solicitud.idMascota }}</td>
+        <td>{{ getNombreMascota(solicitud.idMascota) }}</td>
         <td>{{ solicitud.idAdoptante }}</td>
         <td>{{ solicitud.estado }}</td>
         <td>{{ solicitud.fechaAdopcion }}</td>
@@ -43,7 +43,7 @@
       <tr *ngFor="let solicitud of inputSolicitudes">
         <td>{{ solicitud.id }}</td>
         <td>{{ solicitud.fecha }}</td>
-        <td>{{ solicitud.idAnimal }} {{ getNombreMascota(solicitud.idAnimal) }}</td>
+        <td>{{ solicitud.idMascota }} {{ getNombreMascota(solicitud.idMascota) }}</td>
         <td>{{ solicitud.estado }}</td>
       </tr>
     </tbody>

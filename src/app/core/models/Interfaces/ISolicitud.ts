@@ -1,7 +1,7 @@
 export interface ISolicitud{
   id: number | null;
   fecha: string;
-  idAnimal: number ;
+  idMascota: number ;
   idAdoptante: number | null;
   comentarios: string;
   estado: string;

@@ -3,7 +3,7 @@ import { ISolicitud } from "../Interfaces/ISolicitud";
 export class Solicitud implements ISolicitud{
   id : number | null= null;
   fecha: string = '';
-  idAnimal: number ;
+  idMascota: number ;
   idAdoptante: number | null= null;
   estado:  'Pendiente' | 'Aprobada' | 'Rechazada' | '' = '';
   comentarios: string;
@@ -13,7 +13,7 @@ export class Solicitud implements ISolicitud{
   constructor(solicitud?:any){
     this.id =  solicitud == undefined ? null : solicitud.id;
     this.fecha = solicitud == undefined ? '' : solicitud.fecha;
-    this.idAnimal = solicitud == undefined ? null : solicitud.idAnimal;
+    this.idMascota = solicitud == undefined ? null : solicitud.idMascota;
     this.idAdoptante = solicitud == undefined ? null : solicitud.idAdoptante;
     this.estado = solicitud == undefined ? '' : solicitud.estado;
     this.comentarios = solicitud == undefined ? '' : solicitud.comentarios;

@@ -107,7 +107,7 @@ export class GestionSolicitudesComponent {
 
   verSolicitud(solicitud: Solicitud){
     this.mascotaEnSolicitud =
-      this.listaMascotas.filter(m => m.id == solicitud.idAnimal)[0];
+      this.listaMascotas.filter(m => m.id == solicitud.idMascota)[0];
     this.adoptanteEnSolicitud=
       this.listaAdoptantes.filter(a => a.id == solicitud.idAdoptante)[0];
     this.listaFiltradaSolicitudes = this.listaCompletaSolicitudes.filter(s => s.idAdoptante == solicitud.idAdoptante);

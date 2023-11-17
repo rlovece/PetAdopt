@@ -42,7 +42,7 @@ export class EditSolicitudComponent {
 
    getMascota(){
      if (this.solicitud){
-       this.mascotaService.getById(this.solicitud.idAnimal)
+       this.mascotaService.getById(this.solicitud.idMascota)
       .subscribe({
         next: data => this.mascotaEdit = data,
         error: e => console.log(e)
@@ -59,7 +59,7 @@ export class EditSolicitudComponent {
         this.solicitud.fechaAdopcion = new Date().toLocaleString();
         this.solicitud.estado = newSolicitud.estado;
         this.mascotaEdit.estado = 'Adoptado';
-        this.mascotaService.update(this.solicitud.idAnimal, this.mascotaEdit)
+        this.mascotaService.update(this.solicitud.idMascota, this.mascotaEdit)
         .subscribe(data => {
           console.log(data);
             if (this.solicitud != undefined && this.solicitud.id!= null) {
