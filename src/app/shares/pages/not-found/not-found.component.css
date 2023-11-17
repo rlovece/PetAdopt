@@ -13,7 +13,21 @@
 }
 
 img{
-  width: 30%;
-  height: 40%;
+  width: 100%;
   background-position: center;
+}
+
+
+@media screen and (min-width: 45em) and (max-width: 63.9em) {
+  img{
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+
+  img{
+    width: 30%;
+    height: 40%;
+  }
 }

@@ -101,10 +101,11 @@ button{
   background-color: transparent;
 }
 
+
 .menuDesplegable{
   position: fixed;
   top: 15px;
-  left: 60%;
+  left: 0%;
   bottom: 0;
   right: 0;
   background: #F8FACB;
@@ -115,7 +116,6 @@ button{
     transform: translateX(0);
   }
 }
-
 
 .side-menu{
   position: fixed;
@@ -245,3 +245,22 @@ input, select{
   transition: all .3s ease;
   height: 25px;
 }
+
+
+@media screen and (min-width: 45em) and (max-width: 63.9em) {
+  .menuDesplegable{
+    left: 40%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+
+  .menuDesplegable{
+    left: 60%;
+  }
+
+  .titulo-form{
+    font-size: 24px;
+  }
+}
+
