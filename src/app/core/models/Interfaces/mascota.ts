@@ -10,6 +10,5 @@ export interface IMascota {
   nacimiento: Data | null;
   caracteristicas: string;
   estado: "En adopcion" | "En transito" | "Adoptado" | "";
-  idAdminCarga: number | null;
 }
 

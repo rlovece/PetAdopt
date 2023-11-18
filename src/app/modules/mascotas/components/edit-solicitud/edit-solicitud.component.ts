@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiSolicitudesService } from 'src/app/core/services/api-solicitudes.service';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
-import { MascotasService } from 'src/app/core/services/mascotas.service';
+import { MascotasService } from 'src/app/core/services/api-mascotas.service';
 
 
 @Component({

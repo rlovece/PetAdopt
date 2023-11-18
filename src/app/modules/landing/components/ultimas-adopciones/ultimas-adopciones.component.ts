@@ -3,7 +3,7 @@ import { ApiSolicitudesService } from 'src/app/core/services/api-solicitudes.ser
 import { Adoptante } from 'src/app/core/models/Models/adoptante';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
-import { MascotasService } from 'src/app/core/services/mascotas.service';
+import { MascotasService } from 'src/app/core/services/api-mascotas.service';
 import { ApiAdoptantesService } from 'src/app/core/services/api-adoptantes.service';
 
 @Component({

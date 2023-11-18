@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mascota } from 'src/app/core/models/Models/mascota';
-import { MascotasService } from '../../../../core/services/mascotas.service';
+import { MascotasService } from '../../../../core/services/api-mascotas.service';
 
 @Component({
   selector: 'app-lista-mascotas',

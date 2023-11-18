@@ -14,7 +14,6 @@ export class Mascota implements IMascota{
   nacimiento: Data | null = null;
   caracteristicas: string = "";
   estado: "En adopcion" | "En transito" | "Adoptado" | "" = "En adopcion";
-  idAdminCarga: number | null = null;
 
   constructor(mascota?:any){
 
@@ -27,6 +26,5 @@ export class Mascota implements IMascota{
     this.nacimiento = mascota == undefined ? '' : mascota.nacimiento;
     this.caracteristicas = mascota == undefined ? '' : mascota.caracteristicas;
     this.estado = mascota == undefined ? 'En adopcion' : mascota.estado;
-    this.idAdminCarga = mascota == undefined ? null : mascota.idAdminCarga;
   }
 }

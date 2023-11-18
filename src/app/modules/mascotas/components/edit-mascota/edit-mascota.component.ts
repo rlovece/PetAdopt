@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Mascota } from 'src/app/core/models/Models/mascota';
-import { MascotasService } from 'src/app/core/services/mascotas.service';
+import { MascotasService } from 'src/app/core/services/api-mascotas.service';
 
 @Component({
   selector: 'app-edit-mascota',

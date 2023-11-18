@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
-import { MascotasService } from 'src/app/core/services/mascotas.service';
+import { MascotasService } from 'src/app/core/services/api-mascotas.service';
 
 @Component({
   selector: 'app-listado-solicitudes',
