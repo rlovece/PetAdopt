@@ -86,6 +86,11 @@ export class GestionSolicitudesComponent {
     this.listaCompletaSolicitudes.filter(s => s.estado == 'Aprobada');
   }
 
+  verRechazadas(){
+    this.listaFiltradaSolicitudes =
+    this.listaCompletaSolicitudes.filter(s => s.estado == 'Rechazada');
+  }
+
   quitarFiltros(){
     this.listaFiltradaSolicitudes = this.listaCompletaSolicitudes.slice();
   }
