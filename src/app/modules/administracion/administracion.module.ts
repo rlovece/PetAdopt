@@ -14,6 +14,7 @@ import { GestionUsuariosComponent } from './gestion/gestion-usuarios/gestion-usu
 import { UsuariosModule } from '../usuarios/usuarios.module';
 import { GestionComentariosComponent } from './gestion/gestion-comentarios/gestion-comentarios.component';
 import { ListadoComentariosComponent } from './listados/listado-comentarios/listado-comentarios.component';
+import { SharesModule } from "../../shares/shares.module";
 
 @NgModule({
     declarations: [
@@ -37,7 +38,7 @@ import { ListadoComentariosComponent } from './listados/listado-comentarios/list
         AdministracionRoutingModule,
         MascotasModule,
         UsuariosModule,
+        SharesModule
     ]
-
 })
 export class AdministracionModule { }

@@ -12,6 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AddMascotaComponent {
   mascotaForm: FormGroup;
   @Output() EmitAddMascota = new EventEmitter<Mascota>();
+  @Output() EmitMsj = new EventEmitter<string>();
 
   constructor(
     private fb: FormBuilder,
@@ -35,11 +36,11 @@ export class AddMascotaComponent {
       this.mascotaService.create(newMascota).subscribe(
         (data) => {
           this.EmitAddMascota.emit(data);
-          alert(`${data.nombre} fue agregado en estado "En Adopcion"`);
+          this.EmitMsj.emit(`${data.nombre} fue agregado en estado "En Adopcion"`);
         }
       );
     } else {
-      alert('Por favor, completa todos los campos obligatorios.');
+      this.EmitMsj.emit(`Por favor, completa todos los campos obligatorios.`);
     }
   }
 }

@@ -11,6 +11,7 @@ export class EditMascotaComponent {
   mascotaForm: FormGroup | undefined;
   @Output() EmitEditMascota = new EventEmitter<Mascota>();
   @Input() mascota: Mascota | undefined;
+  @Output() EmitMsj = new EventEmitter<string>();
 
   constructor(
     private fb: FormBuilder,
@@ -45,7 +46,7 @@ export class EditMascotaComponent {
         this.mascotaService.update(this.mascota.id, this.mascota).subscribe(
           (data) => {
             this.EmitEditMascota.emit(data);
-            alert(`${data.nombre} fue editado`);
+            this.EmitMsj.emit(`${data.nombre} fue editado`);
           }
         );
       }

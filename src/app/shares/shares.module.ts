@@ -4,6 +4,7 @@ import { HeaderComponent } from '../modules/landing/components/header/header.com
 import { NavComponent } from './nav/nav.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './alert/alert.component';
 
 
 
@@ -12,7 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HeaderComponent,
     NavComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AlertComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -21,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HeaderComponent,
     NavComponent,
+    AlertComponent
   ]
 })
 

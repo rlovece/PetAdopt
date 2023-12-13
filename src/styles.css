@@ -130,6 +130,21 @@ button{
   }
 }
 
+.alert{
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  bottom: 40%;
+  right: 0%;
+  background: #F8FACB;
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px rgba(2, 2, 2, 0.9);
+  opacity: 0%;
+  &.active {
+    opacity: 100%;
+  }
+}
+
 .side-menu{
   position: fixed;
   top: 0;
@@ -200,9 +215,9 @@ ul {
   content: "";
   display: block;
   width: 100%;
-  height: 1px; /* Ajusta la altura de la sombra según tus preferencias */
-  background: rgba(44, 44, 44, 0.3); /* Color y opacidad de la sombra */
-  box-shadow: 0px 2px 5px rgba(97, 97, 97, 0.9); /* Estilo de la sombra */
+  height: 1px;
+  background: rgba(44, 44, 44, 0.3);
+  box-shadow: 0px 2px 5px rgba(97, 97, 97, 0.9);
 }
 
 .titulo-form{
@@ -267,12 +282,22 @@ td {
   .menuDesplegable{
     left: 40%;
   }
+
+  .alert{
+    left: 15%;
+    right: 15%;
+  }
 }
 
 @media screen and (min-width: 64em) {
 
   .menuDesplegable{
     left: 60%;
+  }
+
+  .alert{
+    left: 30%;
+    right: 30%;
   }
 
   .titulo-form{

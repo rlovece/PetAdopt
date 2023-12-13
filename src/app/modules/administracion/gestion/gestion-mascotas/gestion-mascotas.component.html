@@ -18,14 +18,18 @@
 <div class="menuDesplegable" [class.active]="mostrarPanelAddMascota">
   <div *ngIf="mostrarPanelAddMascota">
     <button (click)="verPanelAddMascota()" class="boton" id="cerrar">X</button>
-    <app-add-mascota (EmitAddMascota)="onAgregarMascota($event)"></app-add-mascota>
+    <app-add-mascota (EmitAddMascota)="onAgregarMascota($event)" (EmitMsj)="mostrarMsj($event)"></app-add-mascota>
   </div>
 </div>
 
 <div *ngIf="mascotaSeleccionadaParaEdicion" class="menuDesplegable" [class.active]="mostrarPanelEditMascota">
   <div *ngIf="mostrarPanelEditMascota">
     <button (click)="verPanelEditMascota()" class="boton" id="cerrar">X</button>
-    <app-edit-mascota [mascota]="mascotaSeleccionadaParaEdicion" (EmitEditMascota)="GuardarCambiosEdit()"></app-edit-mascota>
+    <app-edit-mascota
+      [mascota]="mascotaSeleccionadaParaEdicion"
+      (EmitEditMascota)="GuardarCambiosEdit()"
+      (EmitMsj)="mostrarMsj($event)"
+    ></app-edit-mascota>
   </div>
 </div>
 
@@ -36,3 +40,6 @@
   </div>
 </div>
 
+<div class="alert" [class.active]="mostrarAlert">
+  <app-alert [texto]="msj" (EmitAceptar)="aceptarAlert()"></app-alert>
+</div>
