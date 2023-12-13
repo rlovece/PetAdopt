@@ -15,6 +15,9 @@ export class GestionUsuariosComponent {
   mostrarPanelEditarUsuario: boolean = false;
   usuarioAeditar: Usuario | null = null;
 
+  mostrarAlert: boolean = false;
+  msj: string = '';
+
   constructor( private usuarioService: ApiUsuariosService ){}
 
   @Input() inputUsuarios: Usuario = new Usuario();
@@ -63,7 +66,7 @@ export class GestionUsuariosComponent {
       .subscribe(
         {
           next: () => {
-            alert(`${usu.nombre} fue eliminada`)
+            this.mostrarMsj(`Usuario Administrador nro ${usu.id} fue eliminado`);
             this.usuarios= this.usuarios.filter(u => u.id != usu.id);
           },
           error: e => console.log(e)
@@ -71,5 +74,15 @@ export class GestionUsuariosComponent {
       )
     }
   }
+
+  mostrarMsj(event: string) {
+    this.msj = event;
+    this.mostrarAlert = true;
+  }
+
+  aceptarAlert() {
+    this.mostrarAlert = false;
+  }
+
 }
 

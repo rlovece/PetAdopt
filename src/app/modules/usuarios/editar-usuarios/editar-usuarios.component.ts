@@ -12,6 +12,7 @@ export class EditarUsuariosComponent {
 
   @Output() EmitEditUsuario = new EventEmitter<Usuario>();
   @Input() usuario: Usuario | undefined;
+  @Output() EmitMsj = new EventEmitter<string>();
 
   formulario: FormGroup | undefined;
 
@@ -36,7 +37,6 @@ export class EditarUsuariosComponent {
 
 editarUsuario() {
   console.log(this.usuario);
-    console.log("primer if");
   if (this.formulario && this.formulario.valid && this.usuario) {
     this.usuario.nombre = this.formulario.value.nombre;
     this.usuario.apellido = this.formulario.value.apellido;
@@ -44,20 +44,18 @@ editarUsuario() {
     this.usuario.direccion = this.formulario.value.direccion;
     this.usuario.email = this.formulario.value.email;
     this.usuario.contrasenia= this.formulario.value.contrasenia;
-    this.usuario.admin= true;
     this.usuario.telefono = this.formulario.value.telefono;
         if (this.usuario.id != null) {
             this.usuarioService.updateUsuario(this.usuario.id, this.usuario).subscribe({
         next: (data) => {
           console.log(this.usuario);
-    console.log("primer if");
           this.EmitEditUsuario.emit(data);
-          alert(`${data.nombre} fue editado`);
+          this.EmitMsj.emit(`El usuario nro ${data.id} usuario fue editado`);
         },
         error: (e) => console.log(e),
       });
     } else {
-      alert('Por favor, completa todos los campos obligatorios.');
+      this.EmitMsj.emit(`Su 'Por favor, verifica los datos`);
     }
     }
 }

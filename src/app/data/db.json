@@ -31,7 +31,7 @@
       "tamanio": "Pequeño",
       "nacimiento": "01/08/2021",
       "caracteristicas": "Juguetona, usa las piedritas",
-      "estado": "En adopcion"
+      "estado": "Adoptado"
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "tamanio": "Grande",
       "nacimiento": "01/08/2013",
       "caracteristicas": "Cariñoso, se lleva bien con los niños",
-      "estado": "En adopcion"
+      "estado": "Adoptado"
     },
     {
       "id": 5,
@@ -150,7 +150,7 @@
       "nombre": "Belen",
       "apellido": "Perez",
       "dni": 33111112,
-      "telefono": "22386744934",
+      "telefono": "2238674493",
       "direccion": "Chaco 3482",
       "email": "belen@gmail.com",
       "contrasenia": "123456",
@@ -161,7 +161,7 @@
       "nombre": "Oriana Dafne",
       "apellido": "Lucero",
       "direccion": "Italia 2985",
-      "telefono": "+542235578638",
+      "telefono": "2235578638",
       "email": "dafne@gmail.com",
       "contrasenia": "benito123",
       "id": 3
@@ -241,21 +241,10 @@
       "id": 8,
       "fecha": "12/12/2023",
       "idAdoptante": 1,
-      "estado": "Pendiente",
+      "estado": "Rechazada",
       "idMascota": 3,
-      "comentarios": "",
-      "fechaAdopcion": "",
-      "foto": ""
-    },
-    {
-      "id": 9,
-      "fecha": "12/12/2023",
-      "idAdoptante": 1,
-      "estado": "Pendiente",
-      "idMascota": 3,
-      "comentarios": "",
-      "fechaAdopcion": "",
-      "foto": ""
+      "foto": "-",
+      "comentarios": "No fue posible"
     }
   ],
   "adoptantes": [

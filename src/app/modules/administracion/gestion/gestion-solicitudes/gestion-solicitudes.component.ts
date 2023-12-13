@@ -25,6 +25,9 @@ export class GestionSolicitudesComponent {
   adoptanteEnSolicitud: Adoptante = new Adoptante;
   solicitudSeleccionada: Solicitud = new Solicitud;
 
+  mostrarAlert: boolean = false;
+  msj: string = '';
+
   constructor(
     private solicitudesService: ApiSolicitudesService,
     private mascotasService: MascotasService,
@@ -120,23 +123,12 @@ export class GestionSolicitudesComponent {
     this.solicitudSeleccionada = solicitud;
   }
 
+  mostrarMsj(event: string) {
+    this.msj = event;
+    this.mostrarAlert = true;
+  }
 
-
-
-
-  /*  deleteMascota(mascota: Mascota){
-    if (mascota.id){
-      this.mascotasService.delete(mascota.id)
-      .subscribe(
-        {
-          next: () => {
-            alert(`${mascota.nombre} fue eliminada`)
-            this.listaCompletaMascotas= this.listaCompletaMascotas.filter(m => m.id != mascota.id);
-            this.listaFiltradaMascotas = this.listaCompletaMascotas.slice();
-          },
-          error: e => console.log(e)
-        }
-      )
-    }
-  }*/
+  aceptarAlert() {
+    this.mostrarAlert = false;
+  }
 }

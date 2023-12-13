@@ -36,10 +36,11 @@
       <span class="error" *ngIf="formulario.controls['email'].hasError('required') && formulario.controls['email'].touched">El email es requerido</span>
       <span class="error" *ngIf="formulario.controls['email'].getError('pattern')&& formulario.touched">El formato de email no es valido</span>
     </div>
+
     <div class="form-group">
       <label for="contrasenia">Contraseña:</label>
       <input type="password" id="contrasenia" formControlName="contrasenia" placeholder="Nueva Contraseña">
-      <span class="error" *ngIf="formulario.controls['email'].hasError('required') && formulario.controls['email'].touched">El email es requerido</span>
+      <span class="error" *ngIf="formulario.controls['contrasenia'].hasError('required') && formulario.controls['contrasenia'].touched">Min 8 caracteres</span>
     </div>
     <button id="crear" class="boton" type="submit" (click)="agregarUsuario()">Crear</button>
   </form>

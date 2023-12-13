@@ -18,7 +18,10 @@
 <div class="menuDesplegable" [class.active]="mostrarPanelAddMascota">
   <div *ngIf="mostrarPanelAddMascota">
     <button (click)="verPanelAddMascota()" class="boton" id="cerrar">X</button>
-    <app-add-mascota (EmitAddMascota)="onAgregarMascota($event)" (EmitMsj)="mostrarMsj($event)"></app-add-mascota>
+    <app-add-mascota
+      (EmitAddMascota)="onAgregarMascota($event)"
+      (EmitMsj)="mostrarMsj($event)"
+    ></app-add-mascota>
   </div>
 </div>
 

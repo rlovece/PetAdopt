@@ -15,6 +15,7 @@ export class EditSolicitudComponent {
   @Output() EmitEditSolicitud = new EventEmitter<Solicitud>();
   @Output() EmitEditMascota = new EventEmitter<Mascota>();
   @Input() solicitud: Solicitud | undefined;
+  @Output() EmitMsj = new EventEmitter<string>();
 
   mascotaEdit: Mascota = new Mascota;
 
@@ -68,7 +69,7 @@ export class EditSolicitudComponent {
               .subscribe(
                 (data) => {
                   this.EmitEditSolicitud.emit(data);
-                  alert(`Solicitud ${data.id} fue editada!`);
+                  this.EmitMsj.emit(`Solicitud ${data.id} fue editada!`);
                 }
               );
             }
@@ -81,7 +82,7 @@ export class EditSolicitudComponent {
           .subscribe(
             (data) => {
               this.EmitEditSolicitud.emit(data);
-              alert(`Solicitud ${data.id} fue editada!`);
+              this.EmitMsj.emit(`Solicitud ${data.id} fue editada!`);
             }
           );
         }

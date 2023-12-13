@@ -9,7 +9,6 @@ export class Usuario implements IUsuario{
   direccion: string ='';
   email: string ='';
   contrasenia: string ='';
-  admin: boolean= true;
 
   constructor(usuario?:any){
     this.id =  usuario == undefined ? null : usuario.id;
@@ -20,6 +19,5 @@ export class Usuario implements IUsuario{
     this.direccion = usuario == undefined ? '' : usuario.direccion;
     this.email = usuario == undefined ? '' : usuario.email;
     this.contrasenia = usuario == undefined ? '' : usuario.contrasenia;
-    this.admin = usuario == undefined ? false : usuario.admin;
   }
 }

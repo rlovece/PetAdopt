@@ -11,6 +11,8 @@ import { ApiUsuariosService } from 'src/app/core/services/api-usuarios.service';
 export class AgregarUsuariosComponent {
 
   @Output() EmitAgregarUsuario = new EventEmitter<Usuario>();
+  @Output() EmitMsj = new EventEmitter<string>();
+
   constructor(private fb: FormBuilder, private usuarioService: ApiUsuariosService){}
 
   formulario: FormGroup = this.fb.group({
@@ -25,15 +27,16 @@ export class AgregarUsuariosComponent {
 
   agregarUsuario(){
     if (this.formulario.valid) {
-      let nuevoUsuario: Usuario = this.formulario.value;
+      let nuevoUsuario: Usuario =  this.formulario.value;
+
       this.usuarioService.addUsuario(nuevoUsuario).subscribe(
         (data) => {
           this.EmitAgregarUsuario.emit(data);
-          alert(`${data.nombre} fue agregado al listado`);
+          this.EmitMsj.emit(`El usuario con DNI ${data.dni} fue registrado con exito`);
         }
       );
     } else {
-      alert('Por favor, completa todos los campos obligatorios.');
+      this.EmitMsj.emit(`Por favor, completa todos los campos obligatorios.`);
     }
   }
 }

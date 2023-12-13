@@ -7,5 +7,4 @@ export interface IUsuario{
   direccion: string;
   email: string;
   contrasenia: string;
-  admin: boolean;
   }

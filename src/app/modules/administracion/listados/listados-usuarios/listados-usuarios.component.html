@@ -2,14 +2,13 @@
   <table class="tabla">
     <thead>
     <tr>
-    <th>ID</th>
+    <th>Nro</th>
     <th>Nombre</th>
     <th>Apellido</th>
     <th>DNI</th>
     <th>Telefono</th>
     <th>Direccion</th>
     <th>E-Mail</th>
-    <th>Contraseña</th>
     <th>Editar</th>
     <th>Eliminar</th>
     </tr>
@@ -23,7 +22,6 @@
         <td>{{ usu.telefono }}</td>
         <td>{{ usu.direccion }}</td>
         <td>{{ usu.email }}</td>
-        <td>{{ usu.contrasenia }}</td>
         <td><button  (click)="editarUsuario(usu)">✍🏻</button></td>
         <td><button (click)="borrarUsuario(usu!)">❌</button></td>
       </tr>

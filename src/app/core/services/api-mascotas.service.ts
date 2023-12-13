@@ -35,7 +35,6 @@ export class MascotasService {
   }
 
   create(mascota: Mascota){
-    console.log(mascota);
     return this.http.post<Mascota>(`${this.baseURL}/mascotas`, mascota);
   }
 
