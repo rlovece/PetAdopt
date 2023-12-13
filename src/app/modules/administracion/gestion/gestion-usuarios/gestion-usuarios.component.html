@@ -21,8 +21,7 @@
 <div *ngIf="usuarioAeditar" class="menuDesplegable" [class.active]="mostrarPanelEditarUsuario">
   <div *ngIf="mostrarPanelEditarUsuario">
     <button (click)="verPanelEditarUsuario()" class="boton"  id="cerrar">X</button>
-    <app-editar-usuarios [usuario]="usuarioAeditar"></app-editar-usuarios>
-    <p>Guarde los cambios y luego pulse cerrar</p>
+    <app-editar-usuarios [usuario]="usuarioAeditar" (EmitEditUsuario)="verPanelEditarUsuario()"></app-editar-usuarios>
   </div>
 </div>
 

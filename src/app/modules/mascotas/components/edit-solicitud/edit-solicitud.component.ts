@@ -56,7 +56,8 @@ export class EditSolicitudComponent {
       this.solicitud.foto = newSolicitud.foto;
       this.solicitud.comentarios = newSolicitud.comentarios;
       if (this.solicitud.estado != 'Aprobada' && newSolicitud.estado == 'Aprobada'){
-        this.solicitud.fechaAdopcion = new Date().toLocaleString();
+        const fecha = new Date();
+        this.solicitud.fechaAdopcion = `${fecha.getDate()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`
         this.solicitud.estado = newSolicitud.estado;
         this.mascotaEdit.estado = 'Adoptado';
         this.mascotaService.update(this.solicitud.idMascota, this.mascotaEdit)
@@ -67,11 +68,23 @@ export class EditSolicitudComponent {
               .subscribe(
                 (data) => {
                   this.EmitEditSolicitud.emit(data);
-                  alert(`${data.id} fue editado!`);
+                  alert(`Solicitud ${data.id} fue editada!`);
                 }
               );
             }
           })
+      }
+      if (this.solicitud.estado != 'Aprobada' && newSolicitud.estado == 'Rechazada'){
+        this.solicitud.estado = newSolicitud.estado;
+        if (this.solicitud != undefined && this.solicitud.id!= null) {
+          this.solicitudesService.update(this.solicitud.id, this.solicitud)
+          .subscribe(
+            (data) => {
+              this.EmitEditSolicitud.emit(data);
+              alert(`Solicitud ${data.id} fue editada!`);
+            }
+          );
+        }
       }
     }
   }

@@ -44,7 +44,7 @@ export class EditMascotaComponent {
       if (this.mascota.id != null) {
         this.mascotaService.update(this.mascota.id, this.mascota).subscribe(
           (data) => {
-            // this.EmitEditMascota.emit(data);
+            this.EmitEditMascota.emit(data);
             alert(`${data.nombre} fue editado`);
           }
         );

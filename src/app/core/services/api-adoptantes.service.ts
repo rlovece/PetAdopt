@@ -24,4 +24,8 @@ export class ApiAdoptantesService {
   addAdoptante(adoptante: Adoptante): Observable<Adoptante>{
     return this.http.post<Adoptante>(`${this.baseURL}/adoptantes`, adoptante);
   }
+
+  update(id: number, adoptante: Partial<Adoptante>){
+    return this.http.put<Adoptante>(`${this.baseURL}/adoptantes/${id}`, adoptante);
+  }
 }

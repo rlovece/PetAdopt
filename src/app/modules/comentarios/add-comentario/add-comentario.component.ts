@@ -29,7 +29,7 @@ export class AddComentarioComponent {
       this.comentarioService.create(newComentario).subscribe(
         (data) => {
           this.EmitAddComentario.emit(data);
-          alert(`${data.nombre} agradecemos tus comentarios!!"`);
+          alert(`${data.nombre} agradecemos tu comentario!!"`);
         }
       );
     } else {

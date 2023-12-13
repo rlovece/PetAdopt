@@ -10,7 +10,7 @@ import { Usuario } from 'src/app/core/models/Models/usuario';
 export class EditarUsuariosComponent {
 
 
-  @Output() EmitEditarUsuario = new EventEmitter<Usuario>();
+  @Output() EmitEditUsuario = new EventEmitter<Usuario>();
   @Input() usuario: Usuario | undefined;
 
   formulario: FormGroup | undefined;
@@ -46,16 +46,12 @@ editarUsuario() {
     this.usuario.contrasenia= this.formulario.value.contrasenia;
     this.usuario.admin= true;
     this.usuario.telefono = this.formulario.value.telefono;
-    console.log(this.usuario);
-    console.log("primer if");
-    if (this.usuario.id != null) {
-      console.log(this.usuario);
-      console.log("segundo if");
-      this.usuarioService.updateUsuario(this.usuario.id, this.usuario).subscribe({
+        if (this.usuario.id != null) {
+            this.usuarioService.updateUsuario(this.usuario.id, this.usuario).subscribe({
         next: (data) => {
           console.log(this.usuario);
     console.log("primer if");
-          this.EmitEditarUsuario.emit(data);
+          this.EmitEditUsuario.emit(data);
           alert(`${data.nombre} fue editado`);
         },
         error: (e) => console.log(e),

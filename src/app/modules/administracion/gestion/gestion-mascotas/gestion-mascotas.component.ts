@@ -82,6 +82,10 @@ export class GestionMascotasComponent {
     this.mascotaSeleccionadaParaEdicion = mascota;
   }
 
+  GuardarCambiosEdit() {
+    this.mostrarPanelEditMascota = false;
+  }
+
   deleteMascota(mascota: Mascota){
     if (mascota.id){
       this.mascotasService.delete(mascota.id)

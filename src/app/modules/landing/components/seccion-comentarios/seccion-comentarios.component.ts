@@ -35,7 +35,7 @@ export class SeccionComentariosComponent {
     this.mostrarPanelAddComentario = !this.mostrarPanelAddComentario;
   }
 
-  onAgregarMascota(newComentario : Comentario){
+  onAgregarComentario(newComentario : Comentario){
     this.mostrarPanelAddComentario = false;
     this.listaComentarios.push(newComentario);
     this.listaComentarios.shift();

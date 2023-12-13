@@ -64,6 +64,7 @@ export class SolicitarAdopcionComponent {
       this.solicitudService.addSolictud(this.solicitud).subscribe({
         next: (data) => {
           alert('Solicitud enviada con éxito.');
+          this.EmitAddSolicitud.emit(data);
         },
         error: (e) => console.error(e),
       });
@@ -78,20 +79,28 @@ export class SolicitarAdopcionComponent {
       return;
     }
 
-    if(this.getDNIAdoptante(this.formulario.value.dni)){
-      console.log('entro');
-      this.agregarSolicitud(this.formulario.value.dni);
-    }else{
-      this.adoptanteService.addAdoptante(this.formulario.value).subscribe({
+    const adoptante = this.getDNIAdoptante(this.formulario.value.dni)
+    adoptante.email = this.formulario.value.email;
+    adoptante.telefono = this.formulario.value.telefono;
+    adoptante.domicilio = this.formulario.value.domicilio;
+
+    if(adoptante.id){
+      this.adoptanteService.update(adoptante.id, adoptante).subscribe({
         next: (data) => {
-          alert('Adoptante agregado con éxito.');
-          this.agregarSolicitud(this.formulario.value.dni);
-          this.EmitAddSolicitud.emit(data);
+          this.agregarSolicitud(data.dni);
         },
         error: (e) => console.error(e),
       });
-  }
-
+    }else{
+      this.adoptanteService.addAdoptante(this.formulario.value).subscribe({
+        next: (data) => {
+          alert(`Adoptante ${data.nombre} ${data.apellido} agregado con éxito.`);
+          this.adoptantes.push(data);
+          this.agregarSolicitud(data.dni);
+        },
+        error: (e) => console.error(e),
+      });
+    }
   }
 
 }

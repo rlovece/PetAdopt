@@ -25,8 +25,7 @@
 <div *ngIf="mascotaSeleccionadaParaEdicion" class="menuDesplegable" [class.active]="mostrarPanelEditMascota">
   <div *ngIf="mostrarPanelEditMascota">
     <button (click)="verPanelEditMascota()" class="boton" id="cerrar">X</button>
-    <app-edit-mascota [mascota]="mascotaSeleccionadaParaEdicion"></app-edit-mascota>
-    <p>Guarde los cambios y luego pulse cerrar</p>
+    <app-edit-mascota [mascota]="mascotaSeleccionadaParaEdicion" (EmitEditMascota)="GuardarCambiosEdit()"></app-edit-mascota>
   </div>
 </div>
 
