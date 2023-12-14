@@ -41,5 +41,8 @@ export class NavAdminComponent {
     this.opcionSeleccionada.emit('usuarios');
   }
 
+  gestionAdoptantes() {
+    this.opcionSeleccionada.emit('adoptantes');
+  }
 
 }

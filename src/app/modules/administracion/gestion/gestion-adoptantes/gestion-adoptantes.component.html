@@ -1,0 +1,15 @@
+<div class="botones">
+  <button class="boton" (click)="verPanelAgregar()">Agregar Adoptante</button>
+</div>
+
+
+<div class="conteiner-usuarios">
+  <app-listados-adoptantes
+    [inputAdoptantes]="adoptantes"
+    (adoptanteToEdit)="editAdoptante($event)"
+    (adoptanteToDelete)="deleteAdoptante($event)"
+    (adoptanteToView)="verAdoptante($event)"
+  ></app-listados-adoptantes>
+</div>
+
+
