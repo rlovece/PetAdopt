@@ -4,13 +4,8 @@ import { Adoptante } from 'src/app/core/models/Models/adoptante';
 
 @Component({
   selector: 'app-listados-adoptantes',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  template: `<p>listados-adoptantes works!</p>`,
-  styleUrls: ['./listados-adoptantes.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './listados-adoptantes.component.html',
+  styleUrls: ['./listados-adoptantes.component.css']
 })
 export class ListadosAdoptantesComponent {
 
@@ -23,21 +18,21 @@ export class ListadosAdoptantesComponent {
 
   constructor(){}
 
-  editAdoptante(mascota: Adoptante) {
-    this.adoptanteToEdit.emit(mascota);
+  editAdoptante(adoptante: Adoptante) {
+    this.adoptanteToEdit.emit(adoptante);
   }
 
-  deleteAdoptante (mascota: Adoptante) {
-    this.adoptanteToDelete.emit(mascota);
+  deleteAdoptante (adoptante: Adoptante) {
+    this.adoptanteToDelete.emit(adoptante);
   }
 
   cambiarEstadoVistaDetalle() {
     this.vistaDetallaAdoptante = !this.vistaDetallaAdoptante;
   }
 
-  mostrarDetalleAdoptante(mascota: Adoptante) {
+  mostrarDetalleAdoptante(adoptante: Adoptante) {
     this.cambiarEstadoVistaDetalle();
-    this.adoptanteToView.emit(mascota);
+    this.adoptanteToView.emit(adoptante);
   }
 
 }

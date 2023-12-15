@@ -1,0 +1,14 @@
+.tarjeta-adoptante{
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.8em;
+  margin: 0.4em;
+  height: 70%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.329);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

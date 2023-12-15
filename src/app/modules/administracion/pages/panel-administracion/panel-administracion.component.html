@@ -13,6 +13,9 @@
   <div *ngIf="opcionSeleccionada === 'usuarios'">
     <app-gestion-usuarios></app-gestion-usuarios>
   </div>
+  <div *ngIf="opcionSeleccionada === 'adoptantes'">
+    <app-gestion-adoptantes></app-gestion-adoptantes>
+  </div>
   <div id="bienvenida" *ngIf="opcionSeleccionada === 'bienvenida'">
     <h2>Bienvenid@</h2>
     <p>¡Excelente trabajo!</p>

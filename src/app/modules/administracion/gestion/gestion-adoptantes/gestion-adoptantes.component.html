@@ -1,9 +1,6 @@
-<div class="botones">
-  <button class="boton" (click)="verPanelAgregar()">Agregar Adoptante</button>
-</div>
 
 
-<div class="conteiner-usuarios">
+<div class="conteiner-adoptantes">
   <app-listados-adoptantes
     [inputAdoptantes]="adoptantes"
     (adoptanteToEdit)="editAdoptante($event)"
@@ -13,3 +10,25 @@
 </div>
 
 
+
+<div *ngIf="adoptanteSeleccionadoParaEdicion" class="menuDesplegable" [class.active]="mostrarPanelEditAdoptante">
+  <div *ngIf="mostrarPanelEditAdoptante">
+    <button (click)="verPanelEditAdoptante()" class="boton" id="cerrar">X</button>
+    <app-edit-adoptantes
+      [adoptante]="adoptanteSeleccionadoParaEdicion"
+      (EmitEditAdoptante)="GuardarCambiosEdit()"
+      (EmitMsj)="mostrarMsj($event)"
+    ></app-edit-adoptantes>
+  </div>
+</div>
+
+<div *ngIf="adoptanteSeleccionadoView" class="menuDesplegable" [class.active]="adoptanteSeleccionadoView">
+  <div *ngIf="mostrarPanelViewAdoptante">
+    <button (click)="verPanelViewAdoptante()" class="boton" id="cerrar">X</button>
+    <app-adoptante [inputAdoptante]="adoptanteSeleccionadoView" [isAdmin]=true></app-adoptante>
+  </div>
+</div>
+
+<div class="alert" [class.active]="mostrarAlert">
+  <app-alert [texto]="msj" (EmitAceptar)="aceptarAlert()"></app-alert>
+</div>

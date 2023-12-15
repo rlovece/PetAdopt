@@ -319,22 +319,13 @@
   ],
   "adoptantes": [
     {
-      "id": 1,
-      "nombre": "Analia",
-      "apellido": "Alvarez",
-      "dni": "32145145",
-      "domicilio": "Catamarca 2154",
-      "telefono": "22341597531",
-      "email": "analia@gmail.com"
-    },
-    {
       "id": 2,
-      "nombre": "Marcos",
+      "nombre": "Marco",
       "apellido": "Alvarez",
-      "dni": "32145145",
-      "domicilio": "Catamarca 2154",
-      "telefono": "2234561456",
-      "email": "marcosAlv@gmail.com"
+      "dni": "32145140",
+      "domicilio": "Catamarca 2150",
+      "telefono": "2234571456",
+      "email": "marcoAlvarez@gmail.com"
     },
     {
       "dni": "38441343",

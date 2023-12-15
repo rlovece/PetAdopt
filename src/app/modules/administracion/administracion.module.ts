@@ -15,14 +15,19 @@ import { UsuariosModule } from '../usuarios/usuarios.module';
 import { GestionComentariosComponent } from './gestion/gestion-comentarios/gestion-comentarios.component';
 import { ListadoComentariosComponent } from './listados/listado-comentarios/listado-comentarios.component';
 import { SharesModule } from "../../shares/shares.module";
+import { GestionAdoptantesComponent } from './gestion/gestion-adoptantes/gestion-adoptantes.component';
+import { ListadosAdoptantesComponent } from './listados/listados-adoptantes/listados-adoptantes.component';
+import { AdoptantesModule } from '../adoptantes/adoptantes.module';
 
 @NgModule({
     declarations: [
         PanelAdministracionComponent,
         ListadosMascotasComponent,
+        ListadosAdoptantesComponent,
         NavAdminComponent,
         GestionMascotasComponent,
         GestionSolicitudesComponent,
+        GestionAdoptantesComponent,
         ListadoSolicitudesComponent,
         ListadosUsuariosComponent,
         GestionUsuariosComponent,
@@ -32,13 +37,15 @@ import { SharesModule } from "../../shares/shares.module";
     exports: [
         ListadosMascotasComponent,
         ListadosUsuariosComponent,
+        ListadosAdoptantesComponent
     ],
     imports: [
         CommonModule,
         AdministracionRoutingModule,
         MascotasModule,
         UsuariosModule,
-        SharesModule
+        SharesModule,
+        AdoptantesModule
     ]
 })
 export class AdministracionModule { }

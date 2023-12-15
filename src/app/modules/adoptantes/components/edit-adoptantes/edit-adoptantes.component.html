@@ -1,0 +1,30 @@
+<div class="conteiner" >
+  <h2 class="titulo-form">Editar Adoptante</h2>
+  <form *ngIf="formulario" [formGroup]="formulario" (ngSubmit)="editAdoptante()">
+    <div class="form-group">
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido: </label>
+      <input type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
+    </div>
+    <div class="form-group">
+      <label for="dni">DNI: </label>
+      <input type="text" id="dni" formControlName="dni" placeholder="DNI">
+    </div>
+    <div class="form-group">
+      <label for="domicilio">Domicilio: </label>
+      <input type="text" id="domicilio" formControlName="domicilio" placeholder="Domicilio">
+    </div>
+    <div class="form-group">
+      <label for="telefono">Telefono: </label>
+      <input type="text" id="telefono" formControlName="telefono" placeholder="Telefono">
+    </div>
+    <div class="form-group">
+      <label for="email">Email: </label>
+      <input type="text" id="email" formControlName="email" placeholder="Email">
+    </div>
+    <button type="submit" class="boton">Guardar</button>
+  </form>
+</div>

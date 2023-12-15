@@ -28,4 +28,9 @@ export class ApiAdoptantesService {
   update(id: number, adoptante: Partial<Adoptante>){
     return this.http.put<Adoptante>(`${this.baseURL}/adoptantes/${id}`, adoptante);
   }
+
+  delete(id: number){
+    return this.http.delete<boolean>(`${this.baseURL}/adoptantes/${id}`);
+  }
+
 }
