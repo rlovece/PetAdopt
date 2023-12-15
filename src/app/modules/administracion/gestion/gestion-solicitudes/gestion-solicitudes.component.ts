@@ -123,6 +123,22 @@ export class GestionSolicitudesComponent {
     this.solicitudSeleccionada = solicitud;
   }
 
+  deleteSolicitud(solicitud: Solicitud){
+    if (solicitud.id){
+      this.solicitudesService.delete(solicitud.id)
+      .subscribe(
+        {
+          next: () => {
+            this.mostrarMsj (`${solicitud.id} fue eliminada`);
+            this.listaCompletaSolicitudes= this.listaCompletaSolicitudes.filter(m => m.id != solicitud.id);
+            this.listaFiltradaSolicitudes = this.listaFiltradaSolicitudes.slice();
+          },
+          error: e => console.log(e)
+        }
+      )
+    }
+  }
+
   mostrarMsj(event: string) {
     this.msj = event;
     this.mostrarAlert = true;

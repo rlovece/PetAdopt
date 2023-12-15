@@ -4,7 +4,7 @@ export class Solicitud implements ISolicitud{
   id : number | null= null;
   fecha: string = '';
   idMascota: number ;
-  idAdoptante: number | null= null;
+  idAdoptante: number;
   estado:  'Pendiente' | 'Aprobada' | 'Rechazada' | '' = '';
   comentarios: string;
   fechaAdopcion: string;

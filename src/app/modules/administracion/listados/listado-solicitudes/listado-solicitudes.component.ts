@@ -36,7 +36,12 @@ export class ListadoSolicitudesComponent {
   }
 
   getNombreAdoptante(id: number): string {
-    return this.inputAdoptantes.filter((m) => m.id == id)[0]?.nombre;
+    const nombre= this.inputAdoptantes.filter((m) => m.id == id)[0]?.nombre + ' ' + this.inputAdoptantes.filter((m) => m.id == id)[0]?.apellido;
+    return nombre;
+  }
+
+  getDniAdoptante(id: number): string {
+    return this.inputAdoptantes.filter((m) => m.id == id)[0]?.dni;
   }
 
   editSolicitud (solicitud: Solicitud) {

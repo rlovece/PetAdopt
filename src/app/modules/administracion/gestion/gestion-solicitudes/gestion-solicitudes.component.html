@@ -9,9 +9,11 @@
   <app-listado-solicitudes
     [inputSolicitudes]="listaFiltradaSolicitudes"
     [inputMascotas]="listaMascotas"
+    [inputAdoptantes]="listaAdoptantes"
     [paraAdoptante]=false
     (solicitudToView)="verSolicitud($event)"
     (solicitudToEdit)="editSolicitud($event)"
+    (solicitudToDelete)="deleteSolicitud($event)"
   ></app-listado-solicitudes>
 </div>
 

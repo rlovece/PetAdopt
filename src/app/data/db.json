@@ -267,36 +267,6 @@
       "foto": ""
     },
     {
-      "id": 11,
-      "fecha": "14/12/2023",
-      "idAdoptante": 11,
-      "estado": "Pendiente",
-      "idMascota": 8,
-      "comentarios": "",
-      "fechaAdopcion": "",
-      "foto": ""
-    },
-    {
-      "id": 12,
-      "fecha": "14/12/2023",
-      "idAdoptante": 12,
-      "estado": "Pendiente",
-      "idMascota": 8,
-      "comentarios": "",
-      "fechaAdopcion": "",
-      "foto": ""
-    },
-    {
-      "id": 13,
-      "fecha": "14/12/2023",
-      "idAdoptante": 13,
-      "estado": "Pendiente",
-      "idMascota": 8,
-      "comentarios": "",
-      "fechaAdopcion": "",
-      "foto": ""
-    },
-    {
       "id": 14,
       "fecha": "14/12/2023",
       "idAdoptante": 14,

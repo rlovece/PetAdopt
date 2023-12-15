@@ -1,7 +1,7 @@
 import { IAdoptante } from "../Interfaces/IAdoptante";
 
 export class Adoptante implements IAdoptante{
-  id: number | null= null;
+  id: number ;
   nombre: string = '';
   apellido: string = '';
   dni: string = '';

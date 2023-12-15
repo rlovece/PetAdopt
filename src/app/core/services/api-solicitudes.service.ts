@@ -28,4 +28,9 @@ export class ApiSolicitudesService {
   update(id: number, solicitud: Partial<Solicitud>){
     return this.http.put<Solicitud>(`${this.baseURL}/solicitudes/${id}`, solicitud);
   }
+
+  delete(id: number){
+    return this.http.delete<boolean>(`${this.baseURL}/solicitudes/${id}`);
+  }
+
 }
