@@ -442,7 +442,7 @@
       "apellido": "Martin",
       "domicilio": "Calle 65",
       "telefono": "2235112222",
-      "email": "andy@gmai.com",
+      "email": "andrea@gmail.com",
       "id": 15
     }
   ],
@@ -586,6 +586,20 @@
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "14/12/2023",
       "comentario": "Hola, son los mejores"
+    },
+    {
+      "id": 21,
+      "idAdoptante": 16,
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "15/12/2023",
+      "comentario": "Son todos tan lindos que no sabes con cuál quedarte!!"
+    },
+    {
+      "id": 22,
+      "idAdoptante": 15,
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "15/12/2023",
+      "comentario": "Son todos tan lindos que no sabes con cuál quedarte!!"
     }
   ]
 }
