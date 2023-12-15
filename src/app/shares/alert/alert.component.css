@@ -5,4 +5,9 @@
   text-align: center;
   justify-content: space-around;
   height: 100%;
+  width: 80%;
+}
+
+#msj p {
+  width: 100%;
 }

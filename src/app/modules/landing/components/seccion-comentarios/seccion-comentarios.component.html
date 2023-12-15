@@ -6,9 +6,14 @@
   ></app-lista-comentarios>
   <div class="menuDesplegable" [class.active]="mostrarPanelAddComentario">
     <button (click)="verPanelAddComentario()" class="boton">X</button>
-    <app-add-comentario (EmitAddComentario)="onAgregarComentario($event)"></app-add-comentario>
+    <app-add-comentario
+      (EmitAddComentario)="onAgregarComentario($event)"
+      (EmitMsj)="mostrarMsj($event)"
+    ></app-add-comentario>
   </div>
 </div>
 
-
+<div class="alert" [class.active]="mostrarAlert">
+  <app-alert [texto]="msj" (EmitAceptar)="aceptarAlert()"></app-alert>
+</div>
 

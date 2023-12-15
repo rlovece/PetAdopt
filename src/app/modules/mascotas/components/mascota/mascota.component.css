@@ -15,7 +15,12 @@ background: radial-gradient(circle, rgba(252,220,122,1) 0%, rgba(252,191,122,1) 
   }
 }
 
-
+.alert{
+  &.active {
+    top: 30%;
+    bottom: 30%;
+  }
+}
 
 
 h2{
@@ -63,3 +68,13 @@ h2{
   width: 60%;
 }
 
+
+@media screen and (min-width: 20em) {
+
+  .alert{
+    &.active {
+      top: 35%;
+      bottom: 35%;
+    }
+  }
+}

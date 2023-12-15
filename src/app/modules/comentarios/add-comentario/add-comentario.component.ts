@@ -10,6 +10,7 @@ import { ApiComentariosService } from 'src/app/core/services/api-comentarios.ser
 export class AddComentarioComponent {
   comentarioForm: FormGroup;
   @Output() EmitAddComentario = new EventEmitter<Comentario>();
+  @Output() EmitMsj = new EventEmitter<string>();
 
   constructor(
     private fb: FormBuilder,
@@ -29,11 +30,15 @@ export class AddComentarioComponent {
       this.comentarioService.create(newComentario).subscribe(
         (data) => {
           this.EmitAddComentario.emit(data);
-          alert(`${data.nombre} agradecemos tu comentario!!"`);
+          if (data.puntaje == '⭐⭐⭐⭐⭐' || data.puntaje == '⭐⭐⭐⭐'){
+            this.EmitMsj.emit(`Muchas gracias ${data.nombre}. Tu comentario nos llena de orgullo!`)
+          } else {
+            this.EmitMsj.emit(`Muchas gracias ${data.nombre}. Tu comentario nos ayuda a mejorar!`)
+          }
         }
       );
     } else {
-      alert('Si deseas enviarnos un comentario debes completar todos los campos.');
+      this.EmitMsj.emit(`Para registrar un comentario debes completar todos los campos."`);
     }
   }
 

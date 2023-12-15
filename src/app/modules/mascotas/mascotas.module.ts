@@ -10,6 +10,7 @@ import { SolicitarAdopcionComponent } from './components/solicitar-adopcion/soli
 import { EditSolicitudComponent } from './components/edit-solicitud/edit-solicitud.component';
 import { ComentarioComponent } from '../comentarios/comentario/comentario.component';
 import { ListaMascotasComponent } from './components/lista-mascotas/lista-mascotas.component';
+import { SharesModule } from 'src/app/shares/shares.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ListaMascotasComponent } from './components/lista-mascotas/lista-mascot
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharesModule
   ],
   exports:[
     ImagenComponent,
