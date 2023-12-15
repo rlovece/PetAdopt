@@ -245,6 +245,76 @@
       "idMascota": 3,
       "foto": "-",
       "comentarios": "No fue posible"
+    },
+    {
+      "id": 9,
+      "fecha": "14/12/2023",
+      "idAdoptante": 6,
+      "estado": "Pendiente",
+      "idMascota": 8,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
+    },
+    {
+      "id": 10,
+      "fecha": "14/12/2023",
+      "idAdoptante": 4,
+      "estado": "Pendiente",
+      "idMascota": 8,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
+    },
+    {
+      "id": 11,
+      "fecha": "14/12/2023",
+      "idAdoptante": 11,
+      "estado": "Pendiente",
+      "idMascota": 8,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
+    },
+    {
+      "id": 12,
+      "fecha": "14/12/2023",
+      "idAdoptante": 12,
+      "estado": "Pendiente",
+      "idMascota": 8,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
+    },
+    {
+      "id": 13,
+      "fecha": "14/12/2023",
+      "idAdoptante": 13,
+      "estado": "Pendiente",
+      "idMascota": 8,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
+    },
+    {
+      "id": 14,
+      "fecha": "14/12/2023",
+      "idAdoptante": 14,
+      "estado": "Rechazada",
+      "idMascota": 7,
+      "comentarios": "No fue posible",
+      "fechaAdopcion": "",
+      "foto": "-"
+    },
+    {
+      "id": 15,
+      "fecha": "14/12/2023",
+      "idAdoptante": 1,
+      "estado": "Rechazada",
+      "idMascota": 8,
+      "comentarios": "No fue posible",
+      "fechaAdopcion": "",
+      "foto": "-"
     }
   ],
   "adoptantes": [
@@ -253,7 +323,7 @@
       "nombre": "Analia",
       "apellido": "Alvarez",
       "dni": "32145145",
-      "domicilio": "Calle 431",
+      "domicilio": "Catamarca 2154",
       "telefono": "22341597531",
       "email": "analia@gmail.com"
     },
@@ -279,15 +349,15 @@
       "dni": "31421111",
       "nombre": "Manuela",
       "apellido": "Perez",
-      "domicilio": "Calle 1 213",
-      "telefono": "2234564123",
-      "email": "manu@gmail.com",
+      "domicilio": "Calle 3",
+      "telefono": "2231456123",
+      "email": "manuela@gmail.com",
       "id": 4
     },
     {
       "dni": "33273764",
       "nombre": "Ruth",
-      "apellido": "Lovece",
+      "apellido": "Alvarez",
       "domicilio": "Cale 20",
       "telefono": "2231112223",
       "email": "ruth@gmail.com",
@@ -297,9 +367,9 @@
       "dni": "22311222",
       "nombre": "Bruno",
       "apellido": "Perez",
-      "domicilio": "Calle 32",
-      "telefono": "2314221222",
-      "email": "brunis@gmail.com",
+      "domicilio": "Calle 1 213",
+      "telefono": "+542234229556",
+      "email": "rlovece@outlook.com.ar",
       "id": 6
     },
     {
@@ -412,6 +482,27 @@
       "nombre": "Ruth",
       "fecha": "12/12/2023",
       "id": 13
+    },
+    {
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "comentario": "Gracias por su trabajo",
+      "nombre": "Antonio",
+      "fecha": "14/12/2023",
+      "id": 14
+    },
+    {
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "comentario": "Excelente servicio",
+      "nombre": "Carlos",
+      "fecha": "14/12/2023",
+      "id": 15
+    },
+    {
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "comentario": "Los amo!! Son re dedicados a los animalitos 💜",
+      "nombre": "Analia",
+      "fecha": "14/12/2023",
+      "id": 16
     }
   ]
 }

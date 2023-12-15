@@ -18,10 +18,11 @@ export class SolicitarAdopcionComponent {
 
   @Input() idMascota: number=0;
   @Output() EmitAddSolicitud = new EventEmitter();
-
+  @Output() EmitMsj = new EventEmitter<string>();
 
   solicitud: Solicitud = new Solicitud();
   adoptantes: Adoptante[] = [];
+  msj: string = '';
 
   formulario: FormGroup = this.fb.group({
     dni:  ['', [Validators.required, Validators.minLength(6)]],
@@ -48,7 +49,6 @@ export class SolicitarAdopcionComponent {
   }
 
   getDNIAdoptante(dni: string): Adoptante {
-    console.log(this.adoptantes);
     return this.adoptantes.filter((m) => m.dni === dni)[0];
   }
 
@@ -63,8 +63,8 @@ export class SolicitarAdopcionComponent {
 
       this.solicitudService.addSolictud(this.solicitud).subscribe({
         next: (data) => {
-          alert('Solicitud enviada con éxito.');
           this.EmitAddSolicitud.emit(data);
+          this.EmitMsj.emit(`${this.msj} la solicitud enviada con éxito.`);
         },
         error: (e) => console.error(e),
       });
@@ -75,18 +75,19 @@ export class SolicitarAdopcionComponent {
 
   addSolicitud() {
     if (this.formulario.invalid){
-      alert('Por favor, completa todos los campos obligatorios.');
+      this.EmitMsj.emit(`Por favor, completa todos los campos obligatorios.`);
       return;
     }
 
     const adoptante = this.getDNIAdoptante(this.formulario.value.dni)
-    adoptante.email = this.formulario.value.email;
-    adoptante.telefono = this.formulario.value.telefono;
-    adoptante.domicilio = this.formulario.value.domicilio;
 
-    if(adoptante.id){
+    if(adoptante && adoptante.id){
+      adoptante.email = this.formulario.value.email;
+      adoptante.telefono = this.formulario.value.telefono.toString();
+      adoptante.domicilio = this.formulario.value.domicilio;
       this.adoptanteService.update(adoptante.id, adoptante).subscribe({
         next: (data) => {
+          this.msj = `${data.nombre} ${data.apellido} sus datos han sido actualizados y `;
           this.agregarSolicitud(data.dni);
         },
         error: (e) => console.error(e),
@@ -94,7 +95,7 @@ export class SolicitarAdopcionComponent {
     }else{
       this.adoptanteService.addAdoptante(this.formulario.value).subscribe({
         next: (data) => {
-          alert(`Adoptante ${data.nombre} ${data.apellido} agregado con éxito.`);
+          this.msj = `${data.nombre} ${data.apellido} sus datos han sido agregados y \n`;
           this.adoptantes.push(data);
           this.agregarSolicitud(data.dni);
         },

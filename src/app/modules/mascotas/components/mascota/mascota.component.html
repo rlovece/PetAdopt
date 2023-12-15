@@ -1,7 +1,7 @@
 
+
 <div class="tarjeta-mascota" *ngIf="!isAdmin">
   <app-imagen [archivo]="inputMascota.foto"></app-imagen>
-
   <h2>{{inputMascota.nombre}}</h2>
   <p>Nació: {{inputMascota.nacimiento}}</p>
   <p>Sexo: {{inputMascota.sexo}} </p>
@@ -10,10 +10,21 @@
   <button class="boton" (click)="solicitarMascota()">Quiero adoptar!</button>
     <div class="solicitarMascota" [class.active]="mostrarPanelSolicitar">
       <div *ngIf="mostrarPanelSolicitar">
-        <button class="cerrar" (click)="solicitarMascota()" id="cerrar">X</button>
-        <app-solicitar-adopcion *ngIf="inputMascota.id" [idMascota]="inputMascota.id" (EmitAddSolicitud)="addSolicitud()"></app-solicitar-adopcion>
+        <button class="cerrar" (click)="cerrarSolicitarMascota()" id="cerrar">X</button>
+
+        <app-solicitar-adopcion
+          *ngIf="inputMascota.id" [idMascota]="inputMascota.id"
+          (EmitAddSolicitud)="addSolicitud()"
+          (EmitMsj)="mostrarMsj($event)"
+        ></app-solicitar-adopcion>
+
+
       </div>
     </div>
+</div>
+
+<div class="alert" [class.active]="mostrarAlert">
+  <app-alert [texto]="msj" (EmitAceptar)="aceptarAlert()"></app-alert>
 </div>
 
 <div class="tarjeta-mascota-admin" *ngIf="isAdmin">
@@ -24,4 +35,5 @@
   <p>{{inputMascota.caracteristicas}}</p>
 
 </div>
+
 

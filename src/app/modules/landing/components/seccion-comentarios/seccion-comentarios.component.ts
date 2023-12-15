@@ -12,6 +12,8 @@ export class SeccionComentariosComponent {
   listaComentarios : Comentario[] = [];
   mostrarPanelAddComentario: boolean = false;
 
+  mostrarAlert: boolean = false;
+  msj: string = '';
 
   constructor(
     private comentariosService: ApiComentariosService,
@@ -39,5 +41,14 @@ export class SeccionComentariosComponent {
     this.mostrarPanelAddComentario = false;
     this.listaComentarios.push(newComentario);
     this.listaComentarios.shift();
+  }
+
+  mostrarMsj(event: string) {
+    this.msj = event;
+    this.mostrarAlert = true;
+  }
+
+  aceptarAlert() {
+    this.mostrarAlert = false;
   }
 }
