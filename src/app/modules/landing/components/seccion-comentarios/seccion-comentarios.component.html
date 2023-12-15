@@ -2,10 +2,10 @@
   <h2>Últimos comentarios</h2>
   <button class="boton" (click)="verPanelAddComentario()">Añadir comentario</button>
   <app-lista-comentarios
-  [inputComentarios] = "listaComentarios"
+  [inputComentarios] = "listaComentariosView"
   ></app-lista-comentarios>
   <div class="menuDesplegable" [class.active]="mostrarPanelAddComentario">
-    <button (click)="verPanelAddComentario()" class="boton">X</button>
+    <button (click)="cerrarPanelAddComentario()" class="boton">X</button>
     <app-add-comentario
       (EmitAddComentario)="onAgregarComentario($event)"
       (EmitMsj)="mostrarMsj($event)"

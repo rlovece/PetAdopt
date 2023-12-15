@@ -1,6 +1,6 @@
 <div class="conteiner">
   <h2 class="titulo-form">Agregar Comentario</h2>
-  <form [formGroup]="comentarioForm" (ngSubmit)="addComentario()">
+  <form [formGroup]="comentarioForm" (ngSubmit)="addAdoptante()">
     <div class="form-group">
       <label for="puntaje">Puntaje</label>
       <select id="tipo" name="puntaje" formControlName="puntaje" required>
@@ -16,17 +16,34 @@
     </div>
 
     <div class="form-group">
-      <label for="nombre">Nombre: </label>
-      <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
-      <span class="error" *ngIf="comentarioForm.controls['nombre'].hasError('required') && comentarioForm.controls['nombre'].touched">El nombre es requerido</span>
-
-    </div>
-
-    <div class="form-group">
       <label for="comentario">Comentario</label>
       <input type="text" id="comentario" formControlName="comentario" placeholder="Su comentario...">
       <span class="error" *ngIf="comentarioForm.controls['comentario'].hasError('required') && comentarioForm.controls['comentario'].touched">El comentario es requerido</span>
     </div>
+
+    <div class="form-group">
+      <label for="dni">DNI:       </label>
+      <input type="text" id="dni" formControlName="dni" placeholder="DNI">
+      <span class="error" *ngIf="comentarioForm.controls['dni'].hasError('required') && comentarioForm.controls['dni'].touched">El dni es requerido</span>
+      <span class="error" *ngIf="comentarioForm.controls['dni'].getError('minlength') && comentarioForm.touched">El DNI debe tener al menos 6 digitos</span>
+    </div>
+    <div class="form-group">
+      <label for="nombre">Nombre:    </label>
+      <input type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+      <span class="error" *ngIf="comentarioForm.controls['nombre'].hasError('required') && comentarioForm.controls['nombre'].touched">El nombre es requerido</span>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido:  </label>
+      <input type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
+      <span class="error" *ngIf="comentarioForm.controls['apellido'].hasError('required') && comentarioForm.controls['apellido'].touched">El apellido es requerido</span>
+    </div>
+    <div class="form-group">
+      <label for="email">Mail:        </label>
+      <input type="text" id="email" formControlName="email" placeholder="Email">
+      <span class="error" *ngIf="comentarioForm.controls['email'].hasError('required') && comentarioForm.controls['email'].touched">El email es requerido</span>
+      <span class="error" *ngIf="comentarioForm.controls['email'].getError('pattern')&& comentarioForm.touched">El formato de email no es valido</span>
+    </div>
+
 
     <button type="submit" class="boton">Agregar</button>
   </form>

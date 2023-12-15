@@ -21,6 +21,10 @@ export class ApiAdoptantesService {
     return this.http.get<Adoptante>(`${this.baseURL}/adoptantes?dni=${dni}`);
   }
 
+  getAdoptanteById(id: number): Observable<Adoptante>{
+    return this.http.get<Adoptante>(`${this.baseURL}/adoptantes/${id}`);
+  }
+
   addAdoptante(adoptante: Adoptante): Observable<Adoptante>{
     return this.http.post<Adoptante>(`${this.baseURL}/adoptantes`, adoptante);
   }

@@ -5,8 +5,8 @@ export class Adoptante implements IAdoptante{
   nombre: string = '';
   apellido: string = '';
   dni: string = '';
-  domicilio: string = '';
-  telefono: string = '';
+  domicilio?: string = '';
+  telefono?: string = '';
   email: string = '';
 
   constructor(adoptante?:any){

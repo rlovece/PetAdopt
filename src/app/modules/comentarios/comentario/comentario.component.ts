@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Comentario } from 'src/app/core/models/Models/comentario';
+import { ComentarioView } from 'src/app/core/models/Models/comentario';
 
 @Component({
   selector: 'app-comentario',
@@ -8,5 +8,5 @@ import { Comentario } from 'src/app/core/models/Models/comentario';
 })
 export class ComentarioComponent {
 
-  @Input() inputComentario: Comentario = new Comentario;
+  @Input() inputComentario: ComentarioView = new ComentarioView;
 }

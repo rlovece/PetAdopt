@@ -315,6 +315,16 @@
       "comentarios": "No fue posible",
       "fechaAdopcion": "",
       "foto": "-"
+    },
+    {
+      "id": 16,
+      "fecha": "14/12/2023",
+      "idAdoptante": 15,
+      "estado": "Pendiente",
+      "idMascota": 13,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
     }
   ],
   "adoptantes": [
@@ -389,47 +399,92 @@
       "telefono": "2331112145",
       "email": "esli@gmail.com",
       "id": 10
+    },
+    {
+      "id": 11,
+      "nombre": "Angelica",
+      "apellido": "Pascual",
+      "dni": "56444545",
+      "domicilio": "",
+      "telefono": "",
+      "email": "angy@gmail.com"
+    },
+    {
+      "id": 12,
+      "nombre": "Pablo",
+      "apellido": "Alonzo",
+      "dni": "31666444",
+      "domicilio": "",
+      "telefono": "",
+      "email": "pablin@yahoo.com.ar"
+    },
+    {
+      "id": 13,
+      "nombre": "Ana Maria",
+      "apellido": "Peralez",
+      "dni": "16422155",
+      "domicilio": "",
+      "telefono": "",
+      "email": "anita61@gmail.com"
+    },
+    {
+      "id": 14,
+      "nombre": "Mario",
+      "apellido": "Dimiglio",
+      "dni": "16422111",
+      "domicilio": "",
+      "telefono": "",
+      "email": "marito@gmail.com"
+    },
+    {
+      "dni": "14222333",
+      "nombre": "Andrea",
+      "apellido": "Martin",
+      "domicilio": "Calle 65",
+      "telefono": "2235112222",
+      "email": "andy@gmai.com",
+      "id": 15
     }
   ],
   "comentarios": [
     {
       "id": 1,
-      "nombre": "Carla",
+      "idAdoptante": 1,
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "12/03/23",
       "comentario": "Me encanta lo que hacen, se nota que le ponen mucho amor! Los felicito!!"
     },
     {
       "id": 2,
-      "nombre": "Belen",
+      "idAdoptante": 1,
       "puntaje": "⭐⭐⭐⭐",
       "fecha": "13/03/23",
       "comentario": "Buena experiencia, los recomiendo."
     },
     {
       "id": 3,
-      "nombre": "Ana",
+      "idAdoptante": 1,
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "14/04/23",
       "comentario": "Son lo más 🐶♥😺"
     },
     {
       "id": 4,
-      "nombre": "Pedro",
+      "idAdoptante": 1,
       "puntaje": "⭐⭐⭐",
       "fecha": "15/04/23",
       "comentario": "Buen servicio, pero quisiera ver más mascotas publicadas."
     },
     {
       "id": 5,
-      "nombre": "Laura",
+      "idAdoptante": 1,
       "puntaje": "⭐⭐⭐⭐",
       "fecha": "16/04/23",
       "comentario": "Excelente atención, responden de inmediato."
     },
     {
       "id": 6,
-      "nombre": "Camila",
+      "idAdoptante": 1,
       "puntaje": "⭐⭐⭐⭐",
       "fecha": "16/05/23",
       "comentario": "Re felices con Pepa y el seguimiento que le han hecho. Gracias💕"
@@ -438,71 +493,99 @@
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "16/06/23",
       "comentario": "Los amo!! Son re dedicados a los animalitos 💜",
-      "nombre": "Mariela",
+      "idAdoptante": 1,
       "id": 7
     },
     {
       "puntaje": "⭐⭐⭐⭐",
       "fecha": "16/06/23",
       "comentario": "Quiero Adoptar!! Me llaman  2234556612",
-      "nombre": "Martin",
+      "idAdoptante": 1,
       "id": 8
     },
     {
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "08/07/23",
       "comentario": "Gracias por su trabajo",
-      "nombre": "Belen",
+      "idAdoptante": 1,
       "id": 9
     },
     {
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "09/07/23",
       "comentario": "Son todos hermosos, no entiendo pq la gente compra!!",
-      "nombre": "Andrea",
+      "idAdoptante": 1,
       "id": 10
     },
     {
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "10/07/23",
       "comentario": "Son todos tan lindos que no sabes con cuál quedarte!!",
-      "nombre": "Camila",
+      "idAdoptante": 1,
       "id": 11
     },
     {
       "puntaje": "⭐⭐⭐",
       "fecha": "15/07/23",
       "comentario": "No entiendo como adoptar",
-      "nombre": "Adolfo",
+      "idAdoptante": 1,
       "id": 12
     },
     {
       "puntaje": "⭐⭐⭐⭐⭐",
       "comentario": "Son los mejores",
-      "nombre": "Ruth",
+      "idAdoptante": 1,
       "fecha": "12/12/2023",
       "id": 13
     },
     {
       "puntaje": "⭐⭐⭐⭐⭐",
       "comentario": "Gracias por su trabajo",
-      "nombre": "Antonio",
+      "idAdoptante": 1,
       "fecha": "14/12/2023",
       "id": 14
     },
     {
       "puntaje": "⭐⭐⭐⭐⭐",
       "comentario": "Excelente servicio",
-      "nombre": "Carlos",
+      "idAdoptante": 1,
       "fecha": "14/12/2023",
       "id": 15
     },
     {
       "puntaje": "⭐⭐⭐⭐⭐",
       "comentario": "Los amo!! Son re dedicados a los animalitos 💜",
-      "nombre": "Analia",
+      "idAdoptante": 1,
       "fecha": "14/12/2023",
       "id": 16
+    },
+    {
+      "id": 17,
+      "idAdoptante": 11,
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "14/12/2023",
+      "comentario": "Gracias por su trabajo"
+    },
+    {
+      "id": 18,
+      "idAdoptante": 12,
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "14/12/2023",
+      "comentario": "Quiero adoptar!!"
+    },
+    {
+      "id": 19,
+      "idAdoptante": 13,
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "14/12/2023",
+      "comentario": "Son todos hermosos, no entiendo pq la gente compra!!"
+    },
+    {
+      "id": 20,
+      "idAdoptante": 14,
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "14/12/2023",
+      "comentario": "Hola, son los mejores"
     }
   ]
 }

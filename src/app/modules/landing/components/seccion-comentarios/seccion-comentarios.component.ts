@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Comentario } from 'src/app/core/models/Models/comentario';
+import { Comentario, ComentarioView } from 'src/app/core/models/Models/comentario';
+import { ApiAdoptantesService } from 'src/app/core/services/api-adoptantes.service';
 import { ApiComentariosService } from 'src/app/core/services/api-comentarios.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { ApiComentariosService } from 'src/app/core/services/api-comentarios.ser
 export class SeccionComentariosComponent {
 
   listaComentarios : Comentario[] = [];
+  listaComentariosView: ComentarioView[] = [];
   mostrarPanelAddComentario: boolean = false;
 
   mostrarAlert: boolean = false;
@@ -17,6 +19,7 @@ export class SeccionComentariosComponent {
 
   constructor(
     private comentariosService: ApiComentariosService,
+    private adoptantesService: ApiAdoptantesService
   ){}
 
   ngOnInit(){
@@ -27,20 +30,46 @@ export class SeccionComentariosComponent {
     this.comentariosService.getAll()
     .subscribe(
       {
-        next: data => this.listaComentarios = data.slice(-5),
+        next: data => {
+          this.listaComentarios = data.slice(-5);
+          this.getComentariosView();
+        },
         error: e => console.log(e)
       }
     )
   }
 
+  getComentariosView(){
+    this.listaComentarios.forEach(item => {
+      const newComentarioView = new ComentarioView();
+      newComentarioView.comentario = item.comentario;
+      newComentarioView.fecha = item.fecha;
+      newComentarioView.puntaje = item.puntaje;
+      if (item.idAdoptante){
+        this.adoptantesService.getAdoptanteById(item.idAdoptante).subscribe({
+          next: data => {
+            newComentarioView.nombreAdoptante = data.nombre;
+            this.listaComentariosView.push(newComentarioView);
+          },
+          error: e => console.log(e)
+        })
+      }
+    });
+  }
+
   verPanelAddComentario() {
+    this.mostrarMsj(`Sus datos su datos será almacenados para futuros contactos. \n Si quiere que los eliminemos comuniquese con nosostros.`)
     this.mostrarPanelAddComentario = !this.mostrarPanelAddComentario;
   }
 
-  onAgregarComentario(newComentario : Comentario){
+  cerrarPanelAddComentario() {
+    this.mostrarPanelAddComentario = !this.mostrarPanelAddComentario;
+  }
+
+  onAgregarComentario(newComentario : ComentarioView){
     this.mostrarPanelAddComentario = false;
-    this.listaComentarios.push(newComentario);
-    this.listaComentarios.shift();
+    this.listaComentariosView.push(newComentario);
+    this.listaComentariosView.shift();
   }
 
   mostrarMsj(event: string) {

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Comentario } from 'src/app/core/models/Models/comentario';
+import { Comentario, ComentarioView } from 'src/app/core/models/Models/comentario';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Comentario } from 'src/app/core/models/Models/comentario';
   styleUrls: ['./lista-comentarios.component.css']
 })
 export class ListaComentariosComponent {
-  @Input() inputComentarios: Array<Comentario> = [];
+  @Input() inputComentarios: Array<ComentarioView> = [];
 
 
 
