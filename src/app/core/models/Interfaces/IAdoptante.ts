@@ -3,8 +3,8 @@ export interface IAdoptante{
   nombre: string;
   apellido: string;
   dni: string;
-  domicilio: string;
-  telefono: string;
+  domicilio?: string;
+  telefono?: string;
   email: string;
 }
 
