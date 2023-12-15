@@ -1,0 +1,30 @@
+<div class="contenedor">
+  <table class="tabla">
+    <thead>
+    <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>DNI</th>
+    <th>Domicilio</th>
+    <th>Telefono</th>
+    <th>Email</th>
+    <th>Ver</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+    </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let adoptante of inputAdoptantes">
+        <td>{{ adoptante.nombre }}</td>
+        <td>{{ adoptante.apellido }}</td>
+        <td>{{ adoptante.dni}}</td>
+        <td>{{ adoptante.domicilio }}</td>
+        <td>{{ adoptante.telefono }}</td>
+        <td>{{ adoptante.email }}</td>
+        <td><button class="mas-button" (click)="mostrarDetalleAdoptante(adoptante)">📋</button></td>
+        <td><button class="edit-button" (click)="editAdoptante(adoptante)">✍🏻</button></td>
+        <td><button class="delete-button" (click)="deleteAdoptante(adoptante)">❌</button></td>
+      </tr>
+    </tbody>
+    </table>

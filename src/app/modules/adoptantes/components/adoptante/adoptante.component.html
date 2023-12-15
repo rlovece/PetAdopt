@@ -1,0 +1,13 @@
+<div class="tarjeta-adoptante">
+  <h2> A D O P T A N T E</h2>
+  <p>Nombre: {{inputAdoptante.nombre}}</p>
+  <p>Apellido: {{inputAdoptante.apellido}}</p>
+  <p>DNI: {{inputAdoptante.dni}} </p>
+  <p>Domicilio: {{inputAdoptante.domicilio}}</p>
+  <p>Telefono: {{inputAdoptante.telefono}}</p>
+  <p>Email: {{inputAdoptante.email}}</p>
+</div>
+
+<div class="alert" [class.active]="mostrarAlert">
+  <app-alert [texto]="msj" (EmitAceptar)="aceptarAlert()"></app-alert>
+</div>
