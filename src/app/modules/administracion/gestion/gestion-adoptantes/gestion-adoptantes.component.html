@@ -22,10 +22,12 @@
   </div>
 </div>
 
-<div *ngIf="adoptanteSeleccionadoView" class="menuDesplegable" [class.active]="adoptanteSeleccionadoView">
+<div *ngIf="adoptanteSeleccionadoView" class="menuDesplegable" id="adoptante" [class.active]="mostrarPanelViewAdoptante">
   <div *ngIf="mostrarPanelViewAdoptante">
     <button (click)="verPanelViewAdoptante()" class="boton" id="cerrar">X</button>
-    <app-adoptante [inputAdoptante]="adoptanteSeleccionadoView" [isAdmin]=true></app-adoptante>
+    <app-adoptante
+    [inputAdoptante]="adoptanteSeleccionadoView" [isAdmin]=true
+    ></app-adoptante>
   </div>
 </div>
 

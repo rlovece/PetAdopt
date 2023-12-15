@@ -14,7 +14,6 @@ export class GestionAdoptantesComponent {
 
   adoptantes: Adoptante[] = [];
   opcionSeleccionada: string = 'bienvenida';
-  mostrarPanelAddAdoptante: boolean = false;
   mostrarPanelEditAdoptante: boolean = false;
   adoptanteSeleccionadoParaEdicion: Adoptante | null = null;
   mostrarPanelViewAdoptante: boolean = false;
@@ -85,7 +84,7 @@ export class GestionAdoptantesComponent {
     this.mostrarPanelViewAdoptante = !this.mostrarPanelViewAdoptante;
   }
 
-
+  
   mostrarMsj(event: string) {
     this.msj = event;
     this.mostrarAlert = true;
@@ -94,12 +93,6 @@ export class GestionAdoptantesComponent {
   aceptarAlert() {
     this.mostrarAlert = false;
   }
-
-
-  verPanelAgregar() {
-    this.mostrarPanelAddAdoptante = !this.mostrarPanelAddAdoptante;
-  }
-
 
 }
 
