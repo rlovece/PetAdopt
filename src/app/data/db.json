@@ -8,8 +8,8 @@
       "foto": "https://cdn.pixabay.com/photo/2016/02/26/16/32/bulldog-1224267_1280.jpg",
       "tamanio": "Mediano",
       "nacimiento": "01/08/2017",
-      "caracteristicas": "Castrada, vacunas al día, Sociable, tranquila, le gustan los niños",
-      "estado": "Adoptado"
+      "caracteristicas": "Castrada, vacunas al día, Sociable, tranquila, le gustan los niños y otros animales",
+      "estado": "En adopcion"
     },
     {
       "id": 2,
@@ -74,7 +74,7 @@
       "tamanio": "Grande",
       "nacimiento": "2023-09-08",
       "caracteristicas": "Cachorra, aún no tiene edad para castrar.",
-      "estado": "Pendiente",
+      "estado": "En adopcion",
       "id": 8
     },
     {
@@ -131,6 +131,17 @@
       "caracteristicas": "Castrada, le encantan los niños",
       "estado": "En adopcion",
       "id": 13
+    },
+    {
+      "nombre": "Zenon",
+      "tipo": "Perro",
+      "sexo": "M",
+      "foto": "https://cdn.pixabay.com/photo/2018/01/09/11/04/dog-3071334_640.jpg",
+      "tamanio": "Pequeño",
+      "nacimiento": "2019-02-01",
+      "caracteristicas": "Castrado. Bueno con otros animales y niños",
+      "estado": "En adopcion",
+      "id": 14
     }
   ],
   "usuario": [
@@ -209,16 +220,6 @@
       "foto": "https://cdn.pixabay.com/photo/2016/11/29/08/59/man-1868563_1280.jpg"
     },
     {
-      "id": 5,
-      "fecha": "10/11/23",
-      "idMascota": 1,
-      "idAdoptante": 1,
-      "comentarios": "Todos los meses nos envia fotos con ella, nos cuenta que su momento favorito del dia es por la tarde cuando salen de pase juntas",
-      "estado": "Aprobada",
-      "fechaAdopcion": "15/11/23",
-      "foto": "https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_1280.jpg"
-    },
-    {
       "id": 6,
       "fecha": "12/12/2023",
       "idAdoptante": 5,
@@ -236,15 +237,6 @@
       "comentarios": "No fue posible",
       "fechaAdopcion": "",
       "foto": "-"
-    },
-    {
-      "id": 8,
-      "fecha": "12/12/2023",
-      "idAdoptante": 1,
-      "estado": "Rechazada",
-      "idMascota": 3,
-      "foto": "-",
-      "comentarios": "No fue posible"
     },
     {
       "id": 9,
@@ -277,16 +269,6 @@
       "foto": "-"
     },
     {
-      "id": 15,
-      "fecha": "14/12/2023",
-      "idAdoptante": 1,
-      "estado": "Rechazada",
-      "idMascota": 8,
-      "comentarios": "No fue posible",
-      "fechaAdopcion": "",
-      "foto": "-"
-    },
-    {
       "id": 16,
       "fecha": "14/12/2023",
       "idAdoptante": 15,
@@ -295,9 +277,38 @@
       "comentarios": "",
       "fechaAdopcion": "",
       "foto": ""
+    },
+    {
+      "id": 17,
+      "fecha": "15/12/2023",
+      "estado": "Pendiente",
+      "idMascota": 14,
+      "idAdoptante": 6,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
+    },
+    {
+      "id": 18,
+      "fecha": "15/12/2023",
+      "estado": "Pendiente",
+      "idMascota": 13,
+      "idAdoptante": 16,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": ""
     }
   ],
   "adoptantes": [
+    {
+      "id": 1,
+      "nombre": "Melina",
+      "apellido": "Cortes",
+      "dni": "32516425",
+      "domicilio": "Calle 4502",
+      "telefono": "2234445561",
+      "email": "melina@gmail.com"
+    },
     {
       "id": 2,
       "nombre": "Marco",
@@ -338,9 +349,9 @@
       "dni": "22311222",
       "nombre": "Bruno",
       "apellido": "Perez",
-      "domicilio": "Calle 1 213",
-      "telefono": "+542234229556",
-      "email": "rlovece@outlook.com.ar",
+      "domicilio": "Calle 0329",
+      "telefono": "2235556741",
+      "email": "mail1@outlook.com.ar",
       "id": 6
     },
     {
@@ -405,6 +416,24 @@
       "telefono": "2235112222",
       "email": "andrea@gmail.com",
       "id": 15
+    },
+    {
+      "dni": "18444555",
+      "nombre": "Valentina",
+      "apellido": "Malbran",
+      "domicilio": "Calle 0229",
+      "telefono": "223444555111",
+      "email": "valen@gmail.com",
+      "id": 16
+    },
+    {
+      "nombre": "Alejandro",
+      "apellido": "Martin",
+      "dni": "15222444",
+      "domicilio": "",
+      "telefono": "",
+      "email": "ale@gmail.com",
+      "id": 17
     }
   ],
   "comentarios": [
@@ -550,7 +579,7 @@
     },
     {
       "id": 21,
-      "idAdoptante": 16,
+      "idAdoptante": 15,
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "15/12/2023",
       "comentario": "Son todos tan lindos que no sabes con cuál quedarte!!"
@@ -561,6 +590,13 @@
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "15/12/2023",
       "comentario": "Son todos tan lindos que no sabes con cuál quedarte!!"
+    },
+    {
+      "id": 23,
+      "idAdoptante": 17,
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "15/12/2023",
+      "comentario": "Excelente trabajo"
     }
   ]
 }

@@ -9,7 +9,4 @@ import { Comentario, ComentarioView } from 'src/app/core/models/Models/comentari
 })
 export class ListaComentariosComponent {
   @Input() inputComentarios: Array<ComentarioView> = [];
-
-
-
 }
