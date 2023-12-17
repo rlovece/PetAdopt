@@ -1,5 +1,5 @@
 <div class="contenedor">
-  <table class="tabla">
+  <table class="tabla"  id="tablaListado">
     <thead>
     <tr>
     <th>Fecha</th>
@@ -14,6 +14,14 @@
         <td>{{ comentario.comentario}}</td>
       </tr>
     </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="1">Total Comentarios:</td>
+        <td id="totalFilas"> {{contarFilas()}} </td>
+        <td colspan="1"></td>
+      </tr>
+    </tfoot>
     </table>
 
 </div>

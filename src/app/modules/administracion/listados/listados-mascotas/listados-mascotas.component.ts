@@ -34,4 +34,10 @@ export class ListadosMascotasComponent {
     this.mascotaToView.emit(mascota);
   }
 
+  contarFilas():number{
+    var filas = document.querySelectorAll("#tablaListado tr");
+    var totalFilas = filas.length-2;
+    return totalFilas;
+  }
+
 }

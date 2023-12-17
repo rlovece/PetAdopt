@@ -7,5 +7,6 @@ export interface ISolicitud{
   estado: string;
   fechaAdopcion: string;
   foto: string;
+  idAdmin: number | null;
 }
 

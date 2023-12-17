@@ -59,7 +59,8 @@ export class SolicitarAdopcionComponent {
     this.solicitud.idMascota = this.idMascota;
     this.solicitud.estado = 'Pendiente';
     this.solicitud.fecha = new_Date.toLocaleDateString();
-
+    this.solicitud.comentarios = '';
+    this.solicitud.idAdmin= 0;
     this.solicitud.idAdoptante = this.getDNIAdoptante(dni).id;
 
       this.solicitudService.addSolictud(this.solicitud).subscribe({

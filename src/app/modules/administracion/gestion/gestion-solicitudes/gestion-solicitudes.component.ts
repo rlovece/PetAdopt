@@ -5,6 +5,8 @@ import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
 import { MascotasService } from 'src/app/core/services/api-mascotas.service';
 import { ApiAdoptantesService } from 'src/app/core/services/api-adoptantes.service';
+import { Usuario } from 'src/app/core/models/Models/usuario';
+import { ApiUsuariosService } from 'src/app/core/services/api-usuarios.service';
 
 @Component({
   selector: 'app-gestion-solicitudes',
@@ -16,7 +18,9 @@ export class GestionSolicitudesComponent {
   listaCompletaSolicitudes: Solicitud[] = [];
   listaMascotas: Mascota[] = [];
   listaAdoptantes: Adoptante[] = [];
+  listaUsuarios: Usuario[] = [];
   listaFiltradaSolicitudes: Solicitud[] = [];
+
 
   mostrarPanelViewSolicitud: boolean = false;
   mostrarPanelEditSolicitud: boolean = false;
@@ -31,13 +35,15 @@ export class GestionSolicitudesComponent {
   constructor(
     private solicitudesService: ApiSolicitudesService,
     private mascotasService: MascotasService,
-    private adoptanteService : ApiAdoptantesService
+    private adoptanteService : ApiAdoptantesService,
+    private usuariosService: ApiUsuariosService
   ){}
 
   ngOnInit(){
     this.getAllSolicitudes();
     this.getAllMascotas();
     this.getAllAdoptantes();
+    this.getAllUsuarios();
   }
 
   getAllSolicitudes(){
@@ -77,6 +83,17 @@ export class GestionSolicitudesComponent {
     )
   }
 
+  getAllUsuarios(){
+    this.usuariosService.getAllUsuarios()
+    .subscribe(
+      {
+        next: data => {
+          this.listaUsuarios=data;
+        },
+        error: e => console.log(e)
+      }
+    )
+  }
 
   verPendientes(){
     this.listaFiltradaSolicitudes =

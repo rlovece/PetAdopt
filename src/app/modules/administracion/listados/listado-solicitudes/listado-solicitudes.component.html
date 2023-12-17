@@ -1,5 +1,5 @@
 <div class="contenedor" *ngIf="!paraAdoptante">
-  <table class="tabla">
+  <table class="tabla" id="tablaListado">
     <thead>
     <tr>
     <th>Fecha</th>
@@ -8,7 +8,8 @@
     <th>Adoptante</th>
     <th>DNI adoptante</th>
     <th>Estado</th>
-    <th>Fecha Adop</th>
+    <th>Supervisó</th>
+    <th>Fecha Adopcion</th>
     <th>Ver más</th>
     <th>Editar</th>
     <th>Eliminar</th>
@@ -23,12 +24,22 @@
         <td>{{ getNombreAdoptante(solicitud.idAdoptante)}}</td>
         <td>{{ getDniAdoptante(solicitud.idAdoptante)}}</td>
         <td>{{ solicitud.estado }}</td>
+        <td>{{ getNombreUsuario(solicitud.idAdmin) }}</td>
         <td>{{ solicitud.fechaAdopcion }}</td>
         <td><button class="mas-button" (click)="mostrarDetalleSolicitud(solicitud)">📋</button></td>
         <td><button class="edit-button" (click)="editSolicitud(solicitud)">✍🏻</button></td>
         <td><button class="delete-button" (click)="deleteSolicitud(solicitud)">❌</button></td>
       </tr>
     </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="5">Total solicitudes:</td>
+        <td id="totalFilas"> {{contarFilas()}} </td>
+        <td colspan="5"></td>
+      </tr>
+    </tfoot>
+
     </table>
 </div>
 

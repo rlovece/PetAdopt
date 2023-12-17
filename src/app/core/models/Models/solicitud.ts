@@ -9,6 +9,7 @@ export class Solicitud implements ISolicitud{
   comentarios: string;
   fechaAdopcion: string;
   foto: string;
+  idAdmin: number;
 
   constructor(solicitud?:any){
     this.id =  solicitud == undefined ? null : solicitud.id;
@@ -19,6 +20,7 @@ export class Solicitud implements ISolicitud{
     this.comentarios = solicitud == undefined ? '' : solicitud.comentarios;
     this.fechaAdopcion = solicitud == undefined ? '' : solicitud.fechaAdopcion;
     this.foto = solicitud == undefined ? '' : solicitud.foto;
+    this.idAdmin = solicitud == undefined ? null : solicitud.idAdmin;
   }
 
 }

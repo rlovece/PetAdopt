@@ -1,5 +1,5 @@
 <div class="contenedor">
-  <table class="tabla">
+  <table class="tabla" id="tablaListado">
     <thead>
     <tr>
     <th>Nombre</th>
@@ -24,6 +24,15 @@
         <td><button (click)="borrarUsuario(usu!)">❌</button></td>
       </tr>
     </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="3">Total Usuarios:</td>
+        <td id="totalFilas"> {{contarFilas()}} </td>
+        <td colspan="4"></td>
+      </tr>
+    </tfoot>
+
     </table>
 
 </div>

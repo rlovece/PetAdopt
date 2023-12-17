@@ -4,6 +4,8 @@ import { ApiSolicitudesService } from 'src/app/core/services/api-solicitudes.ser
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
 import { MascotasService } from 'src/app/core/services/api-mascotas.service';
+import { Usuario } from 'src/app/core/models/Models/usuario';
+import { ApiAuthService } from 'src/app/core/services/api-auth.service';
 
 
 @Component({
@@ -12,6 +14,7 @@ import { MascotasService } from 'src/app/core/services/api-mascotas.service';
 })
 export class EditSolicitudComponent {
   solicitudForm: FormGroup | undefined;
+  usuarioLogin: Usuario = new Usuario;
   @Output() EmitEditSolicitud = new EventEmitter<Solicitud>();
   @Output() EmitEditMascota = new EventEmitter<Mascota>();
   @Input() solicitud: Solicitud | undefined;
@@ -22,9 +25,13 @@ export class EditSolicitudComponent {
   constructor(
     private fb: FormBuilder,
     private solicitudesService: ApiSolicitudesService,
-    private mascotaService: MascotasService
-  ) {
+    private mascotaService: MascotasService,
+    private authService: ApiAuthService
+  ) {if (this.authService.currentUser){
+    this.usuarioLogin = this.authService.currentUser;
   }
+}
+
 
   ngOnInit() {
     this.initForm();
@@ -51,6 +58,16 @@ export class EditSolicitudComponent {
     }
   }
 
+  getAdoptante(){
+    if (this.solicitud){
+      this.mascotaService.getById(this.solicitud.idMascota)
+     .subscribe({
+       next: data => this.mascotaEdit = data,
+       error: e => console.log(e)
+      })
+   }
+ }
+
   editSolicitud() {
     if (this.solicitudForm && this.solicitudForm.valid && this.solicitud) {
       let newSolicitud: Solicitud = this.solicitudForm.value;
@@ -61,6 +78,7 @@ export class EditSolicitudComponent {
         this.solicitud.fechaAdopcion = `${fecha.getDate()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`
         this.solicitud.estado = newSolicitud.estado;
         this.mascotaEdit.estado = 'Adoptado';
+        this.solicitud.idAdmin = this.usuarioLogin.id;
         this.mascotaService.update(this.solicitud.idMascota, this.mascotaEdit)
         .subscribe(data => {
           console.log(data);
@@ -77,6 +95,7 @@ export class EditSolicitudComponent {
       }
       if (this.solicitud.estado != 'Aprobada' && newSolicitud.estado == 'Rechazada'){
         this.solicitud.estado = newSolicitud.estado;
+        this.solicitud.idAdmin = this.usuarioLogin.id;
         if (this.solicitud != undefined && this.solicitud.id!= null) {
           this.solicitudesService.update(this.solicitud.id, this.solicitud)
           .subscribe(

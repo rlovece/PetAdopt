@@ -3,6 +3,7 @@ import { Observable, catchError, map, of } from 'rxjs';
 import { Adoptante } from 'src/app/core/models/Models/adoptante';
 import { Mascota } from 'src/app/core/models/Models/mascota';
 import { Solicitud } from 'src/app/core/models/Models/solicitud';
+import { Usuario } from 'src/app/core/models/Models/usuario';
 import { MascotasService } from 'src/app/core/services/api-mascotas.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class ListadoSolicitudesComponent {
   @Input() inputSolicitudes: Array<Solicitud> = [];
   @Input() inputMascotas: Array<Mascota> = [];
   @Input() inputAdoptantes: Array<Adoptante> = [];
+  @Input() inputUsuarios: Array<Usuario> = [];
   @Input() paraAdoptante: boolean = false;
   @Output() solicitudToEdit: EventEmitter<Solicitud> = new EventEmitter();
   @Output() solicitudToDelete: EventEmitter<Solicitud> = new EventEmitter();
@@ -40,6 +42,16 @@ export class ListadoSolicitudesComponent {
     return nombre;
   }
 
+  getNombreUsuario(id: number): string {
+    if(id == 0){
+      return ' ';
+    }else{
+      const nombre= this.inputUsuarios.filter((m) => m.id == id)[0]?.nombre + ' ' + this.inputUsuarios.filter((m) => m.id == id)[0]?.apellido;
+      return nombre;
+    }
+
+  }
+
   getDniAdoptante(id: number): string {
     return this.inputAdoptantes.filter((m) => m.id == id)[0]?.dni;
   }
@@ -60,6 +72,15 @@ export class ListadoSolicitudesComponent {
   cambiarEstadoVistaDetalle() {
     this.vistaDetalleSolicitud = !this.vistaDetalleSolicitud;
   }
+
+
+  contarFilas():number{
+    var filas = document.querySelectorAll("#tablaListado tr");
+    var totalFilas = filas.length-2;
+    return totalFilas;
+  }
+
+
 
 
 }

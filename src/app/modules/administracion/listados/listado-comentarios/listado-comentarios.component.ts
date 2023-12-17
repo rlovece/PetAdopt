@@ -9,4 +9,10 @@ import { Comentario } from 'src/app/core/models/Models/comentario';
 export class ListadoComentariosComponent {
 
   @Input() inputComentarios: Array<Comentario> = [];
+
+  contarFilas():number{
+    var filas = document.querySelectorAll("#tablaListado tr");
+    var totalFilas = filas.length-2;
+    return totalFilas;
+  }
 }
