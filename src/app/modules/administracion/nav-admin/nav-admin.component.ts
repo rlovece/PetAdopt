@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiAuthService } from 'src/app/core/services/api-auth.service';
 import { Usuario } from 'src/app/core/models/Models/usuario';
@@ -12,12 +12,19 @@ export class NavAdminComponent {
 
   usuarioLogin: Usuario = new Usuario;
   @Output() opcionSeleccionada = new EventEmitter<string>();
+  isScrolled = false;
 
   constructor(private authService: ApiAuthService, private router: Router){
     if (this.authService.currentUser){
       this.usuarioLogin = this.authService.currentUser;
       console.log(this.usuarioLogin);
     }
+  }
+
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    this.isScrolled = window.scrollY > 100;
   }
 
   onLogOut(){

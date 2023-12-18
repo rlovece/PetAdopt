@@ -11,8 +11,7 @@ export class NavComponent {
   isScrolled = false;
   @HostListener('window:scroll', ['$event'])
   onScroll() {
-    // Verifica la posición del scroll y actualiza la variable isScrolled
-    this.isScrolled = window.scrollY > 400; // Cambia 50 según sea necesario
+    this.isScrolled = window.scrollY > 400;
   }
 
   toggleMenu(){

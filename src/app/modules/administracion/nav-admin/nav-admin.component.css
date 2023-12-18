@@ -14,6 +14,23 @@ nav {
   align-items: center;
 }
 
+.content {
+  transition:  transform 0.3s ease;
+}
+.content-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ajusta el margen superior para dar espacio al nav fijo */
+}
+
+.content-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
 h2 {
   margin-top: 2%;
   margin-bottom: 2%;
