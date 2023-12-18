@@ -267,17 +267,6 @@
       "idAdmin": 0
     },
     {
-      "id": 14,
-      "fecha": "14/12/2023",
-      "idAdoptante": 14,
-      "estado": "Rechazada",
-      "idMascota": 7,
-      "comentarios": "No fue posible",
-      "fechaAdopcion": "",
-      "foto": "-",
-      "idAdmin": 1
-    },
-    {
       "id": 16,
       "fecha": "14/12/2023",
       "idAdoptante": 15,
@@ -302,13 +291,13 @@
     {
       "id": 18,
       "fecha": "15/12/2023",
-      "estado": "Pendiente",
+      "estado": "Rechazada",
       "idMascota": 13,
       "idAdoptante": 16,
-      "comentarios": "",
+      "comentarios": "-",
       "fechaAdopcion": "",
-      "foto": "",
-      "idAdmin": 0
+      "foto": "-",
+      "idAdmin": 1
     }
   ],
   "adoptantes": [
