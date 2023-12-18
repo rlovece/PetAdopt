@@ -7,6 +7,10 @@ background: linear-gradient(0deg, rgba(255,224,81,1) 25%, rgba(230,129,132,1) 10
  margin-bottom: 1px;
 }
 
+#lista-adopcion{
+border: white 1px solid;
+}
+
 
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
   .grilla-mascotas{

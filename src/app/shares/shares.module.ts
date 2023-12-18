@@ -5,6 +5,7 @@ import { NavComponent } from './nav/nav.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './alert/alert.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -18,6 +19,7 @@ import { AlertComponent } from './alert/alert.component';
   ],
   imports: [
     ReactiveFormsModule,
+    CommonModule
   ],
   exports:[
     FooterComponent,

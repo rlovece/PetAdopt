@@ -200,6 +200,7 @@ button{
   background: linear-gradient(90deg, rgba(233,148,151,1) 0%, rgba(230,129,132,1) 50%, rgba(164,74,149,1) 100%);
   border: 2px solid rgb(250, 233, 250);
   border-radius: 5px;
+  z-index: 1000;
 }
 
 .hide-mobile div {
@@ -207,11 +208,13 @@ button{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 1000; 
 }
 
 #nav-cabecera {
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 
 #lista-cabecera {

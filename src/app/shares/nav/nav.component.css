@@ -5,6 +5,16 @@
   font-size: 1.2rem;
   font-family: 'Kanit', sans-serif;
 }
+
+.lista-cabecera{
+  padding: 0;
+  margin:0;
+}
+
+.lista-cabecera li{
+  margin-right: 0px;
+  padding: 0;
+}
 #toggleMenu{
   border: none;
   background-color: transparent;
@@ -23,6 +33,25 @@ button{
   border-radius: 5px;
   color:#FBFFA5;
   text-shadow: 0px 0px 2px #FBFFA5;
+}
+
+.content {
+  /* Estilos del contenido */
+  transition:  transform 0.3s ease; ; /* Agrega una transición suave al ajustar el margen superior */
+}
+
+.content-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ajusta el margen superior para dar espacio al nav fijo */
+}
+
+.content-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Medium only */

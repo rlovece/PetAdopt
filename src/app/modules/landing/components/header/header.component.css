@@ -14,6 +14,11 @@
   text-align: left;
 }
 
+#header1{
+  border: #ffffff 1px solid;
+}
+
+
 .image1{
   width: 25%;
   height: 8%;
