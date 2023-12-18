@@ -1,7 +1,7 @@
 
 
 <div class="tarjeta-mascota" *ngIf="!isAdmin">
-  <app-imagen [archivo]="inputMascota.foto"></app-imagen>
+  <app-imagen [archivo]="inputMascota.foto" class="foto"></app-imagen>
   <h2>{{inputMascota.nombre}}</h2>
   <p>Nació: {{inputMascota.nacimiento}}</p>
   <p>Sexo: {{inputMascota.sexo}} </p>
