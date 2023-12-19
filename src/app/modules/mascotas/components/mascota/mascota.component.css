@@ -1,12 +1,12 @@
 .solicitarMascota {
   height: 100%;
   position: fixed;
-  top: 10px;
+  top: 70px;
   left: 60%;
   bottom: 0;
   right: 0;
   background: rgb(252,220,122);
-background: radial-gradient(circle, rgba(252,220,122,1) 0%, rgba(252,191,122,1) 100%);
+  background: radial-gradient(circle, rgba(252,220,122,1) 0%, rgba(252,191,122,1) 100%);
   border-radius: 20px;
   transition: all ease-out .5s;
   transform: translateX(100%);
