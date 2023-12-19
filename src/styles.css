@@ -138,6 +138,8 @@ button{
 
 .menuDesplegable{
   position: fixed;
+  margin-bottom: 10px;
+  margin-top: 10px;
   left: 0%;
   bottom: 0;
   right: 0;
