@@ -80,7 +80,7 @@ export class AddComentarioComponent {
         next: (data) => {
           this.msj = `${data.nombre} ${data.apellido} tus datos han sido actualizados.`;
           if (data.id) {
-            this.addComentario(data.id);
+            this.addComentario(data.id, data.nombre);
           }
         },
         error: (e) => console.error(e),
@@ -98,18 +98,18 @@ export class AddComentarioComponent {
       next: (data) => {
         this.msj = `${data.nombre} ${data.apellido} tus datos fueron guardados.`;
         if (data.id) {
-          this.addComentario(data.id);
+          this.addComentario(data.id, data.nombre);
         }
       },
       error: (e) => console.error(e),
     });
   }
 
-  createComentarioView(data: Comentario) {
+  createComentarioView(data: Comentario, nombre: string) {
     let newComentarioView: ComentarioView = new ComentarioView();
     newComentarioView.comentario = this.comentarioForm.value.comentario;
     newComentarioView.puntaje = this.comentarioForm.value.puntaje;
-    newComentarioView.nombreAdoptante = this.comentarioForm.value.nombre;
+    newComentarioView.nombreAdoptante = nombre;
     newComentarioView.fecha = new Date().toLocaleDateString();
     this.EmitAddComentario.emit(newComentarioView);
     if (data.puntaje == '⭐⭐⭐⭐⭐' || data.puntaje == '⭐⭐⭐⭐') {
@@ -119,7 +119,7 @@ export class AddComentarioComponent {
     }
   }
 
-  addComentario(id: number) {
+  addComentario(id: number, nombre: string) {
     if (this.comentarioForm.valid) {
       let newComentario: Comentario = new Comentario();
       newComentario.comentario = this.comentarioForm.value.comentario;
@@ -127,7 +127,7 @@ export class AddComentarioComponent {
       newComentario.idAdoptante = id;
       newComentario.fecha = new Date().toLocaleDateString();
       this.comentarioService.create(newComentario).subscribe((data) => {
-        this.createComentarioView(data);
+        this.createComentarioView(data, nombre);
       });
     }
   }

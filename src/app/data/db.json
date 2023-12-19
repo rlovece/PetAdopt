@@ -298,6 +298,28 @@
       "fechaAdopcion": "",
       "foto": "-",
       "idAdmin": 1
+    },
+    {
+      "id": 19,
+      "fecha": "19/12/2023",
+      "estado": "Pendiente",
+      "idMascota": 1,
+      "idAdoptante": 18,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": "",
+      "idAdmin": 0
+    },
+    {
+      "id": 20,
+      "fecha": "19/12/2023",
+      "estado": "Pendiente",
+      "idMascota": 14,
+      "idAdoptante": 17,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": "",
+      "idAdmin": 0
     }
   ],
   "adoptantes": [
@@ -413,10 +435,28 @@
       "nombre": "Alejandro",
       "apellido": "Martin",
       "dni": "15222444",
-      "domicilio": "Av. Independencia 3421",
-      "telefono": "02235578638",
-      "email": "ale@gmail.com",
+      "domicilio": "Calle 10 212",
+      "telefono": "2335111222",
+      "email": "alejandro@yahoo.com.ar",
       "id": 17
+    },
+    {
+      "dni": "18666444",
+      "nombre": "Martin",
+      "apellido": "Alvarez",
+      "domicilio": "Calle 549",
+      "telefono": "2236145119",
+      "email": "martu@gmail.com",
+      "id": 18
+    },
+    {
+      "nombre": "Amalia",
+      "apellido": "Paez",
+      "dni": "13444111",
+      "domicilio": "",
+      "telefono": "",
+      "email": "amalia@gmail.com",
+      "id": 19
     }
   ],
   "comentarios": [
@@ -541,7 +581,7 @@
     },
     {
       "id": 18,
-      "idAdoptante": 12,
+      "idAdoptante": 5,
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "14/12/2023",
       "comentario": "Quiero adoptar!!"
@@ -555,7 +595,7 @@
     },
     {
       "id": 20,
-      "idAdoptante": 14,
+      "idAdoptante": 15,
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "14/12/2023",
       "comentario": "Hola, son los mejores"
@@ -569,17 +609,31 @@
     },
     {
       "id": 22,
-      "idAdoptante": 15,
-      "puntaje": "⭐⭐⭐⭐⭐",
-      "fecha": "15/12/2023",
-      "comentario": "Son todos tan lindos que no sabes con cuál quedarte!!"
-    },
-    {
-      "id": 23,
       "idAdoptante": 17,
       "puntaje": "⭐⭐⭐⭐⭐",
       "fecha": "15/12/2023",
       "comentario": "Excelente trabajo"
+    },
+    {
+      "id": 23,
+      "idAdoptante": 19,
+      "puntaje": "⭐⭐",
+      "fecha": "19/12/2023",
+      "comentario": "Que dificil esta pagina"
+    },
+    {
+      "id": 24,
+      "idAdoptante": 18,
+      "puntaje": "⭐⭐⭐⭐",
+      "fecha": "19/12/2023",
+      "comentario": "Los amo. Gracias por todo!"
+    },
+    {
+      "id": 25,
+      "idAdoptante": 19,
+      "puntaje": "⭐⭐⭐⭐",
+      "fecha": "19/12/2023",
+      "comentario": "Gracias por tanto!!"
     }
   ]
 }
