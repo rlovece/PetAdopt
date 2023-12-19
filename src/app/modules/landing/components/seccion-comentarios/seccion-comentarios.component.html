@@ -5,7 +5,7 @@
   [inputComentarios] = "listaComentariosView"
   ></app-lista-comentarios>
   <div class="menuDesplegable" [class.active]="mostrarPanelAddComentario">
-    <button (click)="cerrarPanelAddComentario()" class="boton">X</button>
+    <button (click)="cerrarPanelAddComentario()" class="boton" id="cerrar">X</button>
     <app-add-comentario
       (EmitAddComentario)="onAgregarComentario($event)"
       (EmitMsj)="mostrarMsj($event)"
