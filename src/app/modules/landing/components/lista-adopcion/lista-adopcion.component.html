@@ -1,8 +1,18 @@
 
-<div class="grilla-mascotas" id="lista-adopcion">
+
+<div class="botones">
+  <button class="boton" (click)="verPerros()">Perros</button>
+  <button class="boton" (click)="verGatos()">Gatos</button>
+  <button class="boton" (click)="verGrandes()">Grandes</button>
+  <button class="boton" (click)="verMedianos()">Medianos</button>
+  <button class="boton" (click)="verPequenios()">Pequeños</button>
+  <button class="boton" (click)="quitarFiltros()">Quitar Filtros</button>
+</div>
+
+<div class="grilla-mascotas">
   <app-mascota
   [inputMascota]="mascota"
-    *ngFor="let mascota of mascotasEnAdopcion"
+    *ngFor="let mascota of mascotasEnAdopcionFiltrada"
     >
   </app-mascota>
 </div>
