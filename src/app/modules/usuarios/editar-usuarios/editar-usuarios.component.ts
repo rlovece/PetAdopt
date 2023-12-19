@@ -50,7 +50,7 @@ editarUsuario() {
         next: (data) => {
           console.log(this.usuario);
           this.EmitEditUsuario.emit(data);
-          this.EmitMsj.emit(`El usuario nro ${data.id} usuario fue editado`);
+          this.EmitMsj.emit(`El usuario de ${data.nombre} fue editado`);
         },
         error: (e) => console.log(e),
       });

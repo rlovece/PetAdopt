@@ -9,6 +9,6 @@ export interface IMascota {
   tamanio: "Pequeño" | "Mediano" | "Grande" | "";
   nacimiento: Data | null;
   caracteristicas: string;
-  estado: "En adopcion" | "No adoptable" | "Adoptado" | "";
+  estado: "En adopcion" | "No adoptable" | "Adoptado" | "Eliminado" | "";
 }
 

@@ -50,9 +50,7 @@
   </div>
 </div>
 
-<div class="alert" [class.active]="mostrarAlert">
-  <app-alert [texto]="msj" (EmitAceptar)="aceptarAlert()"></app-alert>
-</div>
+
 
 <div *ngIf="solicitudSeleccionada" class="menuDesplegable" [class.active]="mostrarPanelEditSolicitud">
   <div *ngIf="mostrarPanelEditSolicitud">
@@ -63,6 +61,10 @@
       (EmitMsj)="mostrarMsj($event)"
       ></app-edit-solicitud>
   </div>
+</div>
+
+<div class="alert" [class.active]="mostrarAlert">
+  <app-alert [texto]="msj" (EmitAceptar)="aceptarAlert()"></app-alert>
 </div>
 
 

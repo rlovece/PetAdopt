@@ -66,7 +66,7 @@ export class GestionUsuariosComponent {
       .subscribe(
         {
           next: () => {
-            this.mostrarMsj(`Usuario Administrador nro ${usu.id} fue eliminado`);
+            this.mostrarMsj(`Usuario Administrador de ${usu.nombre} fue eliminado`);
             this.usuarios= this.usuarios.filter(u => u.id != usu.id);
           },
           error: e => console.log(e)

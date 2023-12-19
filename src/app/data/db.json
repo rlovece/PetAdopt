@@ -9,7 +9,7 @@
       "tamanio": "Mediano",
       "nacimiento": "01/08/2017",
       "caracteristicas": "Castrada, vacunas al día, Sociable, tranquila, le gustan los niños y otros animales",
-      "estado": "En adopcion"
+      "estado": "Eliminado"
     },
     {
       "id": 2,
@@ -142,6 +142,17 @@
       "caracteristicas": "Castrado. Bueno con otros animales y niños",
       "estado": "En adopcion",
       "id": 14
+    },
+    {
+      "nombre": "Mimosin",
+      "tipo": "Gato",
+      "sexo": "M",
+      "foto": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg",
+      "tamanio": "Pequeño",
+      "nacimiento": "2023-06-12",
+      "caracteristicas": "Mimoso",
+      "estado": "En adopcion",
+      "id": 15
     }
   ],
   "usuario": [
@@ -278,17 +289,6 @@
       "idAdmin": 0
     },
     {
-      "id": 17,
-      "fecha": "15/12/2023",
-      "estado": "Pendiente",
-      "idMascota": 14,
-      "idAdoptante": 6,
-      "comentarios": "",
-      "fechaAdopcion": "",
-      "foto": "",
-      "idAdmin": 0
-    },
-    {
       "id": 18,
       "fecha": "15/12/2023",
       "estado": "Rechazada",
@@ -298,28 +298,6 @@
       "fechaAdopcion": "",
       "foto": "-",
       "idAdmin": 1
-    },
-    {
-      "id": 19,
-      "fecha": "19/12/2023",
-      "estado": "Pendiente",
-      "idMascota": 1,
-      "idAdoptante": 18,
-      "comentarios": "",
-      "fechaAdopcion": "",
-      "foto": "",
-      "idAdmin": 0
-    },
-    {
-      "id": 20,
-      "fecha": "19/12/2023",
-      "estado": "Pendiente",
-      "idMascota": 14,
-      "idAdoptante": 17,
-      "comentarios": "",
-      "fechaAdopcion": "",
-      "foto": "",
-      "idAdmin": 0
     }
   ],
   "adoptantes": [

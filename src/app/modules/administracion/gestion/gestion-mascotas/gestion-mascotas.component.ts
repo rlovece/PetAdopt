@@ -72,6 +72,11 @@ export class GestionMascotasComponent {
     this.listaFiltradaMascotas.filter(m => m.estado == 'En adopcion');
   }
 
+  verElimidanos() {
+    this.listaFiltradaMascotas =
+    this.listaFiltradaMascotas.filter(m => m.estado == 'Eliminado');
+  }
+
   quitarFiltros(){
     this.listaFiltradaMascotas = this.listaCompletaMascotas.slice();
   }

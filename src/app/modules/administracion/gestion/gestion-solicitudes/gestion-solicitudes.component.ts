@@ -148,7 +148,7 @@ export class GestionSolicitudesComponent {
           next: () => {
             this.mostrarMsj (`${solicitud.id} fue eliminada`);
             this.listaCompletaSolicitudes= this.listaCompletaSolicitudes.filter(m => m.id != solicitud.id);
-            this.listaFiltradaSolicitudes = this.listaFiltradaSolicitudes.slice();
+            this.listaFiltradaSolicitudes = this.listaCompletaSolicitudes.slice();
           },
           error: e => console.log(e)
         }

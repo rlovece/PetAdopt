@@ -106,6 +106,21 @@ export class EditSolicitudComponent {
           );
         }
       }
+      if (this.solicitud.estado == 'Aprobada'){
+        this.solicitud.idAdmin = this.usuarioLogin.id;
+        this.solicitud.comentarios = newSolicitud.comentarios;
+        if (this.solicitud != undefined && this.solicitud.id!= null) {
+          this.solicitudesService.update(this.solicitud.id, this.solicitud)
+          .subscribe(
+            (data) => {
+              this.EmitEditSolicitud.emit(data);
+              this.EmitMsj.emit(`El comentario de la solicitud ${data.id} fue editado! El resto de los campos no pueden ser modificados!`);
+            }
+          );
+        }
+      }
+    }else {
+      this.EmitMsj.emit(`Todos los campos deben ser completados`);
     }
   }
 }

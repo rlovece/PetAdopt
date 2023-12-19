@@ -13,7 +13,7 @@ export class Mascota implements IMascota{
   tamanio: "Pequeño" | "Mediano" | "Grande" | "" = "";
   nacimiento: Data | null = null;
   caracteristicas: string = "";
-  estado: "En adopcion" | "No adoptable" | "Adoptado" | "" = "En adopcion";
+  estado: "En adopcion" | "No adoptable" | "Adoptado" |"Eliminado" | "" = "En adopcion";
 
   constructor(mascota?:any){
 
