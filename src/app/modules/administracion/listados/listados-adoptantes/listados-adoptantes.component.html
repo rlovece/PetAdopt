@@ -26,7 +26,7 @@
         <td>{{ adoptante.email }}</td>
         <td><button class="mas-button" (click)="mostrarDetalleAdoptante(adoptante)">📋</button></td>
         <td><button class="edit-button" (click)="editAdoptante(adoptante)">✍🏻</button></td>
-        <td><button class="delete-button" (click)="deleteAdoptante(adoptante)">❌</button></td>
+        <td><button class="delete-button" (click)="mostrarMsjDelete(adoptante)">❌</button></td>
       </tr>
     </tbody>
 
@@ -37,3 +37,12 @@
       </tr>
     </tfoot>
     </table>
+</div>
+
+<div class="msj-delete" *ngIf="msjDelet">
+  <p>Confirma que desea eliminar al adoptante con DNI {{ adoptanteAEliminar.dni }}</p>
+  <div class="botones">
+    <button class="boton" (click)="deleteAdoptante(adoptanteAEliminar)">Aceptar</button>
+    <button class="boton" (click)="cancelarDelete()">Cancelar</button>
+  </div>
+</div>

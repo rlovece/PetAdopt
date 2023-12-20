@@ -298,6 +298,17 @@
       "fechaAdopcion": "",
       "foto": "-",
       "idAdmin": 1
+    },
+    {
+      "id": 19,
+      "fecha": "19/12/2023",
+      "estado": "Pendiente",
+      "idMascota": 8,
+      "idAdoptante": 18,
+      "comentarios": "",
+      "fechaAdopcion": "",
+      "foto": "",
+      "idAdmin": 0
     }
   ],
   "adoptantes": [
@@ -306,8 +317,6 @@
       "nombre": "Anonimo",
       "apellido": "NN",
       "dni": "11111111",
-      "domicilio": "Adoptante de prueba",
-      "telefono": "222222222222",
       "email": "anonimo@gmail.com"
     },
     {
@@ -419,12 +428,12 @@
       "id": 17
     },
     {
-      "dni": "18666444",
-      "nombre": "Martin",
-      "apellido": "Alvarez",
-      "domicilio": "Calle 549",
-      "telefono": "2236145119",
-      "email": "martu@gmail.com",
+      "dni": "11422533",
+      "nombre": "Anastasia",
+      "apellido": "Alarcon",
+      "domicilio": "Calle 32 321",
+      "telefono": "2234571594",
+      "email": "ana@gmail.com",
       "id": 18
     }
   ],
@@ -592,7 +601,7 @@
     },
     {
       "id": 24,
-      "idAdoptante": 18,
+      "idAdoptante": 1,
       "puntaje": "⭐⭐⭐⭐",
       "fecha": "19/12/2023",
       "comentario": "Los amo. Gracias por todo!"

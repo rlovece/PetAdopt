@@ -27,6 +27,9 @@ export class ListadoSolicitudesComponent {
 
   vistaDetalleSolicitud: boolean = false;
 
+  msjDelet: boolean = false;
+  solicitudAEliminar: Solicitud = new Solicitud;
+
   constructor(){}
 
   getNombreMascota(id: number): string {
@@ -62,6 +65,16 @@ export class ListadoSolicitudesComponent {
 
   deleteSolicitud (solicitud: Solicitud) {
     this.solicitudToDelete.emit(solicitud);
+    this.msjDelet = false;
+  }
+
+  mostrarMsjDelete(solicitud: Solicitud) {
+    this.solicitudAEliminar = solicitud;
+    this.msjDelet = true;
+  }
+
+  cancelarDelete() {
+    this.msjDelet = false;
   }
 
   mostrarDetalleSolicitud(solicitud: Solicitud) {

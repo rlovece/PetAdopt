@@ -321,6 +321,28 @@ td {
   text-align: center;
 }
 
+
+.msj-delete{
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  bottom: 40%;
+  right: 30%;
+  background: #F8FACB;
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px rgba(2, 2, 2, 0.9);
+
+}
+
+.msj-delete p {
+  width: 100%;
+}
+
+.msj-delete .botones{
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
 @media screen and (min-width: 45em) and (max-width: 63.9em) {
   .menuDesplegable{
     left: 40%;

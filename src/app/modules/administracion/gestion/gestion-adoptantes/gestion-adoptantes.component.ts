@@ -86,7 +86,7 @@ export class GestionAdoptantesComponent {
       .subscribe(
         {
           next: () => {
-            this.mostrarMsj (`Los comentarios que realizo el adoptante fueron modificados`);
+            this.mostrarMsj (`${this.msj} y sus comentarios modificados`);
             this.comentarios= this.comentarios.filter(c => c.id != this.comentariosFiltrados[i].id);
           },
           error: e => console.log(e)
@@ -101,7 +101,7 @@ export class GestionAdoptantesComponent {
       .subscribe(
         {
           next: () => {
-            this.mostrarMsj (`${adoptante.nombre} fue eliminada`);
+            this.msj = `${adoptante.nombre} fue eliminado`;
             this.deleteComentario(adoptante.id);
             this.adoptantes= this.adoptantes.filter(m => m.id != adoptante.id);
           },

@@ -16,6 +16,9 @@ export class ListadosAdoptantesComponent {
   vistaDetallaAdoptante = false;
   adoptanteEnVista: Adoptante = new Adoptante;
 
+  msjDelet: boolean = false;
+  adoptanteAEliminar: Adoptante = new Adoptante;
+
   constructor(){}
 
   editAdoptante(adoptante: Adoptante) {
@@ -24,6 +27,16 @@ export class ListadosAdoptantesComponent {
 
   deleteAdoptante (adoptante: Adoptante) {
     this.adoptanteToDelete.emit(adoptante);
+    this.msjDelet = false;
+  }
+
+  mostrarMsjDelete(adoptante: Adoptante) {
+    this.adoptanteAEliminar = adoptante;
+    this.msjDelet = true;
+  }
+
+  cancelarDelete() {
+    this.msjDelet = false;
   }
 
   cambiarEstadoVistaDetalle() {

@@ -2,6 +2,7 @@
   <table class="tabla" id="tablaListado">
     <thead>
     <tr>
+    <th>Nro</th>
     <th>Fecha</th>
     <th>Mascota</th>
     <th>Tipo</th>
@@ -18,6 +19,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let solicitud of inputSolicitudes">
+        <td>{{ solicitud.id }}</td>
         <td>{{ solicitud.fecha }}</td>
         <td>{{ getNombreMascota(solicitud.idMascota) }}</td>
         <td>{{ getTipoMascota(solicitud.idMascota) }}</td>
@@ -28,19 +30,27 @@
         <td>{{ solicitud.fechaAdopcion }}</td>
         <td><button class="mas-button" (click)="mostrarDetalleSolicitud(solicitud)">📋</button></td>
         <td><button class="edit-button" (click)="editSolicitud(solicitud)">✍🏻</button></td>
-        <td><button class="delete-button" (click)="deleteSolicitud(solicitud)">❌</button></td>
+        <td><button class="delete-button" (click)="mostrarMsjDelete(solicitud)">❌</button></td>
       </tr>
     </tbody>
 
     <tfoot>
       <tr>
-        <td colspan="5">Total solicitudes:</td>
+        <td colspan="6">Total solicitudes:</td>
         <td id="totalFilas"> {{contarFilas()}} </td>
-        <td colspan="5"></td>
+        <td colspan="6"></td>
       </tr>
     </tfoot>
 
     </table>
+</div>
+
+<div class="msj-delete" *ngIf="msjDelet">
+  <p>Confirma que desea eliminar la solicitud nro {{ solicitudAEliminar.id }}</p>
+  <div class="botones">
+    <button class="boton" (click)="deleteSolicitud(solicitudAEliminar)">Aceptar</button>
+    <button class="boton" (click)="cancelarDelete()">Cancelar</button>
+  </div>
 </div>
 
 <div class="contenedor" *ngIf="paraAdoptante">
