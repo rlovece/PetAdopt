@@ -164,6 +164,50 @@
       "caracteristicas": "Muy educado",
       "estado": "En adopcion",
       "id": 16
+    },
+    {
+      "nombre": "Negro",
+      "tipo": "Perro",
+      "sexo": "M",
+      "foto": "https://cdn.pixabay.com/photo/2015/11/17/13/13/bulldog-1047518_640.jpg",
+      "tamanio": "Pequeño",
+      "nacimiento": "2020-07-15",
+      "caracteristicas": "Se lleva bien con los niños",
+      "estado": "En adopcion",
+      "id": 17
+    },
+    {
+      "nombre": "Larguirucho",
+      "tipo": "Perro",
+      "sexo": "M",
+      "foto": "https://cdn.pixabay.com/photo/2017/12/29/10/47/animal-company-3047244_640.jpg",
+      "tamanio": "Grande",
+      "nacimiento": "2019-07-16",
+      "caracteristicas": "Jugueton y divertido",
+      "estado": "En adopcion",
+      "id": 18
+    },
+    {
+      "nombre": "Peluza",
+      "tipo": "Perro",
+      "sexo": "F",
+      "foto": "https://cdn.pixabay.com/photo/2017/09/25/13/14/dog-2785077_640.jpg",
+      "tamanio": "Pequeño",
+      "nacimiento": "2018-08-17",
+      "caracteristicas": "Necesita mucho amor",
+      "estado": "En adopcion",
+      "id": 19
+    },
+    {
+      "nombre": "Olaf",
+      "tipo": "Gato",
+      "sexo": "M",
+      "foto": "https://cdn.pixabay.com/photo/2020/12/14/11/18/cat-5830643_640.jpg",
+      "tamanio": "Pequeño",
+      "nacimiento": "2020-09-16",
+      "caracteristicas": "Mimoso",
+      "estado": "En adopcion",
+      "id": 20
     }
   ],
   "usuario": [
