@@ -2,7 +2,7 @@
   height: 100%;
   position: fixed;
   top: 70px;
-  left: 60%;
+  left: 0%;
   bottom: 0;
   right: 0;
   background: rgb(252,220,122);
@@ -82,7 +82,11 @@ h2{
 }
 
 
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 35em) {
+
+  .solicitarMascota{
+    left: 60%;
+  }
 
   .alert{
     &.active {
