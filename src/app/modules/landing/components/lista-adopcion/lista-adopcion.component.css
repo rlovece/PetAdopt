@@ -20,6 +20,10 @@ border: white 1px solid;
   border-radius: 10px;
 }
 
+.boton{
+  margin-top: 33px;
+}
+
 
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
   .grilla-mascotas{
