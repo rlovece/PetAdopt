@@ -25,7 +25,7 @@ export class AddMascotaComponent {
       foto: ['', Validators.required],
       tamanio: ['', Validators.required],
       nacimiento: [null, Validators.required],
-      caracteristicas: [''],
+      caracteristicas: ['', Validators.maxLength(40)],
     });
   }
 

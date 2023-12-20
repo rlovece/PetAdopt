@@ -28,6 +28,7 @@
     <div class="form-group">
       <label for="caracteristicas">Caracteristicas</label>
       <input type="text" id="caracteristicas" formControlName="caracteristicas" placeholder="Más caracteristicas">
+      <span class="error" *ngIf="mascotaForm.controls['caracteristicas'].getError('maxlength')">Máx 40 caracteres</span>
     </div>
     <button type="submit" class="boton">Guardar</button>
   </form>

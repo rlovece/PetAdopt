@@ -30,7 +30,7 @@ export class EditMascotaComponent {
         foto: [this.mascota.foto, Validators.required],
         tamanio: [this.mascota.tamanio, Validators.required],
         estado: [this.mascota.estado, Validators.required],
-        caracteristicas: [this.mascota.caracteristicas, Validators.required],
+        caracteristicas: [this.mascota.caracteristicas, Validators.maxLength(40)],
       });
     }
   }

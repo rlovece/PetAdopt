@@ -153,6 +153,17 @@
       "caracteristicas": "Mimoso",
       "estado": "En adopcion",
       "id": 15
+    },
+    {
+      "nombre": "Apolo",
+      "tipo": "Gato",
+      "sexo": "M",
+      "foto": "https://cdn.pixabay.com/photo/2023/09/28/17/10/cat-8282097_640.jpg",
+      "tamanio": "Pequeño",
+      "nacimiento": "2022-12-12",
+      "caracteristicas": "Muy educado",
+      "estado": "En adopcion",
+      "id": 16
     }
   ],
   "usuario": [
@@ -435,6 +446,15 @@
       "telefono": "2234571594",
       "email": "ana@gmail.com",
       "id": 18
+    },
+    {
+      "nombre": "Manuela",
+      "apellido": "Castro",
+      "dni": "33111222",
+      "domicilio": "",
+      "telefono": "",
+      "email": "manue@gmail.com",
+      "id": 19
     }
   ],
   "comentarios": [
@@ -612,6 +632,13 @@
       "puntaje": "⭐⭐⭐⭐",
       "fecha": "19/12/2023",
       "comentario": "Gracias por tanto!!"
+    },
+    {
+      "idAdoptante": 19,
+      "puntaje": "⭐⭐⭐⭐⭐",
+      "fecha": "19/12/2023",
+      "comentario": "Los amo!! Son re dedicados a los animalitos 💜",
+      "id": 26
     }
   ]
 }
