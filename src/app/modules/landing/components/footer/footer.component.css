@@ -3,6 +3,8 @@ footer{
   text-align: center;
   display: flex;
   flex-direction: column;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
 }
 
 .container{

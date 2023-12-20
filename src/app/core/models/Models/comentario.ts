@@ -1,7 +1,7 @@
 import { IComentario, IComentarioView } from "../Interfaces/IComentario";
 
 export class Comentario implements IComentario{
-  id: number | null= null;
+  id: number ;
   idAdoptante: number | null= null;
   puntaje:  '⭐' | '⭐⭐' | '⭐⭐⭐' | '⭐⭐⭐⭐'| '⭐⭐⭐⭐⭐' | '' = '';
   fecha: String = '';

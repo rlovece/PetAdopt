@@ -1,5 +1,6 @@
+<div class="fotoAdopcion">
 <img (load)="imgCargada()" (error)="errorImg()" [src]="archivo" *ngIf="archivo; else elseImg"/>
 <ng-template #elseImg>
   <img [src]="imgDefecto" alt="imagen por defecto">
 </ng-template>
-
+</div>

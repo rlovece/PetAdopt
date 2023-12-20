@@ -30,8 +30,9 @@
 <div class="tarjeta-mascota-admin" *ngIf="isAdmin">
   <app-imagen id="img-admin" [archivo]="inputMascota.foto"></app-imagen>
   <h2>{{inputMascota.nombre}}</h2>
-  <p>F. Nac: {{inputMascota.nacimiento}}, Estado {{inputMascota.estado}}</p>
-  <p>Sexo: {{inputMascota.sexo}}, Tamaño: {{inputMascota.tamanio}}</p>
+  <p>Fecha Nacimiento: {{inputMascota.nacimiento}}</p>
+  <p>Estado: {{inputMascota.estado}}</p>
+  <p>Sexo: {{inputMascota.sexo}} - Tamaño: {{inputMascota.tamanio}}</p>
   <p>{{inputMascota.caracteristicas}}</p>
 
 </div>

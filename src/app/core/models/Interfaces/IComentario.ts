@@ -1,5 +1,5 @@
 export interface IComentario{
-    id: number | null;
+    id: number ;
     puntaje: '⭐' | '⭐⭐' | '⭐⭐⭐' | '⭐⭐⭐⭐'| '⭐⭐⭐⭐⭐' | '';
     fecha: String;
     comentario: string;

@@ -28,4 +28,8 @@ export class ApiComentariosService {
   delete(id: number){
     return this.http.delete<boolean>(`${this.baseURL}/comentarios/${id}`);
   }
+
+  update(id: number, comentario: Partial<Comentario>){
+    return this.http.put<Comentario>(`${this.baseURL}/comentarios/${id}`, comentario);
+  }
 }

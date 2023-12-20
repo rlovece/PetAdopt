@@ -27,14 +27,15 @@
         <p>Fecha: {{solicitudSeleccionada.fecha}}, Estado: {{solicitudSeleccionada.estado}}</p>
         <p *ngIf="solicitudSeleccionada.comentarios != ''"
             >Comentarios: {{solicitudSeleccionada.comentarios}}</p>
-        <app-imagen [archivo]="solicitudSeleccionada.foto"></app-imagen>
+        <app-imagen class="fotoAdopcion" [archivo]="solicitudSeleccionada.foto"></app-imagen>
         <p *ngIf="solicitudSeleccionada.fechaAdopcion != null">Adopcion: {{solicitudSeleccionada.fechaAdopcion}}</p>
        </div>
        <div id="mascota-en-Solicitud">
          <app-mascota [inputMascota]="mascotaEnSolicitud" [isAdmin]=true></app-mascota>
        </div>
        <div id="adoptante-en-Solicitud">
-         <h2>Adoptante: {{adoptanteEnSolicitud.nombre}} {{adoptanteEnSolicitud.apellido}}</h2>
+         <h2>Adoptante:</h2>
+         <h2>{{adoptanteEnSolicitud.nombre}} {{adoptanteEnSolicitud.apellido}}</h2>
          <p>Telefono: {{adoptanteEnSolicitud.telefono}}</p>
          <p>Email: {{adoptanteEnSolicitud.email}}</p>
          <div class="conteiner-mascotas">

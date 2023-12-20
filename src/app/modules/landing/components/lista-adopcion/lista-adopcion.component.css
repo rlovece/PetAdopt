@@ -7,14 +7,17 @@
 .grilla-mascotas{
   display: flex;
   flex-direction: column;
-  background: rgb(255,224,81);
+  border-radius: 10px;
   background: linear-gradient(0deg, rgba(255,224,81,1) 25%, #e68184 100%);
-  border-radius: 5px;
   margin-bottom: 1px;
 }
 
 #lista-adopcion{
 border: white 1px solid;
+}
+
+#filtrosMascotas{
+  border-radius: 10px;
 }
 
 

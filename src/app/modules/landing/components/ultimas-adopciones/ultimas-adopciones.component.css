@@ -11,6 +11,8 @@
   flex-direction: column;
   text-align: center;
   margin: 0%;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
   background: #fbffa5;
   background: linear-gradient(0deg, rgba(251,255,165,1) 35%, #ffe051 100%);
 }

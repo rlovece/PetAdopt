@@ -4,6 +4,8 @@ import { Usuario } from 'src/app/core/models/Models/usuario';
 import { Adoptante } from 'src/app/core/models/Models/adoptante';
 import { ApiSolicitudesService } from 'src/app/core/services/api-solicitudes.service';
 import { ApiAdoptantesService } from 'src/app/core/services/api-adoptantes.service';
+import { ApiComentariosService } from 'src/app/core/services/api-comentarios.service';
+import { Comentario } from 'src/app/core/models/Models/comentario';
 
 @Component({
   selector: 'app-gestion-adoptantes',
@@ -13,6 +15,8 @@ import { ApiAdoptantesService } from 'src/app/core/services/api-adoptantes.servi
 export class GestionAdoptantesComponent {
 
   adoptantes: Adoptante[] = [];
+  comentarios: Comentario[] = [];
+  comentariosFiltrados: Comentario[] = [];
   opcionSeleccionada: string = 'bienvenida';
   mostrarPanelEditAdoptante: boolean = false;
   adoptanteSeleccionadoParaEdicion: Adoptante | null = null;
@@ -23,7 +27,7 @@ export class GestionAdoptantesComponent {
   msj: string = '';
 
   constructor(
-    private solicitudesService: ApiSolicitudesService,
+    private comentariosService: ApiComentariosService,
     private adoptanteService : ApiAdoptantesService
   ){}
 
@@ -33,9 +37,22 @@ export class GestionAdoptantesComponent {
 
   ngOnInit(){
     this.getAllAdoptantes();
+    this.getAllComentarios();
   }
 
   getAllAdoptantes(){
+    this.comentariosService.getAll()
+    .subscribe(
+      {
+        next: data => {
+          this.comentarios = data;
+        },
+        error: e => console.log(e)
+      }
+    )
+  }
+
+  getAllComentarios(){
     this.adoptanteService.getAdoptantes()
     .subscribe(
       {
@@ -60,6 +77,24 @@ export class GestionAdoptantesComponent {
     this.mostrarPanelEditAdoptante = !this.mostrarPanelEditAdoptante;
   }
 
+  deleteComentario(idAdop: number){
+    this.comentariosFiltrados =  this.comentarios.filter(c => c.idAdoptante == idAdop);
+    for (let i = 0; i < this.comentariosFiltrados.length; i++) {
+      this.comentariosFiltrados[i].idAdoptante = 1;
+      const idComentario= this.comentariosFiltrados[i].id;
+      this.comentariosService.update(idComentario, this.comentariosFiltrados[i])
+      .subscribe(
+        {
+          next: () => {
+            this.mostrarMsj (`Los comentarios que realizo el adoptante fueron modificados`);
+            this.comentarios= this.comentarios.filter(c => c.id != this.comentariosFiltrados[i].id);
+          },
+          error: e => console.log(e)
+        }
+      )
+    }
+  }
+
   deleteAdoptante(adoptante: Adoptante){
     if (adoptante.id){
       this.adoptanteService.delete(adoptante.id)
@@ -67,6 +102,7 @@ export class GestionAdoptantesComponent {
         {
           next: () => {
             this.mostrarMsj (`${adoptante.nombre} fue eliminada`);
+            this.deleteComentario(adoptante.id);
             this.adoptantes= this.adoptantes.filter(m => m.id != adoptante.id);
           },
           error: e => console.log(e)
@@ -84,7 +120,7 @@ export class GestionAdoptantesComponent {
     this.mostrarPanelViewAdoptante = !this.mostrarPanelViewAdoptante;
   }
 
-  
+
   mostrarMsj(event: string) {
     this.msj = event;
     this.mostrarAlert = true;

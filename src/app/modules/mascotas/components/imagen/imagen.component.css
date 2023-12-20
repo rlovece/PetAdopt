@@ -1,5 +1,9 @@
 img{
   width: 100%;
-  height: 90%;
+  height: 100%;
   border-radius: 15px;
+}
+
+.fotoAdopcion{
+  margin-bottom: 50px;
 }

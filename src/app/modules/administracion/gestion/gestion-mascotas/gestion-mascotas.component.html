@@ -38,9 +38,9 @@
 </div>
 
 <div *ngIf="mascotaSeleccionadaView" class="menuDesplegable" [class.active]="mostrarPanelViewMascota">
-  <div *ngIf="mostrarPanelViewMascota">
+  <div *ngIf="mostrarPanelViewMascota" >
     <button (click)="verPanelViewMascota()" class="boton" id="cerrar">X</button>
-    <app-mascota [inputMascota]="mascotaSeleccionadaView" [isAdmin]=true></app-mascota>
+    <app-mascota [inputMascota]="mascotaSeleccionadaView" [isAdmin]=true ></app-mascota>
   </div>
 </div>
 

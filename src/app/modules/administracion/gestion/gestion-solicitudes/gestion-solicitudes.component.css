@@ -35,7 +35,7 @@
   left: 0%;
   bottom: 0;
   right: 0;
-  background: rgb(143, 138, 138);
+  background: linear-gradient(0deg, rgba(255,217,134,1) 38%, rgba(254,143,188,1) 100%);
   border-radius: 20px;
   transition: all ease-out .5s;
   transform: translateX(100%);
@@ -59,3 +59,11 @@ app-mascota{
   width: 90%;
 }
 
+.fotoAdopcion{
+  margin-bottom: 100px;
+}
+
+p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#f8936b;
+}
