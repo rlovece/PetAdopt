@@ -40,7 +40,7 @@ export class GestionAdoptantesComponent {
     this.getAllComentarios();
   }
 
-  getAllAdoptantes(){
+  getAllComentarios(){
     this.comentariosService.getAll()
     .subscribe(
       {
@@ -52,12 +52,12 @@ export class GestionAdoptantesComponent {
     )
   }
 
-  getAllComentarios(){
+  getAllAdoptantes(){
     this.adoptanteService.getAdoptantes()
     .subscribe(
       {
         next: data => {
-          this.adoptantes = data;
+          this.adoptantes = data.filter(a => a.id != 1);
         },
         error: e => console.log(e)
       }

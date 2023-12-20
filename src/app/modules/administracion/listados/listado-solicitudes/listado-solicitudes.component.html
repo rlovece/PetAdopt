@@ -65,7 +65,7 @@
     <tbody>
       <tr *ngFor="let solicitud of inputSolicitudes">
         <td>{{ solicitud.fecha }}</td>
-        <td>{{ solicitud.idMascota }} {{ getNombreMascota(solicitud.idMascota) }}</td>
+        <td>{{ getNombreMascota(solicitud.idMascota) }}</td>
         <td>{{ solicitud.estado }}</td>
       </tr>
     </tbody>
